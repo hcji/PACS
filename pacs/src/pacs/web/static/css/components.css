@@ -1,0 +1,164 @@
+/* 组件层：卡片 / 按钮 / 表格 / KPI / 徽章 / 提示 / 进度 / 气泡 / 步骤 / 弹窗。
+   命名沿用现有类的语义，只做统一与补全，避免与既有模板脱节。 */
+
+/* ---- 卡片 ---- */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:var(--sp-4) var(--sp-5);margin-bottom:var(--sp-4)}
+.card > h2{font-size:var(--fs-lg);display:flex;align-items:center;gap:var(--sp-2)}
+.card > h2 .n{color:var(--accent);font-family:var(--mono);margin-right:2px}
+.card > h2 .badge{margin-left:auto}
+.card h3{font-size:var(--fs-md);margin:var(--sp-4) 0 var(--sp-2);color:var(--fg)}
+.card h3:first-child{margin-top:0}
+.card.highlight{border-color:var(--accent2)}
+/* 卡片头右侧操作区（成熟应用的惯例：每张卡片自带操作） */
+.card-head{display:flex;align-items:center;gap:var(--sp-3);margin-bottom:var(--sp-3)}
+.card-head h2{margin:0;font-size:var(--fs-lg)}
+.card-head .actions{margin-left:auto;display:flex;gap:var(--sp-2);align-items:center}
+
+/* ---- 按钮 ---- */
+button{font-family:inherit}
+.btn{background:var(--accent);color:var(--accent-ink);border:0;border-radius:var(--r-md);
+  padding:9px 16px;font-weight:600;cursor:pointer;font-size:var(--fs-md);
+  display:inline-flex;align-items:center;gap:var(--sp-2);transition:filter .15s}
+.btn:hover{filter:brightness(1.12)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.btn.ghost:hover{background:var(--panel2)}
+.btn.danger{background:transparent;color:var(--bad);border:1px solid var(--bad-line)}
+.btn.danger:hover{background:var(--bad-bg)}
+.btn.sm{padding:5px 12px;font-size:var(--fs-sm)}
+.tiny{background:transparent;color:var(--muted);border:1px solid var(--line);
+  border-radius:var(--r-sm);padding:2px 8px;font-size:var(--fs-xs);cursor:pointer}
+.tiny:hover{background:var(--panel2);color:var(--fg)}
+/* 进行中：按钮禁用 + 文案由 JS 换成「处理中…」，并用 data-busy 加视觉反馈 */
+.btn[data-busy]::after,.tiny[data-busy]::after{content:"";width:11px;height:11px;
+  border:2px solid currentColor;border-right-color:transparent;border-radius:50%;
+  display:inline-block;animation:spin .6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---- 网格 ---- */
+.grid{display:grid;gap:var(--sp-4)}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+
+/* ---- chips / tabs ---- */
+.chips{display:flex;flex-wrap:wrap;gap:var(--sp-2)}
+.chip{border:1px solid var(--line);background:var(--panel2);border-radius:var(--r-pill);
+  padding:4px 11px;font-size:var(--fs-sm);cursor:pointer;user-select:none}
+.chip:hover{border-color:var(--line-strong)}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);
+  border-color:var(--accent)}
+.chip.dose[aria-pressed="true"]{background:var(--accent2)}
+.chip.sm{font-size:var(--fs-xs);padding:2px 9px}
+.tabs{display:flex;gap:var(--sp-2);margin-bottom:var(--sp-3);flex-wrap:wrap}
+.tabs button{background:transparent;border:1px solid var(--line);color:var(--muted);
+  padding:5px 12px;border-radius:var(--r-sm);cursor:pointer;font-size:var(--fs-sm)}
+.tabs button[aria-selected="true"]{background:var(--panel2);color:var(--fg)}
+
+/* ---- 表格 ---- */
+table{width:100%;border-collapse:collapse;font-size:var(--fs-sm)}
+th,td{text-align:left;padding:6px 9px;border-bottom:1px solid var(--line);
+  vertical-align:top}
+th{color:var(--muted);font-weight:600;position:sticky;top:0;background:var(--panel);
+  z-index:1;white-space:nowrap}
+tbody tr:hover{background:rgba(255,255,255,.017)}
+td.mono,th.mono{font-family:var(--mono)}
+tr.is-focus{background:rgba(126,224,192,.10)}
+.empty-cell{color:var(--muted);padding:var(--sp-5);text-align:center}
+
+/* ---- 滚动容器 ---- */
+.scroll{max-height:520px;overflow:auto;border:1px solid var(--line);border-radius:var(--r-md)}
+.scroll.sm{max-height:260px}
+.scroll.md{max-height:340px}
+
+/* ---- KPI ---- */
+.kpi{background:var(--panel2);border:1px solid var(--line);border-radius:9px;
+  padding:10px 13px;min-width:0}
+.kpi b{display:block;font-size:20px;font-family:var(--mono);color:var(--accent2);
+  overflow-wrap:anywhere}
+.kpi b.sm{font-size:15px}
+.kpi span{font-size:var(--fs-sm);color:var(--muted)}
+.kpi.is-focus{border-color:var(--accent2)}
+
+/* ---- 徽章 ---- */
+.badge{display:inline-block;padding:1px 7px;border-radius:5px;font-size:var(--fs-xs);
+  font-family:var(--mono);white-space:nowrap}
+.b-pass{background:var(--good-bg);color:var(--good)}
+.b-fail{background:var(--bad-bg);color:var(--bad)}
+.b-weak{background:var(--weak-bg);color:var(--warn)}
+.b-gap{background:var(--gap-bg);color:var(--muted)}
+
+/* ---- 提示框 ---- */
+.warnbox{background:var(--warn-bg);border:1px solid var(--warn-line);
+  border-radius:var(--r-md);padding:10px 13px;font-size:var(--fs-sm);color:var(--warn-fg)}
+.errbox{background:var(--bad-bg);border:1px solid var(--bad-line);
+  border-radius:var(--r-md);padding:10px 13px;font-size:var(--fs-sm);color:var(--bad-fg)}
+.infobox{background:var(--panel2);border:1px solid var(--line);border-radius:var(--r-md);
+  padding:10px 13px;font-size:var(--fs-sm);color:var(--fg-dim)}
+
+/* ---- 状态行 / 空态 / 进度 ---- */
+.status{font-size:var(--fs-md);color:var(--muted);min-height:20px}
+.status.err{color:var(--bad)}
+.status.ok{color:var(--good)}
+.status.busy{color:var(--accent)}
+.empty{color:var(--muted);font-size:var(--fs-sm);padding:var(--sp-5);
+  text-align:center;border:1px dashed var(--line);border-radius:var(--r-md)}
+.empty b{color:var(--fg-dim);display:block;margin-bottom:var(--sp-1)}
+.bar{height:7px;background:var(--panel2);border-radius:4px;overflow:hidden;margin-top:var(--sp-2)}
+.bar > i{display:block;height:100%;background:var(--accent);width:0;transition:width .25s}
+
+/* ---- 提示气泡（toast，右上角堆叠） ---- */
+.toasts{position:fixed;top:64px;right:var(--sp-5);z-index:var(--z-toast);
+  display:flex;flex-direction:column;gap:var(--sp-2);max-width:min(420px,88vw)}
+.toast{background:var(--panel3);border:1px solid var(--line-strong);border-radius:var(--r-md);
+  padding:9px 13px;font-size:var(--fs-sm);box-shadow:var(--shadow);
+  animation:toast-in .18s ease}
+.toast.ok{border-color:var(--good)}
+.toast.err{border-color:var(--bad)}
+.toast.warn{border-color:var(--warn-line)}
+@keyframes toast-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+/* ---- 步骤（提示词构造过程） ---- */
+.step{border:1px solid var(--line);border-radius:9px;background:var(--panel2);
+  padding:10px 13px;margin-bottom:9px}
+.step .hd{display:flex;gap:var(--sp-3);align-items:baseline;flex-wrap:wrap}
+.step .hd b{font-size:var(--fs-md)}
+.step .why{color:var(--muted);font-size:12px;margin:5px 0 8px}
+.step .lines{margin:0;padding-left:20px;font-size:var(--fs-sm)}
+.step details{margin-top:var(--sp-2)}
+.step summary{cursor:pointer;color:var(--muted);font-size:12px}
+.step pre{max-height:220px;margin-top:var(--sp-2)}
+
+/* ---- 对话气泡 ---- */
+.chat{border:1px solid var(--line);border-radius:var(--r-md);padding:var(--sp-3);
+  background:#0b0f14;max-height:520px;overflow:auto}
+.bub{max-width:82%;margin:9px 0;padding:8px 12px;border-radius:var(--r-lg);
+  font-size:var(--fs-md);white-space:pre-wrap;word-break:break-word}
+.bub .who{display:block;font-size:var(--fs-xs);color:var(--muted);margin-bottom:3px}
+.bub.ex{background:#16232e;border:1px solid #24455c;margin-right:auto}
+.bub.br{background:#1b2a22;border:1px solid #2b5340;margin-left:auto}
+.bub.wait{opacity:.55;font-style:italic}
+
+/* ---- 代码/文本块 ---- */
+pre{background:#0a0d12;border:1px solid var(--line);border-radius:var(--r-md);
+  padding:12px;overflow:auto;max-height:440px;font-family:var(--mono);font-size:12px;
+  white-space:pre-wrap;word-break:break-word;margin:0}
+
+/* ---- 图例 ---- */
+.legend{display:flex;gap:var(--sp-4);flex-wrap:wrap;font-size:12px;color:var(--muted);
+  margin-top:var(--sp-2)}
+.sw{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;
+  vertical-align:-1px}
+
+/* ---- 内联编辑（侧栏重命名等） ---- */
+input.inline-edit{padding:3px 7px;font-size:var(--fs-sm);min-width:0}
+
+/* ---- 弹窗（配置门禁） ---- */
+.modal{position:fixed;inset:0;background:rgba(6,9,13,.86);z-index:var(--z-modal);
+  display:none;overflow:auto;padding:26px 16px}
+.modal.show{display:block}
+.modal .box{max-width:900px;margin:0 auto;background:var(--panel);border:1px solid var(--line);
+  border-radius:var(--r-xl);padding:22px 24px;box-shadow:var(--shadow)}
+.modal h2{margin:0 0 var(--sp-2);font-size:var(--fs-xl)}
+.modal .col{border:1px solid var(--line);border-radius:var(--r-md);padding:var(--sp-4);
+  background:var(--panel2)}

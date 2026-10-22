@@ -1,0 +1,67 @@
+/* 布局层：顶栏 / 侧栏 / 内容区 / 页面头。
+   结构约定（成熟控制台类应用的常见骨架）：
+   topbar（全局上下文）
+   └ shell
+     ├ sidebar（导航 + 当前大脑 + 大脑库）
+     └ content（页面头 + 卡片流）                                       */
+
+/* ---- 顶栏：全局上下文与常驻提示 ---- */
+.topbar{position:sticky;top:0;z-index:var(--z-topbar);
+  padding:10px var(--sp-5);border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg,#171d26,#12161c);
+  display:flex;align-items:center;gap:var(--sp-4);flex-wrap:wrap}
+.topbar h1{font-size:16px;letter-spacing:.3px}
+.topbar .sub{color:var(--muted);font-size:var(--fs-sm)}
+.topbar .disclaimer{margin-left:auto;color:var(--warn);font-size:var(--fs-xs);white-space:nowrap}
+.context-chip{border:1px solid var(--line);background:var(--panel2);border-radius:var(--r-pill);
+  padding:3px 12px;font-size:var(--fs-sm);display:inline-flex;gap:var(--sp-2);align-items:center}
+.context-chip b{color:var(--accent2);font-weight:600}
+.topbar-toggle{display:none}
+
+/* 全局横幅（离线模式等常驻提醒） */
+.banner{margin:0;padding:9px var(--sp-5);font-size:var(--fs-sm);
+  border-bottom:1px solid var(--warn-line);background:var(--warn-bg);color:var(--warn-fg)}
+
+/* ---- 骨架 ---- */
+.shell{display:flex;align-items:flex-start;gap:var(--sp-5);
+  padding:var(--sp-5);max-width:1600px;margin:0 auto;width:100%}
+.content{flex:1;min-width:0;max-width:var(--content-max)}
+
+/* ---- 侧栏 ---- */
+.sidebar{width:var(--sidebar-w);flex:0 0 var(--sidebar-w);position:sticky;top:64px;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:var(--sp-4);max-height:calc(100vh - 84px);overflow:auto}
+.sidebar .blk + .blk{margin-top:var(--sp-4);border-top:1px solid var(--line);
+  padding-top:var(--sp-4)}
+.sidebar h3{margin:0 0 var(--sp-3);font-size:var(--fs-xs);color:var(--muted);
+  letter-spacing:.6px;text-transform:uppercase}
+
+/* 侧栏主导航（role=tablist） */
+.nav{display:flex;flex-direction:column;gap:2px}
+.nav-item{display:flex;align-items:center;gap:var(--sp-3);width:100%;
+  background:transparent;border:1px solid transparent;border-radius:var(--r-md);
+  color:var(--fg-dim);padding:8px 10px;font-size:var(--fs-md);font-family:inherit;
+  cursor:pointer;text-align:left}
+.nav-item:hover{background:var(--panel2);color:var(--fg)}
+.nav-item[aria-selected="true"]{background:var(--panel3);color:var(--fg);
+  border-color:var(--line)}
+.nav-item .idx{font-family:var(--mono);color:var(--accent);font-size:var(--fs-sm)}
+.nav-item .badge{margin-left:auto}
+
+/* 页面头：标题 + 目的说明 + 主操作 */
+.page-head{display:flex;align-items:flex-end;gap:var(--sp-4);flex-wrap:wrap;
+  margin-bottom:var(--sp-4)}
+.page-head .title{font-size:var(--fs-xl)}
+.page-head .purpose{color:var(--muted);font-size:var(--fs-sm);margin-top:2px;max-width:70ch}
+.page-head .actions{margin-left:auto;display:flex;gap:var(--sp-2);align-items:center}
+
+/* ---- 响应式：窄屏时侧栏变抽屉 ---- */
+@media (max-width:1040px){
+  .shell{display:block;padding:var(--sp-4)}
+  .topbar-toggle{display:inline-flex}
+  .sidebar{position:fixed;inset:56px auto 0 0;width:min(86vw,320px);flex:none;
+    max-height:none;border-radius:0 var(--r-lg) var(--r-lg) 0;z-index:var(--z-sidebar);
+    transform:translateX(-102%);transition:transform .2s ease;box-shadow:var(--shadow)}
+  .sidebar.open{transform:none}
+  .content{max-width:none}
+}

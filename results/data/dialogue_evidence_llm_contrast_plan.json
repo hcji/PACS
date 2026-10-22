@@ -1,0 +1,18 @@
+{
+  "note": "「必要时」的落地：只列两轴结论不一致或轴一落在难以区分区间的配对。",
+  "layer": "post_hoc_interpretation",
+  "no_writeback": "本产物是**事后解释层**，不是测量：由「已记录的对话 + 已记录的逐维读数」再读一遍得到，不得回写为后续运行的先验（不得进提示词、不得参与特异性判据、不得进冻结快照）。",
+  "pairs": [
+    {
+      "comparison": "Q2-1 · social_cognition @ dose 0.4",
+      "dimension": "social_cognition",
+      "dimension_zh": "社会认知",
+      "reason": "两轴不一致 → 建议用 --llm-contrast 判读",
+      "delta_span": 0.04,
+      "reveal": {
+        "A": "agent_state_updating",
+        "B": "self_other_distinction"
+      }
+    }
+  ]
+}

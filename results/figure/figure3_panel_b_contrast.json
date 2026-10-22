@@ -1,0 +1,47 @@
+{
+  "note": "Panel B 的「各自特点」总结。输入是已记录的逐轮问答（同通道），渲染只读本缓存；不属于测量产物，不得回写。",
+  "layer": "post_hoc_interpretation",
+  "phenotype": "social_interaction_motivation",
+  "mechanisms": {
+    "a": "prediction_error_sensitivity",
+    "b": "social_reward_weighting"
+  },
+  "contrast": {
+    "a": [
+      {
+        "text": "A agrees to join and asks reciprocal questions, e.g. \"where are you up to?\" and \"which side?\"",
+        "bold": "agrees to join and asks reciprocal questions"
+      },
+      {
+        "text": "A sets conditions for sharing and turn-taking, e.g. \"you pick first\" and \"one each, no two in a row.\"",
+        "bold": "sets conditions for sharing and turn-taking"
+      },
+      {
+        "text": "A guards belongings while still engaging, e.g. \"don't touch\" and \"I won't give it; he may mess it up.\"",
+        "bold": "guards belongings while still engaging"
+      }
+    ],
+    "b": [
+      {
+        "text": "B responds briefly and follows the other's lead, e.g. \"anything is fine\" and \"what do you want to play?\"",
+        "bold": "responds briefly and follows the other's lead"
+      },
+      {
+        "text": "B often declines or stays at a distance, e.g. \"I don't really want to go\" and watches.",
+        "bold": "often declines or stays at a distance"
+      },
+      {
+        "text": "B gives minimal cooperative replies or simple help, e.g. \"Mm, okay\" and \"I'll pour you some water?\"",
+        "bold": "minimal cooperative replies or simple help"
+      }
+    ],
+    "note": "Summaries focus on visible Social interaction & motivation features."
+  },
+  "replies": [
+    {
+      "asked": "both",
+      "chars": 1079,
+      "reply": "{\"a\":[{\"text\":\"A agrees to join and asks reciprocal questions, e.g. \\\"where are you up to?\\\" and \\\"which side?\\\"\",\"bold\":\"agrees to join and asks reciprocal questions\"},{\"text\":\"A sets conditions for sharing and turn-taking, e.g. \\\"you pick first\\\" and \\\"one each, no two in a row.\\\"\",\"bold\":\"sets conditions for sharing and turn-taking\"},{\"text\":\"A guards belongings while still engaging, e.g. \\\"don't touch\\\" and \\\"I won't give it; he may mess it up.\\\"\",\"bold\":\"guards belongings while still engaging\"}],\"b\":[{\"text\":\"B responds briefly and follows the other's lead, e.g. \\\"anything is fine\\\" and \\\"what do you want to play?\\\"\",\"bold\":\"responds briefly and follows the other's lead\"},{\"text\":\"B often declines or stays at a distance, e.g. \\\"I don't really want to go\\\" and watches.\",\"bold\":\"often declines or stays at a distance\"},{\"text\":\"B gives minimal cooperative replies or simple help, e.g. \\\"Mm, okay\\\" and \\\"I'll pour you some water?\\\"\",\"bold\":\"minimal cooperative replies or simple help\"}],\"note\":\"Summaries focus on visible Social interaction & motivation features.\"}"
+    }
+  ]
+}

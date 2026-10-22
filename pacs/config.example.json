@@ -1,0 +1,28 @@
+{
+  "_comment": "复制为 config.json 后填写。也可以用环境变量覆盖：PACS_LLM_PROVIDER / PACS_LLM_API_KEY / PACS_LLM_MODEL / PACS_LLM_BASE_URL（模拟大脑），以及 PACS_EXAMINER_LLM_PROVIDER / PACS_EXAMINER_LLM_API_KEY / PACS_EXAMINER_LLM_MODEL / PACS_EXAMINER_LLM_BASE_URL（提问者 / 分析者）。",
+  "_llm_comment": "模拟大脑：被扰动的人工心智。",
+  "llm": {
+    "provider": "mock",
+    "model": "gpt-4o-mini",
+    "base_url": "https://api.openai.com/v1",
+    "api_key": "",
+    "temperature": 0.3,
+    "max_tokens": 2048,
+    "timeout": 60.0
+  },
+  "_examiner_llm_comment": "提问者 / 分析者：表型观察里的「另外一个 LLM」。未填写时以 llm 为底继承（只配一套也能跑通）；也可以配成不同厂商的模型，例如模拟大脑用 GPT、提问者用 DeepSeek。",
+  "examiner_llm": {
+    "provider": "mock",
+    "model": "gpt-4o-mini",
+    "base_url": "https://api.openai.com/v1",
+    "api_key": "",
+    "temperature": 0.3,
+    "max_tokens": 2048,
+    "timeout": 60.0
+  },
+  "run": {
+    "n_instances_per_item": 1,
+    "max_concurrency": 1
+  },
+  "_observation_comment": "心智年龄固定为 36 个月（常量，不可配置），因此这里没有 observation 段：配置文件里若残留 age_months 会被忽略。轮数与字数上限是 CLI/API 参数，也不落配置。"
+}

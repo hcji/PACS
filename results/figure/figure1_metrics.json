@@ -1,0 +1,2497 @@
+{
+  "reference_arm": {
+    "n_subjects": 20,
+    "n_targets": 28,
+    "n_replicates": 5,
+    "icc": 0.7384570639699227,
+    "icc_lo": 0.5790842397535879,
+    "icc_hi": 0.8978298881862575,
+    "sem": 0.11289147056790483,
+    "sem_lo": 0.0996350437918954,
+    "sem_hi": 0.13024901396850236,
+    "cv_mean": 0.16869542850394975,
+    "within_profile_pearson": 0.7549404820796444,
+    "within_profile_spearman": 0.743365469603243,
+    "within_tolerance": 0.7035714285714285,
+    "rank_stability": 0.7434,
+    "kappa": 0.0958,
+    "weighted_kappa": 0.1657,
+    "unanimous": 0.0,
+    "turns_mean": 51.15
+  },
+  "arms": {
+    "axis2_brain_pro": {
+      "group": "Brain model",
+      "change": "模拟大脑换成 deepseek-v4-pro",
+      "n_subjects": 20,
+      "n_targets": 28,
+      "n_replicates": 5,
+      "icc": 0.6554660529344076,
+      "icc_lo": 0.5054008458577313,
+      "icc_hi": 0.805531260011084,
+      "sem": 0.05256892678657289,
+      "sem_lo": 0.0463959526448247,
+      "sem_hi": 0.06065162270355024,
+      "cv_mean": 0.0564594407532879,
+      "within_profile_pearson": 0.6668546228282549,
+      "within_tolerance": 0.9071428571428571,
+      "rank_stability": 0.6707,
+      "kappa": 0.1567,
+      "unanimous": 0.0,
+      "r_vs_ref": 0.904735030756928,
+      "r_vs_ref_lo": 0.8025461227535855,
+      "r_vs_ref_hi": 0.9553478803526135,
+      "rho_vs_ref": 0.8199863798939221,
+      "mad_vs_ref": 0.18107142857142855,
+      "max_abs_diff_vs_ref": 0.45400000000000007,
+      "tol_vs_ref": 0.35714285714285715,
+      "bias_vs_ref": -0.17992857142857144,
+      "loa_low": -0.4438088913299803,
+      "loa_high": 0.08395174847283743,
+      "turns_mean": 50.7
+    },
+    "axis3_analyst_pro": {
+      "group": "Analyst model",
+      "change": "分析者换成 deepseek-v4-pro",
+      "n_subjects": 12,
+      "n_targets": 28,
+      "n_replicates": 3,
+      "icc": 0.6418510638297873,
+      "icc_lo": 0.44600301914679713,
+      "icc_hi": 0.8376991085127774,
+      "sem": 0.11261227985078817,
+      "sem_lo": 0.09480424996344236,
+      "sem_hi": 0.13872060279753032,
+      "cv_mean": 0.13922514367310604,
+      "within_profile_pearson": 0.658282276756703,
+      "within_tolerance": 0.6666666666666666,
+      "rank_stability": 0.5678,
+      "kappa": 0.1544,
+      "unanimous": 0.25,
+      "r_vs_ref": 0.9177388714091824,
+      "r_vs_ref_lo": 0.8282410899660799,
+      "r_vs_ref_hi": 0.9615823218640414,
+      "rho_vs_ref": 0.9109073576476181,
+      "mad_vs_ref": 0.13904761904761906,
+      "max_abs_diff_vs_ref": 0.29666666666666663,
+      "tol_vs_ref": 0.4642857142857143,
+      "bias_vs_ref": -0.13523809523809524,
+      "loa_low": -0.2944987697340247,
+      "loa_high": 0.024022579257834242,
+      "turns_mean": 50.5
+    },
+    "axis3_examiner_pro": {
+      "group": "Examiner model",
+      "change": "提问者换成 deepseek-v4-pro",
+      "n_subjects": 12,
+      "n_targets": 28,
+      "n_replicates": 3,
+      "icc": 0.6745019549432134,
+      "icc_lo": 0.46027367934948527,
+      "icc_hi": 0.8887302305369416,
+      "sem": 0.13309353436169952,
+      "sem_lo": 0.11204668546683591,
+      "sem_hi": 0.1639502844589604,
+      "cv_mean": 0.17214619409696685,
+      "within_profile_pearson": 0.6778130798692003,
+      "within_tolerance": 0.7380952380952381,
+      "rank_stability": 0.7418,
+      "kappa": 0.4909,
+      "unanimous": 0.5,
+      "r_vs_ref": 0.7952878985329468,
+      "r_vs_ref_lo": 0.6003314529971897,
+      "r_vs_ref_hi": 0.9010269250136017,
+      "rho_vs_ref": 0.8411112710490176,
+      "mad_vs_ref": 0.09878571428571432,
+      "max_abs_diff_vs_ref": 0.29600000000000004,
+      "tol_vs_ref": 0.7142857142857143,
+      "bias_vs_ref": -0.007500000000000037,
+      "loa_low": -0.26240799565798445,
+      "loa_high": 0.24740799565798435,
+      "turns_mean": 50.833333333333336
+    },
+    "axis3_probe_seed7": {
+      "group": "Probe seed",
+      "change": "题序 seed 42 → 7（第 7 位起）",
+      "n_subjects": 12,
+      "n_targets": 28,
+      "n_replicates": 3,
+      "icc": 0.7660348751301808,
+      "icc_lo": 0.5997511482059361,
+      "icc_hi": 0.9323186020544254,
+      "sem": 0.10068394854985992,
+      "sem_lo": 0.08476221454955724,
+      "sem_hi": 0.12402677623948612,
+      "cv_mean": 0.17730642766985547,
+      "within_profile_pearson": 0.8333202011509476,
+      "within_tolerance": 0.7261904761904763,
+      "rank_stability": 0.8435,
+      "kappa": 0.4909,
+      "unanimous": 0.5,
+      "r_vs_ref": 0.9616548989650059,
+      "r_vs_ref_lo": 0.917890808720613,
+      "r_vs_ref_hi": 0.9823079650889495,
+      "rho_vs_ref": 0.9599014733384005,
+      "mad_vs_ref": 0.045,
+      "max_abs_diff_vs_ref": 0.14799999999999996,
+      "tol_vs_ref": 1.0,
+      "bias_vs_ref": 0.006904761904761883,
+      "loa_low": -0.11435656509311087,
+      "loa_high": 0.12816608890263465,
+      "turns_mean": 51.416666666666664
+    },
+    "axis4_turns_25": {
+      "group": "50 vs 25 turns",
+      "change": "硬固定 25 轮（低于 7×5 配额）",
+      "n_subjects": 20,
+      "n_targets": 28,
+      "n_replicates": 5,
+      "icc": 0.689214382083321,
+      "icc_lo": 0.5609024109772064,
+      "icc_hi": 0.8175263531894356,
+      "sem": 0.11058532342320003,
+      "sem_lo": 0.09759969895497075,
+      "sem_hi": 0.12758828689892804,
+      "cv_mean": 0.17149527609556015,
+      "within_profile_pearson": 0.7172849286987563,
+      "within_tolerance": 0.6642857142857143,
+      "rank_stability": 0.7196,
+      "kappa": 0.4154,
+      "unanimous": 0.25,
+      "r_vs_ref": 0.9169123943641548,
+      "r_vs_ref_lo": 0.8265967340733468,
+      "r_vs_ref_hi": 0.9611874246405083,
+      "rho_vs_ref": 0.915013009800477,
+      "mad_vs_ref": 0.06114285714285715,
+      "max_abs_diff_vs_ref": 0.19000000000000006,
+      "tol_vs_ref": 0.8214285714285714,
+      "bias_vs_ref": -0.027000000000000007,
+      "loa_low": -0.18436412018220835,
+      "loa_high": 0.13036412018220836,
+      "turns_mean": 25.0
+    },
+    "axis4_turns_100": {
+      "group": "50 vs 100 turns",
+      "change": "硬固定 100 轮",
+      "n_subjects": 20,
+      "n_targets": 27,
+      "n_replicates": 5,
+      "icc": 0.6648560730581452,
+      "icc_lo": 0.5015308116407518,
+      "icc_hi": 0.8281813344755387,
+      "sem": 0.11542106736650284,
+      "sem_lo": 0.10164108487224184,
+      "sem_hi": 0.13355772852443165,
+      "cv_mean": 0.1960461913468998,
+      "within_profile_pearson": 0.7773469700914464,
+      "within_tolerance": 0.6518518518518518,
+      "rank_stability": 0.7681,
+      "kappa": 0.44,
+      "unanimous": 0.25,
+      "r_vs_ref": 0.9456681301322394,
+      "r_vs_ref_lo": 0.8847301614721457,
+      "r_vs_ref_hi": 0.9748213132538152,
+      "rho_vs_ref": 0.9540229885057471,
+      "mad_vs_ref": 0.05060714285714286,
+      "max_abs_diff_vs_ref": 0.1329999999999999,
+      "tol_vs_ref": 1.0,
+      "bias_vs_ref": 0.0026071428571428335,
+      "loa_low": -0.1251783886305901,
+      "loa_high": 0.13039267434487578,
+      "turns_mean": 100.0
+    },
+    "axis1_same_brain": {
+      "group": "Same brain",
+      "change": "同参数重跑 5 次（参考臂）",
+      "n_subjects": 20,
+      "n_targets": 28,
+      "n_replicates": 5,
+      "icc": 0.7384570639699227,
+      "icc_lo": 0.5790842397535879,
+      "icc_hi": 0.8978298881862575,
+      "sem": 0.11289147056790483,
+      "sem_lo": 0.0996350437918954,
+      "sem_hi": 0.13024901396850236,
+      "cv_mean": 0.16869542850394975,
+      "within_profile_pearson": 0.7549404820796444,
+      "within_tolerance": 0.7035714285714285,
+      "rank_stability": 0.7434,
+      "kappa": 0.0958,
+      "unanimous": 0.0,
+      "r_vs_ref": null,
+      "r_vs_ref_lo": null,
+      "r_vs_ref_hi": null,
+      "rho_vs_ref": null,
+      "mad_vs_ref": null,
+      "max_abs_diff_vs_ref": null,
+      "tol_vs_ref": null,
+      "bias_vs_ref": null,
+      "loa_low": null,
+      "loa_high": null,
+      "turns_mean": 51.15
+    }
+  },
+  "per_mind_setting": {
+    "M1": {
+      "mind": "belief_updating 0.30",
+      "label": "M1",
+      "completeness": "0.30",
+      "icc": 0.7411644422338279,
+      "icc_jk": [
+        0.8388108799610126,
+        0.7505741763069709,
+        0.7485328359627446,
+        0.6469700336364962,
+        0.6575462631008865,
+        0.7635123944128526,
+        0.7438154646052695
+      ],
+      "sem": 0.09506388829173179,
+      "sem_jk": [
+        0.08074445285384413,
+        0.10109236700496559,
+        0.09929585422698507,
+        0.09832259828408385,
+        0.10285750661311342,
+        0.10104289518153504,
+        0.07876759062795645
+      ],
+      "cv": [
+        0.34804533169286817,
+        0.16141875570198874,
+        0.14595127662315596,
+        0.16381166966065483,
+        0.25528543446553176,
+        0.17537788058821882,
+        0.18914722556089061
+      ],
+      "cv_mean": 0.20557679632761555,
+      "sd_channels": [
+        0.20186629238186352,
+        0.10653637876331257,
+        0.09486832980505137,
+        0.03898717737923585,
+        0.06228964600958974,
+        0.0894427190999916,
+        0.13845576911057192
+      ],
+      "rank_mean": 0.725,
+      "rank_pairs": [
+        0.8001322641986387,
+        0.9819805060619657,
+        0.614704768862218,
+        0.7455777916396407,
+        0.7142857142857143,
+        0.8108437164260031,
+        0.6428571428571429,
+        0.5765999761251577,
+        0.6785714285714286,
+        0.6847124716486248
+      ],
+      "n_subjects": 5,
+      "target_labels": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "G"
+      ]
+    },
+    "M2": {
+      "mind": "belief_updating 0.40",
+      "label": "M2",
+      "completeness": "0.40",
+      "icc": 0.6466786895100692,
+      "icc_jk": [
+        0.6478649543948815,
+        0.7475342774436221,
+        0.6156882506088855,
+        0.6053032944047412,
+        0.574795816019487,
+        0.6649278294480012,
+        0.6494118932303995
+      ],
+      "sem": 0.10160614904526948,
+      "sem_jk": [
+        0.10373684655576013,
+        0.08445116932286965,
+        0.10717586793054988,
+        0.09369098142297368,
+        0.10427687503308995,
+        0.10987113664046007,
+        0.10565667670967761
+      ],
+      "cv": [
+        0.0451361633574497,
+        0.2757376388606559,
+        0.06711176683428413,
+        0.39278429793484176,
+        0.27537433600600464,
+        0.127807686006208,
+        0.17211177052559823
+      ],
+      "cv_mean": 0.19372337993214891,
+      "sd_channels": [
+        0.030331501776206204,
+        0.1891560202584099,
+        0.050199601592044535,
+        0.14690132742763082,
+        0.10464224768228177,
+        0.07259476565152614,
+        0.13046072205840345
+      ],
+      "rank_mean": 0.6364,
+      "rank_pairs": [
+        0.5357142857142857,
+        0.5765999761251577,
+        0.6785714285714286,
+        0.5765999761251577,
+        0.9910312089651149,
+        0.32142857142857145,
+        0.9910312089651149,
+        0.30631873731649006,
+        0.9727272727272728,
+        0.41443123283995714
+      ],
+      "n_subjects": 5,
+      "target_labels": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "G"
+      ]
+    },
+    "M3": {
+      "mind": "belief_updating 0.80",
+      "label": "M3",
+      "completeness": "0.80",
+      "icc": 0.3833113049607891,
+      "icc_jk": [
+        0.3463695430046719,
+        0.45015972925101183,
+        0.4059510462017849,
+        0.28838913909665537,
+        0.3875492760564415,
+        0.45581236978005474,
+        0.33039578251632695
+      ],
+      "sem": 0.11863409130198468,
+      "sem_jk": [
+        0.1283186138744753,
+        0.11211452478009565,
+        0.11855659689222985,
+        0.11931610676406325,
+        0.11968987704341032,
+        0.12259418148237432,
+        0.10879338215167315
+      ],
+      "cv": [
+        0.1057250050804668,
+        0.25955199070543034,
+        0.1478688125473039,
+        0.37528924030524624,
+        0.3836895402719701,
+        0.3114073643365294,
+        0.08241669045265879
+      ],
+      "cv_mean": 0.23799266338565794,
+      "sd_channels": [
+        0.08584870412533903,
+        0.18947295321496416,
+        0.10853570840972107,
+        0.1801388353465182,
+        0.20489021450523204,
+        0.201791972090071,
+        0.06906518659932805
+      ],
+      "rank_mean": 0.474,
+      "rank_pairs": [
+        0.5946187253790689,
+        0.5818181818181818,
+        -0.10092167846991638,
+        0.4865062298556018,
+        0.9910312089651149,
+        0.14547859349066158,
+        0.8571428571428571,
+        0.11927107455535572,
+        0.8468812149338254,
+        0.21821789023599236
+      ],
+      "n_subjects": 5,
+      "target_labels": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "G"
+      ]
+    },
+    "M4": {
+      "mind": "intact (no perturbation)",
+      "label": "M4",
+      "completeness": "1.00",
+      "icc": 0.29767645769399614,
+      "icc_jk": [
+        0.2638494848439625,
+        0.3138936535162974,
+        0.301950329732007,
+        0.3121800053893854,
+        0.3865948533812107,
+        0.26565067981473367,
+        0.28299060329565723
+      ],
+      "sem": 0.026313132697969376,
+      "sem_jk": [
+        0.02818391976523724,
+        0.028166173565703338,
+        0.02815433655170486,
+        0.028101008285587512,
+        0.013416407864998729,
+        0.02750757471437024,
+        0.027202941017470835
+      ],
+      "cv": [
+        0.03085737298119902,
+        0.03595552893906998,
+        0.029496192327742993,
+        0.02430435357475204,
+        0.0949850107291487,
+        0.033511217786467276,
+        0.013312444254256412
+      ],
+      "cv_mean": 0.03748887437037663,
+      "sd_channels": [
+        0.028635642126552688,
+        0.03286335345030997,
+        0.027018512172212582,
+        0.021679483388678818,
+        0.08111719916269297,
+        0.02915475947422653,
+        0.012247448713915901
+      ],
+      "rank_mean": 0.6351,
+      "rank_pairs": [
+        0.02010075630518424,
+        0.5781515884776753,
+        0.41586342329095943,
+        0.39277665953249347,
+        0.7981987297166114,
+        0.6881023532039754,
+        0.785355471607104,
+        0.8611111111111112,
+        0.9058216273156766,
+        0.9058216273156766
+      ],
+      "n_subjects": 5,
+      "target_labels": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "G"
+      ]
+    }
+  },
+  "affected_dimension_identification": {
+    "tau": 0.2,
+    "rule": "a phenotype channel is flagged in a replicate when its reading falls >= tau below the control channel in that same replicate; Jaccard(empty, empty) = 1",
+    "plotted": false,
+    "by_mind_setting": {
+      "M1": {
+        "mind": "belief_updating 0.30",
+        "label": "M1",
+        "completeness": "0.30",
+        "n_replicates": 5,
+        "tau": 0.2,
+        "jaccard": [
+          0.5,
+          0.6666666666666666,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.75,
+          0.6666666666666666,
+          0.6666666666666666,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "flag_agree": [
+          0.5,
+          0.6666666666666666,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.8333333333333334,
+          0.8333333333333334,
+          0.8333333333333334,
+          0.6666666666666666,
+          0.6666666666666666,
+          1.0
+        ],
+        "detect_rate": {
+          "social_interaction_motivation": 0.4,
+          "social_cognition": 0.2,
+          "social_communication_pragmatics": 0.2,
+          "cognitive_flexibility_adaptation": 1.0,
+          "repetitive_restricted_behavior": 1.0,
+          "novelty_uncertainty_sensory_behavior": 0.6
+        },
+        "rank_rho": [
+          0.6767633692869746,
+          0.9710083124552245,
+          0.7015706849811753,
+          0.9710083124552245,
+          0.6,
+          0.5,
+          1.0,
+          0.8,
+          0.6,
+          0.5
+        ],
+        "union": [
+          "cognitive_flexibility_adaptation",
+          "novelty_uncertainty_sensory_behavior",
+          "repetitive_restricted_behavior",
+          "social_cognition",
+          "social_communication_pragmatics",
+          "social_interaction_motivation"
+        ],
+        "flags": {
+          "M1": [
+            "cognitive_flexibility_adaptation",
+            "repetitive_restricted_behavior"
+          ]
+        }
+      },
+      "M2": {
+        "mind": "belief_updating 0.40",
+        "label": "M2",
+        "completeness": "0.40",
+        "n_replicates": 5,
+        "tau": 0.2,
+        "jaccard": [
+          1.0,
+          0.6666666666666666,
+          0.4,
+          1.0,
+          0.6666666666666666,
+          0.4,
+          1.0,
+          0.6,
+          0.6666666666666666,
+          0.4
+        ],
+        "flag_agree": [
+          1.0,
+          0.8333333333333334,
+          0.5,
+          1.0,
+          0.8333333333333334,
+          0.5,
+          1.0,
+          0.6666666666666666,
+          0.8333333333333334,
+          0.5
+        ],
+        "detect_rate": {
+          "social_interaction_motivation": 0.2,
+          "social_cognition": 0.2,
+          "social_communication_pragmatics": 0.0,
+          "cognitive_flexibility_adaptation": 1.0,
+          "repetitive_restricted_behavior": 1.0,
+          "novelty_uncertainty_sensory_behavior": 0.4
+        },
+        "rank_rho": [
+          1.0,
+          1.0,
+          0.4,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "union": [
+          "cognitive_flexibility_adaptation",
+          "novelty_uncertainty_sensory_behavior",
+          "repetitive_restricted_behavior",
+          "social_cognition",
+          "social_interaction_motivation"
+        ],
+        "flags": {
+          "M2": [
+            "cognitive_flexibility_adaptation",
+            "repetitive_restricted_behavior"
+          ]
+        }
+      },
+      "M3": {
+        "mind": "belief_updating 0.80",
+        "label": "M3",
+        "completeness": "0.80",
+        "n_replicates": 5,
+        "tau": 0.2,
+        "jaccard": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.5,
+          0.0,
+          0.5,
+          0.2,
+          0.6,
+          0.2
+        ],
+        "flag_agree": [
+          0.6666666666666666,
+          0.3333333333333333,
+          0.6666666666666666,
+          0.3333333333333333,
+          0.6666666666666666,
+          0.3333333333333333,
+          0.6666666666666666,
+          0.3333333333333333,
+          0.6666666666666666,
+          0.3333333333333333
+        ],
+        "detect_rate": {
+          "social_interaction_motivation": 0.0,
+          "social_cognition": 0.4,
+          "social_communication_pragmatics": 0.4,
+          "cognitive_flexibility_adaptation": 0.6,
+          "repetitive_restricted_behavior": 0.6,
+          "novelty_uncertainty_sensory_behavior": 0.4
+        },
+        "rank_rho": [
+          1.0,
+          0.8888888888888888,
+          -0.5,
+          1.0,
+          0.9486832980505138,
+          -0.8,
+          1.0,
+          -0.9210526315789473,
+          0.872081599272381,
+          -0.7181848464596079
+        ],
+        "union": [
+          "cognitive_flexibility_adaptation",
+          "novelty_uncertainty_sensory_behavior",
+          "repetitive_restricted_behavior",
+          "social_cognition",
+          "social_communication_pragmatics"
+        ],
+        "flags": {
+          "M3": [
+            "cognitive_flexibility_adaptation",
+            "novelty_uncertainty_sensory_behavior",
+            "repetitive_restricted_behavior",
+            "social_cognition"
+          ]
+        }
+      },
+      "M4": {
+        "mind": "intact (no perturbation)",
+        "label": "M4",
+        "completeness": "1.00",
+        "n_replicates": 5,
+        "tau": 0.2,
+        "jaccard": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "flag_agree": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "detect_rate": {
+          "social_interaction_motivation": 0.0,
+          "social_cognition": 0.0,
+          "social_communication_pragmatics": 0.0,
+          "cognitive_flexibility_adaptation": 0.0,
+          "repetitive_restricted_behavior": 0.0,
+          "novelty_uncertainty_sensory_behavior": 0.0
+        },
+        "rank_rho": [
+          -0.8660254037844387,
+          0.5,
+          0.0,
+          -0.8660254037844387,
+          0.0,
+          0.5,
+          1.0,
+          0.8660254037844387,
+          0.0,
+          0.5
+        ],
+        "union": [],
+        "flags": {
+          "M4": []
+        }
+      }
+    }
+  },
+  "affected_rank": {
+    "rule": "per replicate, the 6 phenotype channels ranked by reading ascending (= by deficit-from-control descending); rank 1 = most affected. Ties get the average rank. Top-2 = the two smallest readings, ties broken by DIM order. top2_by_replicate is rank-ordered: index 0 = top-1 (red on the figure), index 1 = top-2 (blue).",
+    "by_mind_setting": {
+      "M1": {
+        "theta": 0.3,
+        "avg_rank": {
+          "social_interaction_motivation": 4.3,
+          "social_cognition": 5.2,
+          "social_communication_pragmatics": 5.1,
+          "cognitive_flexibility_adaptation": 1.5,
+          "repetitive_restricted_behavior": 1.5,
+          "novelty_uncertainty_sensory_behavior": 3.4
+        },
+        "top2_by_replicate": {
+          "0": [
+            "cognitive_flexibility_adaptation",
+            "repetitive_restricted_behavior"
+          ],
+          "1": [
+            "cognitive_flexibility_adaptation",
+            "repetitive_restricted_behavior"
+          ],
+          "2": [
+            "repetitive_restricted_behavior",
+            "cognitive_flexibility_adaptation"
+          ],
+          "3": [
+            "repetitive_restricted_behavior",
+            "cognitive_flexibility_adaptation"
+          ],
+          "4": [
+            "cognitive_flexibility_adaptation",
+            "repetitive_restricted_behavior"
+          ]
+        },
+        "top2_counts": {
+          "social_interaction_motivation": 0.0,
+          "social_cognition": 0.0,
+          "social_communication_pragmatics": 0.0,
+          "cognitive_flexibility_adaptation": 1.0,
+          "repetitive_restricted_behavior": 1.0,
+          "novelty_uncertainty_sensory_behavior": 0.0
+        }
+      },
+      "M2": {
+        "theta": 0.4,
+        "avg_rank": {
+          "social_interaction_motivation": 4.4,
+          "social_cognition": 4.6,
+          "social_communication_pragmatics": 5.4,
+          "cognitive_flexibility_adaptation": 1.6,
+          "repetitive_restricted_behavior": 1.8,
+          "novelty_uncertainty_sensory_behavior": 3.2
+        },
+        "top2_by_replicate": {
+          "0": [
+            "cognitive_flexibility_adaptation",
+            "repetitive_restricted_behavior"
+          ],
+          "1": [
+            "cognitive_flexibility_adaptation",
+            "repetitive_restricted_behavior"
+          ],
+          "2": [
+            "cognitive_flexibility_adaptation",
+            "repetitive_restricted_behavior"
+          ],
+          "3": [
+            "repetitive_restricted_behavior",
+            "social_cognition"
+          ],
+          "4": [
+            "cognitive_flexibility_adaptation",
+            "repetitive_restricted_behavior"
+          ]
+        },
+        "top2_counts": {
+          "social_interaction_motivation": 0.0,
+          "social_cognition": 0.2,
+          "social_communication_pragmatics": 0.0,
+          "cognitive_flexibility_adaptation": 0.8,
+          "repetitive_restricted_behavior": 1.0,
+          "novelty_uncertainty_sensory_behavior": 0.0
+        }
+      },
+      "M3": {
+        "theta": 0.8,
+        "avg_rank": {
+          "social_interaction_motivation": 5.4,
+          "social_cognition": 4.4,
+          "social_communication_pragmatics": 3.9,
+          "cognitive_flexibility_adaptation": 1.6,
+          "repetitive_restricted_behavior": 2.5,
+          "novelty_uncertainty_sensory_behavior": 3.2
+        },
+        "top2_by_replicate": {
+          "0": [
+            "cognitive_flexibility_adaptation",
+            "repetitive_restricted_behavior"
+          ],
+          "1": [
+            "cognitive_flexibility_adaptation",
+            "repetitive_restricted_behavior"
+          ],
+          "2": [
+            "cognitive_flexibility_adaptation",
+            "repetitive_restricted_behavior"
+          ],
+          "3": [
+            "social_cognition",
+            "social_communication_pragmatics"
+          ],
+          "4": [
+            "cognitive_flexibility_adaptation",
+            "repetitive_restricted_behavior"
+          ]
+        },
+        "top2_counts": {
+          "social_interaction_motivation": 0.0,
+          "social_cognition": 0.2,
+          "social_communication_pragmatics": 0.2,
+          "cognitive_flexibility_adaptation": 0.8,
+          "repetitive_restricted_behavior": 0.8,
+          "novelty_uncertainty_sensory_behavior": 0.0
+        }
+      },
+      "M4": {
+        "theta": 1.0,
+        "avg_rank": {
+          "social_interaction_motivation": 5.6,
+          "social_cognition": 4.2,
+          "social_communication_pragmatics": 4.6,
+          "cognitive_flexibility_adaptation": 2.9,
+          "repetitive_restricted_behavior": 2.2,
+          "novelty_uncertainty_sensory_behavior": 1.5
+        },
+        "top2_by_replicate": {
+          "0": [
+            "cognitive_flexibility_adaptation",
+            "novelty_uncertainty_sensory_behavior"
+          ],
+          "1": [
+            "repetitive_restricted_behavior",
+            "novelty_uncertainty_sensory_behavior"
+          ],
+          "2": [
+            "novelty_uncertainty_sensory_behavior",
+            "cognitive_flexibility_adaptation"
+          ],
+          "3": [
+            "novelty_uncertainty_sensory_behavior",
+            "repetitive_restricted_behavior"
+          ],
+          "4": [
+            "repetitive_restricted_behavior",
+            "novelty_uncertainty_sensory_behavior"
+          ]
+        },
+        "top2_counts": {
+          "social_interaction_motivation": 0.0,
+          "social_cognition": 0.0,
+          "social_communication_pragmatics": 0.0,
+          "cognitive_flexibility_adaptation": 0.4,
+          "repetitive_restricted_behavior": 0.6,
+          "novelty_uncertainty_sensory_behavior": 1.0
+        }
+      }
+    }
+  },
+  "profile_value_ranges_by_mind": {
+    "rule": "per (condition × mind setting × channel): min / median / max over every raw reading in that cell (k = the arm's replicate count), no trimming. This is what panel C plots.",
+    "by_condition": {
+      "axis1_same_brain": {
+        "M1": {
+          "social_interaction_motivation": {
+            "min": 0.3,
+            "median": 0.65,
+            "max": 0.8,
+            "n_readings": 5
+          },
+          "social_cognition": {
+            "min": 0.55,
+            "median": 0.68,
+            "max": 0.78,
+            "n_readings": 5
+          },
+          "social_communication_pragmatics": {
+            "min": 0.55,
+            "median": 0.62,
+            "max": 0.76,
+            "n_readings": 5
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.2,
+            "median": 0.22,
+            "max": 0.3,
+            "n_readings": 5
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.18,
+            "median": 0.22,
+            "max": 0.32,
+            "n_readings": 5
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.45,
+            "median": 0.45,
+            "max": 0.65,
+            "n_readings": 5
+          },
+          "general_cognition": {
+            "min": 0.58,
+            "median": 0.75,
+            "max": 0.88,
+            "n_readings": 5
+          }
+        },
+        "M2": {
+          "social_interaction_motivation": {
+            "min": 0.62,
+            "median": 0.68,
+            "max": 0.7,
+            "n_readings": 5
+          },
+          "social_cognition": {
+            "min": 0.42,
+            "median": 0.82,
+            "max": 0.82,
+            "n_readings": 5
+          },
+          "social_communication_pragmatics": {
+            "min": 0.7,
+            "median": 0.72,
+            "max": 0.82,
+            "n_readings": 5
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.27,
+            "median": 0.3,
+            "max": 0.62,
+            "n_readings": 5
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.28,
+            "median": 0.35,
+            "max": 0.55,
+            "n_readings": 5
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.45,
+            "median": 0.58,
+            "max": 0.65,
+            "n_readings": 5
+          },
+          "general_cognition": {
+            "min": 0.55,
+            "median": 0.78,
+            "max": 0.9,
+            "n_readings": 5
+          }
+        },
+        "M3": {
+          "social_interaction_motivation": {
+            "min": 0.72,
+            "median": 0.85,
+            "max": 0.9,
+            "n_readings": 5
+          },
+          "social_cognition": {
+            "min": 0.45,
+            "median": 0.82,
+            "max": 0.88,
+            "n_readings": 5
+          },
+          "social_communication_pragmatics": {
+            "min": 0.62,
+            "median": 0.74,
+            "max": 0.86,
+            "n_readings": 5
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.25,
+            "median": 0.52,
+            "max": 0.7,
+            "n_readings": 5
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.28,
+            "median": 0.62,
+            "max": 0.72,
+            "n_readings": 5
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.38,
+            "median": 0.7,
+            "max": 0.84,
+            "n_readings": 5
+          },
+          "general_cognition": {
+            "min": 0.72,
+            "median": 0.85,
+            "max": 0.9,
+            "n_readings": 5
+          }
+        },
+        "M4": {
+          "social_interaction_motivation": {
+            "min": 0.88,
+            "median": 0.93,
+            "max": 0.95,
+            "n_readings": 5
+          },
+          "social_cognition": {
+            "min": 0.86,
+            "median": 0.92,
+            "max": 0.95,
+            "n_readings": 5
+          },
+          "social_communication_pragmatics": {
+            "min": 0.88,
+            "median": 0.92,
+            "max": 0.95,
+            "n_readings": 5
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.87,
+            "median": 0.9,
+            "max": 0.92,
+            "n_readings": 5
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.76,
+            "median": 0.88,
+            "max": 0.95,
+            "n_readings": 5
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.85,
+            "median": 0.86,
+            "max": 0.92,
+            "n_readings": 5
+          },
+          "general_cognition": {
+            "min": 0.9,
+            "median": 0.92,
+            "max": 0.93,
+            "n_readings": 5
+          }
+        }
+      },
+      "axis2_brain_pro": {
+        "M1": {
+          "social_interaction_motivation": {
+            "min": 0.85,
+            "median": 0.9,
+            "max": 0.92,
+            "n_readings": 5
+          },
+          "social_cognition": {
+            "min": 0.85,
+            "median": 0.9,
+            "max": 0.92,
+            "n_readings": 5
+          },
+          "social_communication_pragmatics": {
+            "min": 0.85,
+            "median": 0.88,
+            "max": 0.9,
+            "n_readings": 5
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.62,
+            "median": 0.68,
+            "max": 0.72,
+            "n_readings": 5
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.64,
+            "median": 0.7,
+            "max": 0.8,
+            "n_readings": 5
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.68,
+            "median": 0.85,
+            "max": 0.85,
+            "n_readings": 5
+          },
+          "general_cognition": {
+            "min": 0.88,
+            "median": 0.92,
+            "max": 0.95,
+            "n_readings": 5
+          }
+        },
+        "M2": {
+          "social_interaction_motivation": {
+            "min": 0.85,
+            "median": 0.9,
+            "max": 0.94,
+            "n_readings": 5
+          },
+          "social_cognition": {
+            "min": 0.8,
+            "median": 0.88,
+            "max": 0.9,
+            "n_readings": 5
+          },
+          "social_communication_pragmatics": {
+            "min": 0.87,
+            "median": 0.88,
+            "max": 0.92,
+            "n_readings": 5
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.56,
+            "median": 0.78,
+            "max": 0.8,
+            "n_readings": 5
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.66,
+            "median": 0.7,
+            "max": 0.85,
+            "n_readings": 5
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.76,
+            "median": 0.85,
+            "max": 0.9,
+            "n_readings": 5
+          },
+          "general_cognition": {
+            "min": 0.88,
+            "median": 0.92,
+            "max": 0.93,
+            "n_readings": 5
+          }
+        },
+        "M3": {
+          "social_interaction_motivation": {
+            "min": 0.82,
+            "median": 0.9,
+            "max": 0.93,
+            "n_readings": 5
+          },
+          "social_cognition": {
+            "min": 0.88,
+            "median": 0.92,
+            "max": 0.95,
+            "n_readings": 5
+          },
+          "social_communication_pragmatics": {
+            "min": 0.86,
+            "median": 0.9,
+            "max": 0.92,
+            "n_readings": 5
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.68,
+            "median": 0.84,
+            "max": 0.85,
+            "n_readings": 5
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.62,
+            "median": 0.78,
+            "max": 0.88,
+            "n_readings": 5
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.72,
+            "median": 0.88,
+            "max": 0.9,
+            "n_readings": 5
+          },
+          "general_cognition": {
+            "min": 0.92,
+            "median": 0.93,
+            "max": 0.96,
+            "n_readings": 5
+          }
+        },
+        "M4": {
+          "social_interaction_motivation": {
+            "min": 0.88,
+            "median": 0.92,
+            "max": 0.95,
+            "n_readings": 5
+          },
+          "social_cognition": {
+            "min": 0.9,
+            "median": 0.93,
+            "max": 0.95,
+            "n_readings": 5
+          },
+          "social_communication_pragmatics": {
+            "min": 0.88,
+            "median": 0.92,
+            "max": 0.94,
+            "n_readings": 5
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.84,
+            "median": 0.92,
+            "max": 0.95,
+            "n_readings": 5
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.78,
+            "median": 0.85,
+            "max": 0.95,
+            "n_readings": 5
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.8,
+            "median": 0.88,
+            "max": 0.92,
+            "n_readings": 5
+          },
+          "general_cognition": {
+            "min": 0.9,
+            "median": 0.95,
+            "max": 0.95,
+            "n_readings": 5
+          }
+        }
+      },
+      "axis3_analyst_pro": {
+        "M1": {
+          "social_interaction_motivation": {
+            "min": 0.78,
+            "median": 0.9,
+            "max": 0.95,
+            "n_readings": 3
+          },
+          "social_cognition": {
+            "min": 0.4,
+            "median": 0.6,
+            "max": 0.82,
+            "n_readings": 3
+          },
+          "social_communication_pragmatics": {
+            "min": 0.7,
+            "median": 0.9,
+            "max": 0.94,
+            "n_readings": 3
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.32,
+            "median": 0.36,
+            "max": 0.55,
+            "n_readings": 3
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.28,
+            "median": 0.32,
+            "max": 0.58,
+            "n_readings": 3
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.45,
+            "median": 0.58,
+            "max": 0.95,
+            "n_readings": 3
+          },
+          "general_cognition": {
+            "min": 0.85,
+            "median": 0.88,
+            "max": 0.96,
+            "n_readings": 3
+          }
+        },
+        "M2": {
+          "social_interaction_motivation": {
+            "min": 0.72,
+            "median": 0.88,
+            "max": 0.95,
+            "n_readings": 3
+          },
+          "social_cognition": {
+            "min": 0.8,
+            "median": 0.88,
+            "max": 0.93,
+            "n_readings": 3
+          },
+          "social_communication_pragmatics": {
+            "min": 0.92,
+            "median": 0.92,
+            "max": 0.96,
+            "n_readings": 3
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.48,
+            "median": 0.55,
+            "max": 0.76,
+            "n_readings": 3
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.35,
+            "median": 0.6,
+            "max": 0.74,
+            "n_readings": 3
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.76,
+            "median": 0.8,
+            "max": 0.83,
+            "n_readings": 3
+          },
+          "general_cognition": {
+            "min": 0.86,
+            "median": 0.95,
+            "max": 0.96,
+            "n_readings": 3
+          }
+        },
+        "M3": {
+          "social_interaction_motivation": {
+            "min": 0.88,
+            "median": 0.95,
+            "max": 0.96,
+            "n_readings": 3
+          },
+          "social_cognition": {
+            "min": 0.9,
+            "median": 0.92,
+            "max": 0.96,
+            "n_readings": 3
+          },
+          "social_communication_pragmatics": {
+            "min": 0.88,
+            "median": 0.93,
+            "max": 0.95,
+            "n_readings": 3
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.55,
+            "median": 0.72,
+            "max": 0.8,
+            "n_readings": 3
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.5,
+            "median": 0.76,
+            "max": 0.78,
+            "n_readings": 3
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.6,
+            "median": 0.88,
+            "max": 0.88,
+            "n_readings": 3
+          },
+          "general_cognition": {
+            "min": 0.92,
+            "median": 0.97,
+            "max": 0.98,
+            "n_readings": 3
+          }
+        },
+        "M4": {
+          "social_interaction_motivation": {
+            "min": 0.95,
+            "median": 0.95,
+            "max": 0.98,
+            "n_readings": 3
+          },
+          "social_cognition": {
+            "min": 0.94,
+            "median": 0.96,
+            "max": 0.99,
+            "n_readings": 3
+          },
+          "social_communication_pragmatics": {
+            "min": 0.93,
+            "median": 0.95,
+            "max": 0.98,
+            "n_readings": 3
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.78,
+            "median": 0.94,
+            "max": 0.96,
+            "n_readings": 3
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.7,
+            "median": 0.96,
+            "max": 0.99,
+            "n_readings": 3
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.88,
+            "median": 0.94,
+            "max": 0.94,
+            "n_readings": 3
+          },
+          "general_cognition": {
+            "min": 0.95,
+            "median": 0.97,
+            "max": 0.99,
+            "n_readings": 3
+          }
+        }
+      },
+      "axis3_examiner_pro": {
+        "M1": {
+          "social_interaction_motivation": {
+            "min": 0.78,
+            "median": 0.85,
+            "max": 0.85,
+            "n_readings": 3
+          },
+          "social_cognition": {
+            "min": 0.32,
+            "median": 0.52,
+            "max": 0.8,
+            "n_readings": 3
+          },
+          "social_communication_pragmatics": {
+            "min": 0.62,
+            "median": 0.78,
+            "max": 0.8,
+            "n_readings": 3
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.22,
+            "median": 0.3,
+            "max": 0.68,
+            "n_readings": 3
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.5,
+            "median": 0.5,
+            "max": 0.62,
+            "n_readings": 3
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.55,
+            "median": 0.78,
+            "max": 0.78,
+            "n_readings": 3
+          },
+          "general_cognition": {
+            "min": 0.78,
+            "median": 0.85,
+            "max": 0.85,
+            "n_readings": 3
+          }
+        },
+        "M2": {
+          "social_interaction_motivation": {
+            "min": 0.45,
+            "median": 0.55,
+            "max": 0.55,
+            "n_readings": 3
+          },
+          "social_cognition": {
+            "min": 0.4,
+            "median": 0.5,
+            "max": 0.55,
+            "n_readings": 3
+          },
+          "social_communication_pragmatics": {
+            "min": 0.5,
+            "median": 0.55,
+            "max": 0.62,
+            "n_readings": 3
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.2,
+            "median": 0.22,
+            "max": 0.35,
+            "n_readings": 3
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.2,
+            "median": 0.22,
+            "max": 0.28,
+            "n_readings": 3
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.32,
+            "median": 0.38,
+            "max": 0.4,
+            "n_readings": 3
+          },
+          "general_cognition": {
+            "min": 0.68,
+            "median": 0.72,
+            "max": 0.78,
+            "n_readings": 3
+          }
+        },
+        "M3": {
+          "social_interaction_motivation": {
+            "min": 0.5,
+            "median": 0.85,
+            "max": 0.88,
+            "n_readings": 3
+          },
+          "social_cognition": {
+            "min": 0.68,
+            "median": 0.9,
+            "max": 0.92,
+            "n_readings": 3
+          },
+          "social_communication_pragmatics": {
+            "min": 0.58,
+            "median": 0.88,
+            "max": 0.88,
+            "n_readings": 3
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.25,
+            "median": 0.76,
+            "max": 0.8,
+            "n_readings": 3
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.28,
+            "median": 0.68,
+            "max": 0.78,
+            "n_readings": 3
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.42,
+            "median": 0.78,
+            "max": 0.82,
+            "n_readings": 3
+          },
+          "general_cognition": {
+            "min": 0.88,
+            "median": 0.88,
+            "max": 0.9,
+            "n_readings": 3
+          }
+        },
+        "M4": {
+          "social_interaction_motivation": {
+            "min": 0.91,
+            "median": 0.92,
+            "max": 0.92,
+            "n_readings": 3
+          },
+          "social_cognition": {
+            "min": 0.89,
+            "median": 0.9,
+            "max": 0.9,
+            "n_readings": 3
+          },
+          "social_communication_pragmatics": {
+            "min": 0.9,
+            "median": 0.9,
+            "max": 0.92,
+            "n_readings": 3
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.84,
+            "median": 0.9,
+            "max": 0.93,
+            "n_readings": 3
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.8,
+            "median": 0.88,
+            "max": 0.94,
+            "n_readings": 3
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.86,
+            "median": 0.87,
+            "max": 0.88,
+            "n_readings": 3
+          },
+          "general_cognition": {
+            "min": 0.9,
+            "median": 0.9,
+            "max": 0.93,
+            "n_readings": 3
+          }
+        }
+      },
+      "axis3_probe_seed7": {
+        "M1": {
+          "social_interaction_motivation": {
+            "min": 0.25,
+            "median": 0.72,
+            "max": 0.72,
+            "n_readings": 3
+          },
+          "social_cognition": {
+            "min": 0.3,
+            "median": 0.62,
+            "max": 0.7,
+            "n_readings": 3
+          },
+          "social_communication_pragmatics": {
+            "min": 0.25,
+            "median": 0.8,
+            "max": 0.8,
+            "n_readings": 3
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.12,
+            "median": 0.3,
+            "max": 0.35,
+            "n_readings": 3
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.1,
+            "median": 0.28,
+            "max": 0.35,
+            "n_readings": 3
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.38,
+            "median": 0.48,
+            "max": 0.55,
+            "n_readings": 3
+          },
+          "general_cognition": {
+            "min": 0.68,
+            "median": 0.7,
+            "max": 0.88,
+            "n_readings": 3
+          }
+        },
+        "M2": {
+          "social_interaction_motivation": {
+            "min": 0.6,
+            "median": 0.62,
+            "max": 0.76,
+            "n_readings": 3
+          },
+          "social_cognition": {
+            "min": 0.72,
+            "median": 0.72,
+            "max": 0.85,
+            "n_readings": 3
+          },
+          "social_communication_pragmatics": {
+            "min": 0.58,
+            "median": 0.7,
+            "max": 0.76,
+            "n_readings": 3
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.22,
+            "median": 0.25,
+            "max": 0.32,
+            "n_readings": 3
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.18,
+            "median": 0.28,
+            "max": 0.3,
+            "n_readings": 3
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.32,
+            "median": 0.46,
+            "max": 0.48,
+            "n_readings": 3
+          },
+          "general_cognition": {
+            "min": 0.72,
+            "median": 0.8,
+            "max": 0.85,
+            "n_readings": 3
+          }
+        },
+        "M3": {
+          "social_interaction_motivation": {
+            "min": 0.78,
+            "median": 0.86,
+            "max": 0.88,
+            "n_readings": 3
+          },
+          "social_cognition": {
+            "min": 0.72,
+            "median": 0.78,
+            "max": 0.82,
+            "n_readings": 3
+          },
+          "social_communication_pragmatics": {
+            "min": 0.74,
+            "median": 0.8,
+            "max": 0.85,
+            "n_readings": 3
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.42,
+            "median": 0.62,
+            "max": 0.68,
+            "n_readings": 3
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.45,
+            "median": 0.62,
+            "max": 0.76,
+            "n_readings": 3
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.55,
+            "median": 0.76,
+            "max": 0.78,
+            "n_readings": 3
+          },
+          "general_cognition": {
+            "min": 0.74,
+            "median": 0.88,
+            "max": 0.9,
+            "n_readings": 3
+          }
+        },
+        "M4": {
+          "social_interaction_motivation": {
+            "min": 0.9,
+            "median": 0.92,
+            "max": 0.93,
+            "n_readings": 3
+          },
+          "social_cognition": {
+            "min": 0.9,
+            "median": 0.93,
+            "max": 0.95,
+            "n_readings": 3
+          },
+          "social_communication_pragmatics": {
+            "min": 0.92,
+            "median": 0.92,
+            "max": 0.93,
+            "n_readings": 3
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.88,
+            "median": 0.88,
+            "max": 0.9,
+            "n_readings": 3
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.78,
+            "median": 0.84,
+            "max": 0.88,
+            "n_readings": 3
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.84,
+            "median": 0.85,
+            "max": 0.88,
+            "n_readings": 3
+          },
+          "general_cognition": {
+            "min": 0.92,
+            "median": 0.92,
+            "max": 0.95,
+            "n_readings": 3
+          }
+        }
+      },
+      "axis4_turns_100": {
+        "M1": {
+          "social_interaction_motivation": {
+            "min": 0.42,
+            "median": 0.65,
+            "max": 0.82,
+            "n_readings": 5
+          },
+          "social_cognition": {
+            "min": 0.55,
+            "median": 0.68,
+            "max": 0.8,
+            "n_readings": 5
+          },
+          "social_communication_pragmatics": {
+            "min": 0.58,
+            "median": 0.7,
+            "max": 0.76,
+            "n_readings": 5
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.22,
+            "median": 0.35,
+            "max": 0.55,
+            "n_readings": 5
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.2,
+            "median": 0.3,
+            "max": 0.45,
+            "n_readings": 5
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.32,
+            "median": 0.42,
+            "max": 0.68,
+            "n_readings": 5
+          },
+          "general_cognition": {
+            "min": 0.72,
+            "median": 0.85,
+            "max": 0.9,
+            "n_readings": 5
+          }
+        },
+        "M2": {
+          "social_interaction_motivation": {
+            "min": 0.62,
+            "median": 0.72,
+            "max": 0.88,
+            "n_readings": 5
+          },
+          "social_cognition": {
+            "min": 0.28,
+            "median": 0.8,
+            "max": 0.88,
+            "n_readings": 5
+          },
+          "social_communication_pragmatics": {
+            "min": 0.52,
+            "median": 0.8,
+            "max": 0.85,
+            "n_readings": 5
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.22,
+            "median": 0.42,
+            "max": 0.58,
+            "n_readings": 5
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.18,
+            "median": 0.35,
+            "max": 0.55,
+            "n_readings": 5
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.42,
+            "median": 0.52,
+            "max": 0.72,
+            "n_readings": 5
+          },
+          "general_cognition": {
+            "min": 0.62,
+            "median": 0.88,
+            "max": 0.92,
+            "n_readings": 5
+          }
+        },
+        "M3": {
+          "social_interaction_motivation": {
+            "min": 0.15,
+            "median": 0.85,
+            "max": 0.88,
+            "n_readings": 5
+          },
+          "social_cognition": {
+            "min": 0.62,
+            "median": 0.78,
+            "max": 0.92,
+            "n_readings": 5
+          },
+          "social_communication_pragmatics": {
+            "min": 0.45,
+            "median": 0.8,
+            "max": 0.85,
+            "n_readings": 5
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.25,
+            "median": 0.35,
+            "max": 0.65,
+            "n_readings": 5
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.25,
+            "median": 0.5,
+            "max": 0.55,
+            "n_readings": 5
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.45,
+            "median": 0.515,
+            "max": 0.58,
+            "n_readings": 4
+          },
+          "general_cognition": {
+            "min": 0.78,
+            "median": 0.85,
+            "max": 0.92,
+            "n_readings": 5
+          }
+        },
+        "M4": {
+          "social_interaction_motivation": {
+            "min": 0.9,
+            "median": 0.92,
+            "max": 0.92,
+            "n_readings": 5
+          },
+          "social_cognition": {
+            "min": 0.9,
+            "median": 0.9,
+            "max": 0.93,
+            "n_readings": 5
+          },
+          "social_communication_pragmatics": {
+            "min": 0.88,
+            "median": 0.9,
+            "max": 0.92,
+            "n_readings": 5
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.78,
+            "median": 0.82,
+            "max": 0.9,
+            "n_readings": 5
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.68,
+            "median": 0.72,
+            "max": 0.91,
+            "n_readings": 5
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.82,
+            "median": 0.82,
+            "max": 0.86,
+            "n_readings": 5
+          },
+          "general_cognition": {
+            "min": 0.9,
+            "median": 0.92,
+            "max": 0.93,
+            "n_readings": 5
+          }
+        }
+      },
+      "axis4_turns_25": {
+        "M1": {
+          "social_interaction_motivation": {
+            "min": 0.3,
+            "median": 0.6,
+            "max": 0.72,
+            "n_readings": 5
+          },
+          "social_cognition": {
+            "min": 0.45,
+            "median": 0.45,
+            "max": 0.6,
+            "n_readings": 5
+          },
+          "social_communication_pragmatics": {
+            "min": 0.42,
+            "median": 0.58,
+            "max": 0.66,
+            "n_readings": 5
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.18,
+            "median": 0.25,
+            "max": 0.5,
+            "n_readings": 5
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.2,
+            "median": 0.38,
+            "max": 0.6,
+            "n_readings": 5
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.42,
+            "median": 0.55,
+            "max": 0.8,
+            "n_readings": 5
+          },
+          "general_cognition": {
+            "min": 0.52,
+            "median": 0.7,
+            "max": 0.85,
+            "n_readings": 5
+          }
+        },
+        "M2": {
+          "social_interaction_motivation": {
+            "min": 0.65,
+            "median": 0.7,
+            "max": 0.85,
+            "n_readings": 5
+          },
+          "social_cognition": {
+            "min": 0.48,
+            "median": 0.62,
+            "max": 0.88,
+            "n_readings": 5
+          },
+          "social_communication_pragmatics": {
+            "min": 0.65,
+            "median": 0.68,
+            "max": 0.85,
+            "n_readings": 5
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.25,
+            "median": 0.45,
+            "max": 0.58,
+            "n_readings": 5
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.25,
+            "median": 0.35,
+            "max": 0.74,
+            "n_readings": 5
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.38,
+            "median": 0.55,
+            "max": 0.78,
+            "n_readings": 5
+          },
+          "general_cognition": {
+            "min": 0.72,
+            "median": 0.85,
+            "max": 0.9,
+            "n_readings": 5
+          }
+        },
+        "M3": {
+          "social_interaction_motivation": {
+            "min": 0.7,
+            "median": 0.74,
+            "max": 0.88,
+            "n_readings": 5
+          },
+          "social_cognition": {
+            "min": 0.62,
+            "median": 0.72,
+            "max": 0.85,
+            "n_readings": 5
+          },
+          "social_communication_pragmatics": {
+            "min": 0.76,
+            "median": 0.82,
+            "max": 0.85,
+            "n_readings": 5
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.55,
+            "median": 0.6,
+            "max": 0.9,
+            "n_readings": 5
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.45,
+            "median": 0.76,
+            "max": 0.95,
+            "n_readings": 5
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.75,
+            "median": 0.82,
+            "max": 0.88,
+            "n_readings": 5
+          },
+          "general_cognition": {
+            "min": 0.82,
+            "median": 0.86,
+            "max": 0.92,
+            "n_readings": 5
+          }
+        },
+        "M4": {
+          "social_interaction_motivation": {
+            "min": 0.9,
+            "median": 0.93,
+            "max": 0.96,
+            "n_readings": 5
+          },
+          "social_cognition": {
+            "min": 0.9,
+            "median": 0.9,
+            "max": 0.93,
+            "n_readings": 5
+          },
+          "social_communication_pragmatics": {
+            "min": 0.86,
+            "median": 0.91,
+            "max": 0.92,
+            "n_readings": 5
+          },
+          "cognitive_flexibility_adaptation": {
+            "min": 0.84,
+            "median": 0.88,
+            "max": 0.9,
+            "n_readings": 5
+          },
+          "repetitive_restricted_behavior": {
+            "min": 0.74,
+            "median": 0.88,
+            "max": 0.95,
+            "n_readings": 5
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "min": 0.76,
+            "median": 0.86,
+            "max": 0.92,
+            "n_readings": 5
+          },
+          "general_cognition": {
+            "min": 0.84,
+            "median": 0.92,
+            "max": 0.95,
+            "n_readings": 5
+          }
+        }
+      }
+    }
+  },
+  "profile_value_ranges": {
+    "rule": "per (condition × channel): min / median / max over every raw reading that channel took in that condition (4 θ levels × replicates, k=5 或 3), no trimming. The grey line drawn next to each channel is the same statistic for the shared same-brain reference arm.",
+    "by_condition": {
+      "axis1_same_brain": {
+        "social_interaction_motivation": {
+          "min": 0.3,
+          "median": 0.72,
+          "max": 0.95,
+          "n_readings": 20
+        },
+        "social_cognition": {
+          "min": 0.42,
+          "median": 0.82,
+          "max": 0.95,
+          "n_readings": 20
+        },
+        "social_communication_pragmatics": {
+          "min": 0.55,
+          "median": 0.75,
+          "max": 0.95,
+          "n_readings": 20
+        },
+        "cognitive_flexibility_adaptation": {
+          "min": 0.2,
+          "median": 0.375,
+          "max": 0.92,
+          "n_readings": 20
+        },
+        "repetitive_restricted_behavior": {
+          "min": 0.18,
+          "median": 0.375,
+          "max": 0.95,
+          "n_readings": 20
+        },
+        "novelty_uncertainty_sensory_behavior": {
+          "min": 0.38,
+          "median": 0.615,
+          "max": 0.92,
+          "n_readings": 20
+        },
+        "general_cognition": {
+          "min": 0.55,
+          "median": 0.85,
+          "max": 0.93,
+          "n_readings": 20
+        }
+      },
+      "axis2_brain_pro": {
+        "social_interaction_motivation": {
+          "min": 0.82,
+          "median": 0.9,
+          "max": 0.95,
+          "n_readings": 20
+        },
+        "social_cognition": {
+          "min": 0.8,
+          "median": 0.9,
+          "max": 0.95,
+          "n_readings": 20
+        },
+        "social_communication_pragmatics": {
+          "min": 0.85,
+          "median": 0.89,
+          "max": 0.94,
+          "n_readings": 20
+        },
+        "cognitive_flexibility_adaptation": {
+          "min": 0.56,
+          "median": 0.79,
+          "max": 0.95,
+          "n_readings": 20
+        },
+        "repetitive_restricted_behavior": {
+          "min": 0.62,
+          "median": 0.765,
+          "max": 0.95,
+          "n_readings": 20
+        },
+        "novelty_uncertainty_sensory_behavior": {
+          "min": 0.68,
+          "median": 0.85,
+          "max": 0.92,
+          "n_readings": 20
+        },
+        "general_cognition": {
+          "min": 0.88,
+          "median": 0.92,
+          "max": 0.96,
+          "n_readings": 20
+        }
+      },
+      "axis3_analyst_pro": {
+        "social_interaction_motivation": {
+          "min": 0.72,
+          "median": 0.95,
+          "max": 0.98,
+          "n_readings": 12
+        },
+        "social_cognition": {
+          "min": 0.4,
+          "median": 0.91,
+          "max": 0.99,
+          "n_readings": 12
+        },
+        "social_communication_pragmatics": {
+          "min": 0.7,
+          "median": 0.93,
+          "max": 0.98,
+          "n_readings": 12
+        },
+        "cognitive_flexibility_adaptation": {
+          "min": 0.32,
+          "median": 0.635,
+          "max": 0.96,
+          "n_readings": 12
+        },
+        "repetitive_restricted_behavior": {
+          "min": 0.28,
+          "median": 0.6499999999999999,
+          "max": 0.99,
+          "n_readings": 12
+        },
+        "novelty_uncertainty_sensory_behavior": {
+          "min": 0.45,
+          "median": 0.855,
+          "max": 0.95,
+          "n_readings": 12
+        },
+        "general_cognition": {
+          "min": 0.85,
+          "median": 0.955,
+          "max": 0.99,
+          "n_readings": 12
+        }
+      },
+      "axis3_examiner_pro": {
+        "social_interaction_motivation": {
+          "min": 0.45,
+          "median": 0.85,
+          "max": 0.92,
+          "n_readings": 12
+        },
+        "social_cognition": {
+          "min": 0.32,
+          "median": 0.74,
+          "max": 0.92,
+          "n_readings": 12
+        },
+        "social_communication_pragmatics": {
+          "min": 0.5,
+          "median": 0.79,
+          "max": 0.92,
+          "n_readings": 12
+        },
+        "cognitive_flexibility_adaptation": {
+          "min": 0.2,
+          "median": 0.515,
+          "max": 0.93,
+          "n_readings": 12
+        },
+        "repetitive_restricted_behavior": {
+          "min": 0.2,
+          "median": 0.56,
+          "max": 0.94,
+          "n_readings": 12
+        },
+        "novelty_uncertainty_sensory_behavior": {
+          "min": 0.32,
+          "median": 0.78,
+          "max": 0.88,
+          "n_readings": 12
+        },
+        "general_cognition": {
+          "min": 0.68,
+          "median": 0.865,
+          "max": 0.93,
+          "n_readings": 12
+        }
+      },
+      "axis3_probe_seed7": {
+        "social_interaction_motivation": {
+          "min": 0.25,
+          "median": 0.77,
+          "max": 0.93,
+          "n_readings": 12
+        },
+        "social_cognition": {
+          "min": 0.3,
+          "median": 0.75,
+          "max": 0.95,
+          "n_readings": 12
+        },
+        "social_communication_pragmatics": {
+          "min": 0.25,
+          "median": 0.8,
+          "max": 0.93,
+          "n_readings": 12
+        },
+        "cognitive_flexibility_adaptation": {
+          "min": 0.12,
+          "median": 0.385,
+          "max": 0.9,
+          "n_readings": 12
+        },
+        "repetitive_restricted_behavior": {
+          "min": 0.1,
+          "median": 0.4,
+          "max": 0.88,
+          "n_readings": 12
+        },
+        "novelty_uncertainty_sensory_behavior": {
+          "min": 0.32,
+          "median": 0.55,
+          "max": 0.88,
+          "n_readings": 12
+        },
+        "general_cognition": {
+          "min": 0.68,
+          "median": 0.865,
+          "max": 0.95,
+          "n_readings": 12
+        }
+      },
+      "axis4_turns_100": {
+        "social_interaction_motivation": {
+          "min": 0.15,
+          "median": 0.81,
+          "max": 0.92,
+          "n_readings": 20
+        },
+        "social_cognition": {
+          "min": 0.28,
+          "median": 0.8,
+          "max": 0.93,
+          "n_readings": 20
+        },
+        "social_communication_pragmatics": {
+          "min": 0.45,
+          "median": 0.8,
+          "max": 0.92,
+          "n_readings": 20
+        },
+        "cognitive_flexibility_adaptation": {
+          "min": 0.22,
+          "median": 0.45,
+          "max": 0.9,
+          "n_readings": 20
+        },
+        "repetitive_restricted_behavior": {
+          "min": 0.18,
+          "median": 0.45,
+          "max": 0.91,
+          "n_readings": 20
+        },
+        "novelty_uncertainty_sensory_behavior": {
+          "min": 0.32,
+          "median": 0.58,
+          "max": 0.86,
+          "n_readings": 19
+        },
+        "general_cognition": {
+          "min": 0.62,
+          "median": 0.89,
+          "max": 0.93,
+          "n_readings": 20
+        }
+      },
+      "axis4_turns_25": {
+        "social_interaction_motivation": {
+          "min": 0.3,
+          "median": 0.73,
+          "max": 0.96,
+          "n_readings": 20
+        },
+        "social_cognition": {
+          "min": 0.45,
+          "median": 0.7,
+          "max": 0.93,
+          "n_readings": 20
+        },
+        "social_communication_pragmatics": {
+          "min": 0.42,
+          "median": 0.8,
+          "max": 0.92,
+          "n_readings": 20
+        },
+        "cognitive_flexibility_adaptation": {
+          "min": 0.18,
+          "median": 0.565,
+          "max": 0.9,
+          "n_readings": 20
+        },
+        "repetitive_restricted_behavior": {
+          "min": 0.2,
+          "median": 0.61,
+          "max": 0.95,
+          "n_readings": 20
+        },
+        "novelty_uncertainty_sensory_behavior": {
+          "min": 0.38,
+          "median": 0.77,
+          "max": 0.92,
+          "n_readings": 20
+        },
+        "general_cognition": {
+          "min": 0.52,
+          "median": 0.85,
+          "max": 0.95,
+          "n_readings": 20
+        }
+      }
+    }
+  },
+  "consistency_check_vs_pipeline": [
+    "与 fig1_panels.json 的最大偏差 = 4.89e-05"
+  ]
+}

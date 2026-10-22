@@ -1,0 +1,32 @@
+# PACS 复现环境（conda）
+#
+#   conda env create -f environment.yml
+#   conda activate pacs
+#
+# 分两层：
+#   * 智能体本体（pacs/src/pacs）**只用标准库**，不需要这里的任何第三方包；
+#   * 下面这些是 results/scripts 下结果表与 Fig.1–4 的绘图/读写依赖。
+#
+# 版本号是发布时验证通过的一套，可按需放宽。
+
+name: pacs
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.12          # 要求 >=3.10（pyproject 的 requires-python）
+  # ---- 结果表读写 ----
+  - openpyxl>=3.1        # result_*.xlsx / dialogue_evidence_casebook.xlsx
+  # ---- Fig.1–4 绘图与统计 ----
+  - numpy>=1.26
+  - pandas>=2.0
+  - scipy>=1.11          # fig2/fig3/fig4 的 t 检验与层次聚类
+  - matplotlib>=3.8      # 全部出图（脚本内部固定 Agg 后端，无需显示器）
+  # ---- 测试 ----
+  - pytest>=7.0
+  # ---- 可选 ----
+  # 智能体核心不依赖 fastapi（Web 界面用标准库 http.server）。
+  # 仅当你想另外调用 HTTP API 的 ASGI 形态时再装：
+  # - pip:
+  #     - fastapi>=0.110

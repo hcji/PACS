@@ -1,0 +1,24 @@
+# 运行时产物：智能体自己会重建，不进版本库
+pacs/data/pacs.db
+pacs/data/exports/
+pacs/data/ontology/
+pacs/data/runs/probe_*/
+pacs/data/runs/demo*/
+
+# 本地 LLM 配置：里面是 API Key，**永远不要提交**
+pacs/config.json
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 复现时产生的临时目录（脚本默认输出到 results/ 下，不在此列）
+results/dose_supplement/

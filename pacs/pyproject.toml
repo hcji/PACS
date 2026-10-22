@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pacs"
+version = "0.1.0"
+description = "可扰动人工认知系统（PACS）：以 LLM 实例化人工心智，通过扰动基础认知计算过程产生孤独症样行为表型，研究孤独症的机制、分型与特征差异"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+# 运行时零第三方依赖（stdlib only）：Web 界面走标准库 http.server，不需要 fastapi。
+# 下面两组都是可选的。
+api = ["fastapi>=0.110"]
+test = ["pytest>=7.0"]
+
+[project.scripts]
+pacs = "pacs.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# 随包分发：内置题库（由 tools/build_examiner_bank.py 从 resources/ 生成）与界面。
+# 少了这一段，wheel 里就不会有题库与页面 —— 运行时会直接报「内置题库不存在」。
+[tool.setuptools.package-data]
+pacs = ["data/*.json", "web/*.html"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

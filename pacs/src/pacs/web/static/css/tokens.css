@@ -1,0 +1,31 @@
+/* 设计令牌（唯一来源）：颜色、间距、字号、圆角、阴影、层级。
+   所有组件只引用变量，不再写死颜色 —— 换主题时只改这一处。 */
+:root{
+  /* 颜色 */
+  --bg:#0e1116; --panel:#161b22; --panel2:#1c2330; --panel3:#222b38;
+  --line:#2a3441; --line-strong:#3a4655;
+  --fg:#e6edf3; --fg-dim:#c7d1db; --muted:#8b98a5;
+  --accent:#4aa8d8; --accent2:#7ee0c0; --accent-ink:#06121a;
+  --warn:#e0a458; --bad:#e06c75; --good:#7ec77e;
+  --warn-bg:rgba(224,164,88,.09); --warn-line:rgba(224,164,88,.35); --warn-fg:#f0cfa0;
+  --bad-bg:rgba(224,108,117,.10); --bad-line:rgba(224,108,117,.35); --bad-fg:#f0a8ae;
+  --good-bg:rgba(126,199,126,.16); --weak-bg:rgba(224,164,88,.16);
+  --gap-bg:rgba(139,152,165,.16);
+  /* 分档色（表型得分） */
+  --lvl-4:#1f6f5c; --lvl-3:#2f8f6d; --lvl-2:#8a8f3c; --lvl-1:#a05a3c; --lvl-0:#5a2630;
+  --lvl-none:#2a3441;
+  /* 排版 */
+  --font:-apple-system,"Segoe UI","Microsoft YaHei",system-ui,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Courier New",monospace;
+  --fs-xs:11.5px; --fs-sm:12.5px; --fs-md:13.5px; --fs-lg:15px; --fs-xl:19px;
+  --lh:1.6;
+  /* 间距 */
+  --sp-1:4px; --sp-2:6px; --sp-3:10px; --sp-4:14px; --sp-5:18px; --sp-6:24px;
+  /* 形状 */
+  --r-sm:6px; --r-md:8px; --r-lg:11px; --r-xl:14px; --r-pill:20px;
+  --shadow:0 8px 28px rgba(0,0,0,.38);
+  /* 层级 */
+  --z-sidebar:10; --z-topbar:20; --z-toast:40; --z-modal:50;
+  /* 布局尺寸 */
+  --sidebar-w:272px; --content-max:1180px;
+}

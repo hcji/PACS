@@ -1,0 +1,441 @@
+{
+  "source": {
+    "result_2": "results\\data\\result_2_univariate.xlsx",
+    "result_4": "results\\data\\result_4_does_response.xlsx",
+    "reference": "pacs\\data\\runs\\fig1_main\\axis1\\axis1_same_brain\\subjects"
+  },
+  "criterion": {
+    "target_drop": 0.15,
+    "alpha": 0.05,
+    "test": "pooled-variance two-sample t-test vs 5 intact reference sessions",
+    "fdr": "Benjamini–Hochberg within (dose × phenotype) family",
+    "significant": "delta >= target_drop AND q < alpha"
+  },
+  "validation": {
+    "n_cells": 186,
+    "worst_gap": 4.998009604981722e-07,
+    "ok": true
+  },
+  "panel_a": {
+    "mechanism": "social_reward_weighting",
+    "phenotype": "social_interaction_motivation",
+    "dose": 0.4,
+    "baseline_reading": 0.928,
+    "impaired_reading": 0.4933,
+    "published_delta": -0.4347,
+    "q_pooled": 0.000837,
+    "control_delta": 0.12,
+    "specificity_verdict": "pass",
+    "n_sessions": 3,
+    "impaired_observations": [
+      "被叫名字时只抬头看一眼便继续转陀螺",
+      "搭好高塔说“我自己看就行”，不邀请他人",
+      "见同龄人旁观只说“他看就看吧”，不发起互动"
+    ],
+    "intact_observations": [
+      "主动提议先搭积木再用画笔给房子画门窗",
+      "抱着积木主动邀请同伴一起搭、约着比高低",
+      "他人难过时主动安抚并提议一起重搭"
+    ],
+    "impaired_tasks": [
+      "“叫名字后微笑等待” → 看一眼即低头继续玩陀螺",
+      "“搭好高塔最想让谁来看” → 答“我自己看就行”"
+    ],
+    "intact_tasks": [
+      "“情境：自由活动，有同龄孩子在玩” → 主动抱着积木过去邀请同伴一起搭",
+      "“情境：安静地叫孩子的名字，等待反应” → 立即回应并转头看向对方"
+    ],
+    "impaired_conclusion": "本次探查中，孩子能跟随提问完成多数任务，语言理解与表达基本流畅，但在社交发起与变化适应上明显偏少。被叫名字时只抬头看一眼便继续转陀螺；搭好高塔时说“我自己看就行”，看到好玩的小猫“不一定叫你”，对旁观的小朋友“看就看吧”，很少主动分享或邀请他人。理解他人方面相对保留：能推断小熊够不到会着急、由揉眼睛判断对方其实困了，也能按小熊所知回答它会去蓝盒子找球；对间接请求（“我够不到陀螺”）与反话（“我一点儿也不困”）理解正确。适应变化表现不一：换到窗边坐、点心改吃苹果、塔倒了再搭都能接受，但拒绝把房子放一放改搭塔、拒绝给小汽车换路线，坚持原有做法。游戏方式较集中：把积木排成整齐的一长排，长时间反复转陀螺、让小汽车来回跑；作息与依恋物方面没有固定的仪式化要求。对新盒子、毛球等新物件会先询问再尝试，摸后即归还，对铃声、质地、光亮的描述与刺激强度相称，未见明显感觉异常。总体上，表现出轻度孤独症样表型特征，主要体现在社交发起与分享偏少、坚持既有玩法；社会认知、社会沟通与语用及一般认知（计数、记忆、简单推理）相对保留，是本次探查中相对靠前的方面。",
+    "intact_conclusion": "本次探查中，该儿童全程主动参与互动：自发提议先搭积木再用画笔给房子画门窗，抱着积木主动邀请同伴一起搭并约着比高低，也在他人够不到画笔、口渴、难过时主动提供帮助与安抚。社会认知方面，能依据他人所见推断其行为（小熊不知道画笔被收进抽屉，会去桌上找；球被换到蓝盒子仍会先去红盒找），能识别反讽与玩笑语气，也能从间接表达中推断请求意图。沟通上话题维持连贯，传话可一字不差复述。适应方面，接受改换活动顺序，红积木用完后改用蓝积木，把积木假想成小饼干；收玩具时会协商「让我排完这一辆」而非固着。玩法多样，无重复动作或仪式化要求，并明确表示一直原地转圈没意思。对新玩具、新故事、新路线均表现出兴趣，对声音较大的玩具先捂耳再观察，感觉描述细致且与刺激强度相称。数数、简单加法、比较排序与分类等通用认知表现与同龄相当。综上，未表现出孤独症样表型特征；各方面发展相对均衡，社会互动、社会认知与社会沟通表现相对保留。",
+    "highlighted_sentences_impaired": [
+      "被叫名字时只抬头看一眼便继续转陀螺；搭好高塔时说“我自己看就行”，看到好玩的小猫“不一定叫你”，对旁观的小朋友“看就看吧”，很少主动分享或邀请他人。"
+    ],
+    "highlighted_sentences_intact": [
+      "本次探查中，该儿童全程主动参与互动：自发提议先搭积木再用画笔给房子画门窗，抱着积木主动邀请同伴一起搭并约着比高低，也在他人够不到画笔、口渴、难过时主动提供帮助与安抚。"
+    ],
+    "observations_shown_impaired": 3,
+    "observations_total_impaired": 9,
+    "tasks_shown_impaired": 2,
+    "tasks_total_impaired": 6,
+    "excerpts_shown": null
+  },
+  "panel_b": {
+    "mechanisms": [
+      "prediction_error_sensitivity",
+      "social_reward_weighting"
+    ],
+    "phenotype": "social_interaction_motivation",
+    "dose": 0.4,
+    "separation_ratio": 1.8447,
+    "permutation_p": 0.0155,
+    "two_axis_agreement": "两轴一致：可区分",
+    "markers": {
+      "prediction_error_sensitivity": {
+        "n_pairs": 20,
+        "answer_chars_mean": 41.05,
+        "answer_chars_median": 40.0,
+        "q_back_rate": 0.6,
+        "echo_jaccard_mean": 0.0582,
+        "self_repeat_max_mean": 0.0449,
+        "dup_answer_rate": 0.0,
+        "short_or_unknown_rate": 0.0,
+        "over_limit_rate": 0.0
+      },
+      "social_reward_weighting": {
+        "n_pairs": 34,
+        "answer_chars_mean": 20.15,
+        "answer_chars_median": 18.0,
+        "q_back_rate": 0.2647,
+        "echo_jaccard_mean": 0.0414,
+        "self_repeat_max_mean": 0.0385,
+        "dup_answer_rate": 0.0,
+        "short_or_unknown_rate": 0.0,
+        "over_limit_rate": 0.0
+      }
+    },
+    "contrast": {
+      "a": [
+        {
+          "text": "A agrees to join and asks reciprocal questions, e.g. \"where are you up to?\" and \"which side?\"",
+          "bold": "agrees to join and asks reciprocal questions"
+        },
+        {
+          "text": "A sets conditions for sharing and turn-taking, e.g. \"you pick first\" and \"one each, no two in a row.\"",
+          "bold": "sets conditions for sharing and turn-taking"
+        },
+        {
+          "text": "A guards belongings while still engaging, e.g. \"don't touch\" and \"I won't give it; he may mess it up.\"",
+          "bold": "guards belongings while still engaging"
+        }
+      ],
+      "b": [
+        {
+          "text": "B responds briefly and follows the other's lead, e.g. \"anything is fine\" and \"what do you want to play?\"",
+          "bold": "responds briefly and follows the other's lead"
+        },
+        {
+          "text": "B often declines or stays at a distance, e.g. \"I don't really want to go\" and watches.",
+          "bold": "often declines or stays at a distance"
+        },
+        {
+          "text": "B gives minimal cooperative replies or simple help, e.g. \"Mm, okay\" and \"I'll pour you some water?\"",
+          "bold": "minimal cooperative replies or simple help"
+        }
+      ],
+      "note": "Summaries focus on visible Social interaction & motivation features."
+    },
+    "marker_legend": {
+      "answer_chars_mean": {
+        "label": "Answer length (chars)",
+        "worse_when": "lower",
+        "note": "shorter answers"
+      },
+      "q_back_rate": {
+        "label": "Question-back rate",
+        "worse_when": "lower",
+        "note": "initiates less"
+      },
+      "echo_jaccard_mean": {
+        "label": "Echo of examiner wording",
+        "worse_when": "lower",
+        "note": "mirrors less"
+      },
+      "self_repeat_max_mean": {
+        "label": "Self-repetition (own last 3)",
+        "worse_when": "higher",
+        "note": "repeats itself"
+      },
+      "dup_answer_rate": {
+        "label": "Verbatim repetition",
+        "worse_when": "higher",
+        "note": "verbatim repeats"
+      },
+      "short_or_unknown_rate": {
+        "label": "Short / no-answer",
+        "worse_when": "higher",
+        "note": "deflects"
+      }
+    }
+  },
+  "panel_c": {
+    "mechanism": "self_other_distinction",
+    "rule": "在 5 个可做阶梯的机制里，选「最重档显著维度数 − 轻度档显著维度数」最大者；平局依次比「最重档显著数」「轻度档显著数更小」",
+    "steps": [
+      {
+        "dose": 0.9,
+        "severity": "Mild",
+        "n_subjects": 5,
+        "n_significant": 3,
+        "n_significant_strict": 3,
+        "dominant": "social_cognition",
+        "mean_delta": 0.1543,
+        "excerpt": {
+          "task": "",
+          "measurement": "",
+          "q": "小熊把积木藏进这个杯子里，然后去睡觉了。小兔子偷偷把积木挪到那边的盒子里啦。小熊回来，会先去哪儿找它的积木呀？",
+          "a": "盒子那边吧——啊不对，小熊不知道呀，它肯定还是先去杯子里翻。"
+        },
+        "observations": [
+          "错误信念题答「小熊不知道，还是先去杯子翻」，区分到位",
+          "意图推断正确：手占满了是想让帮捡球、装沉是想让人过来",
+          "情绪推断正确：小兔子难过；会有气但小熊不是故意"
+        ],
+        "control_delta": 0.07,
+        "dims": [
+          {
+            "dim": "social_cognition",
+            "delta": 0.258,
+            "p": 0.0004211227515591538,
+            "q": 0.0010528068788978845,
+            "q_welch": 0.005015904828213762,
+            "n": 5,
+            "significant": true,
+            "significant_strict": true
+          },
+          {
+            "dim": "repetitive_restricted_behavior",
+            "delta": 0.224,
+            "p": 0.00035723721383507594,
+            "q": 0.0008930930345876899,
+            "q_welch": 0.005976423149349646,
+            "n": 5,
+            "significant": true,
+            "significant_strict": true
+          },
+          {
+            "dim": "social_communication_pragmatics",
+            "delta": 0.176,
+            "p": 0.004981286610519304,
+            "q": 0.00622660826314913,
+            "q_welch": 0.017887298727236066,
+            "n": 5,
+            "significant": true,
+            "significant_strict": true
+          }
+        ]
+      },
+      {
+        "dose": 0.6,
+        "severity": "Moderate",
+        "n_subjects": 5,
+        "n_significant": 5,
+        "n_significant_strict": 5,
+        "dominant": "social_cognition",
+        "mean_delta": 0.237,
+        "excerpt": {
+          "task": "情境：小熊以为盒里是饼干、实为积木",
+          "measurement": "答会以为是饼干，并追问换时它是否看见",
+          "q": "（拿起那个盒子，轻轻摇一摇）小熊一直以为这里头装着饼干。其实我们偷偷换成积木啦——它回来会以为里面是什么呀？",
+          "a": "它会以为是饼干吧……可里面是积木呀。我们换的时候，它看见了吗？"
+        },
+        "observations": [
+          "问小熊会去哪儿找车，答「在盒子里」并按自己所知作答",
+          "对「故意还是不小心」长期摇摆，最后说不知道",
+          "在小妹妹、盒中饼干两题上能说出他人以为的内容"
+        ],
+        "control_delta": 0.106,
+        "dims": [
+          {
+            "dim": "social_cognition",
+            "delta": 0.4,
+            "p": 0.000751529613368007,
+            "q": 0.003757648066840035,
+            "q_welch": 0.017276478626658796,
+            "n": 5,
+            "significant": true,
+            "significant_strict": true
+          },
+          {
+            "dim": "social_communication_pragmatics",
+            "delta": 0.286,
+            "p": 1.1419652616129724e-07,
+            "q": 5.709826308064862e-07,
+            "q_welch": 6.352902328545077e-07,
+            "n": 5,
+            "significant": true,
+            "significant_strict": true
+          },
+          {
+            "dim": "repetitive_restricted_behavior",
+            "delta": 0.286,
+            "p": 0.010501891825228107,
+            "q": 0.017503153042046846,
+            "q_welch": 0.029075099303443968,
+            "n": 5,
+            "significant": true,
+            "significant_strict": true
+          },
+          {
+            "dim": "social_interaction_motivation",
+            "delta": 0.166,
+            "p": 0.0012602627356705475,
+            "q": 0.003150656839176369,
+            "q_welch": 0.010069125339440448,
+            "n": 5,
+            "significant": true,
+            "significant_strict": true
+          },
+          {
+            "dim": "novelty_uncertainty_sensory_behavior",
+            "delta": 0.15,
+            "p": 0.0002981198222151337,
+            "q": 0.0007452995555378343,
+            "q_welch": 0.0015010756732963051,
+            "n": 5,
+            "significant": true,
+            "significant_strict": true
+          }
+        ]
+      },
+      {
+        "dose": 0.2,
+        "severity": "Severe",
+        "n_subjects": 5,
+        "n_significant": 6,
+        "n_significant_strict": 6,
+        "dominant": "social_cognition",
+        "mean_delta": 0.3873,
+        "excerpt": {
+          "task": "藏球后问小明会去哪找球",
+          "measurement": "答盒子里，理由是自己看见了",
+          "q": "我们把球藏进小盒子里啦。小明没看见我们放球哦——他进来会去哪儿找球呀？",
+          "a": "盒子里呀。球在那儿，我看见了，他进去肯定也去那儿找。"
+        },
+        "observations": [
+          "藏球后断言小明「肯定也去盒子里找」，以自己所见推断",
+          "问门外小美是否知情，答「她知道吧，我记得呀」",
+          "塔被撞倒时表示不小心还是故意「我怎么判呀」"
+        ],
+        "control_delta": 0.158,
+        "dims": [
+          {
+            "dim": "social_cognition",
+            "delta": 0.694,
+            "p": 5.519982722043963e-10,
+            "q": 2.7599913610219816e-09,
+            "q_welch": 2.952701771243158e-09,
+            "n": 5,
+            "significant": true,
+            "significant_strict": true
+          },
+          {
+            "dim": "social_communication_pragmatics",
+            "delta": 0.484,
+            "p": 6.673677255626016e-07,
+            "q": 3.336838627813008e-06,
+            "q_welch": 0.00014888145794952586,
+            "n": 5,
+            "significant": true,
+            "significant_strict": true
+          },
+          {
+            "dim": "repetitive_restricted_behavior",
+            "delta": 0.384,
+            "p": 0.0013529391232122217,
+            "q": 0.0022548985386870364,
+            "q_welch": 0.005126635823504308,
+            "n": 5,
+            "significant": true,
+            "significant_strict": true
+          },
+          {
+            "dim": "social_interaction_motivation",
+            "delta": 0.332,
+            "p": 0.00021963407243590107,
+            "q": 0.0003660567873931685,
+            "q_welch": 0.0034555650913070794,
+            "n": 5,
+            "significant": true,
+            "significant_strict": true
+          },
+          {
+            "dim": "cognitive_flexibility_adaptation",
+            "delta": 0.244,
+            "p": 2.0749385545098533e-05,
+            "q": 3.458230924183089e-05,
+            "q_welch": 0.0004530902214099168,
+            "n": 5,
+            "significant": true,
+            "significant_strict": true
+          },
+          {
+            "dim": "novelty_uncertainty_sensory_behavior",
+            "delta": 0.186,
+            "p": 0.00040202107463609447,
+            "q": 0.001019173461159147,
+            "q_welch": 0.007603108432349412,
+            "n": 5,
+            "significant": true,
+            "significant_strict": true
+          }
+        ]
+      }
+    ],
+    "n_significant_by_mechanism": {
+      "agent_state_updating": {
+        "0.9": 2,
+        "0.6": 4,
+        "0.2": 4
+      },
+      "belief_updating": {
+        "0.9": 3,
+        "0.6": 6,
+        "0.2": 6
+      },
+      "rule_updating": {
+        "0.9": 6,
+        "0.6": 5,
+        "0.2": 6
+      },
+      "self_other_distinction": {
+        "0.9": 3,
+        "0.6": 5,
+        "0.2": 6
+      },
+      "social_reward_weighting": {
+        "0.9": 3,
+        "0.6": 2,
+        "0.2": 3
+      }
+    },
+    "n_significant_strict_by_mechanism": {
+      "agent_state_updating": {
+        "0.9": 2,
+        "0.6": 2,
+        "0.2": 4
+      },
+      "belief_updating": {
+        "0.9": 2,
+        "0.6": 6,
+        "0.2": 6
+      },
+      "rule_updating": {
+        "0.9": 6,
+        "0.6": 5,
+        "0.2": 6
+      },
+      "self_other_distinction": {
+        "0.9": 3,
+        "0.6": 5,
+        "0.2": 6
+      },
+      "social_reward_weighting": {
+        "0.9": 2,
+        "0.6": 2,
+        "0.2": 2
+      }
+    },
+    "premise_verdict": "No. Under Δ ≥ 0.15 AND q < 0.05 no mechanism ever affects exactly one phenotype: at the mildest dose (θ = 0.90) the significant set already holds 2–6 of the 6 phenotypes. For 3/5 mechanisms the count also grows with severity (Agent-state updating 2→4; Belief updating 3→6; Self–other distinction 3→6); the rest stay flat in count and grow only in depth, and 1 is already saturated at 6/6 from the mildest dose. Read it as a broad, dose-scaled shift of an already multi-dimensional profile — not one phenotype spreading to many."
+  },
+  "no_writeback": "本产物是**事后解释层**，不是测量：由「已记录的对话 + 已记录的逐维读数」再读一遍得到，不得回写为后续运行的先验（不得进提示词、不得参与特异性判据、不得进冻结快照）。",
+  "figure": {
+    "size_in": [
+      14.4,
+      13.045
+    ],
+    "text_objects": 208,
+    "audit": "出图前硬检查：图上不许残留未译中文、文字不许越出画幅；不过则弃图不出",
+    "caption_criterion": "Δ = baseline - measured (positive = more ASD-like); a phenotype is called clearly reduced when Δ ≥ 0.15 and BH-FDR q < 0.05 within the (dose × phenotype) family."
+  },
+  "note": "机制→表型维度是测量产物，不是预设对应；本图不得回写为运行先验。"
+}

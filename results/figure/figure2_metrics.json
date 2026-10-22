@@ -1,0 +1,4917 @@
+{
+  "source": "results/data/result_2_univariate.xlsx",
+  "criteria": {
+    "target_drop": 0.15,
+    "control_tolerance": 0.15,
+    "concentration_margin": 0.05,
+    "source_of_criteria": "pacs/src/pacs/analysis/specificity.py",
+    "self_check": "62/62 verdicts recomputed from the xlsx match the stored specificity_verdict column"
+  },
+  "primary_dose": 0.4,
+  "secondary_dose": 0.8,
+  "baseline": {
+    "social_interaction_motivation": 0.928,
+    "social_cognition": 0.914,
+    "social_communication_pragmatics": 0.916,
+    "cognitive_flexibility_adaptation": 0.892,
+    "repetitive_restricted_behavior": 0.854,
+    "novelty_uncertainty_sensory_behavior": 0.87,
+    "general_cognition": 0.92
+  },
+  "panel_a": {
+    "value": "mean phenotype reading per cell (0-1, higher = more typical); not sign-flipped",
+    "colour_map": "YlGnBu_r truncated to 0.03-0.82, identical to Figure 1 panel B",
+    "row_order": "hierarchical clustering (average linkage, Euclidean) on the 0.4 level",
+    "cluster_order": [
+      "novelty_valuation",
+      "prediction_error_sensitivity",
+      "rule_updating",
+      "switching_cost",
+      "attention_persistence",
+      "belief_updating",
+      "representation_updating",
+      "selective_attention",
+      "signal_noise_discrimination",
+      "agent_state_updating",
+      "self_other_distinction",
+      "social_reward_weighting",
+      "attention_shifting",
+      "representation_maintenance",
+      "other_state_representation",
+      "perspective_transformation",
+      "information_valuation",
+      "relational_representation",
+      "familiarity_valuation",
+      "information_relevance_weighting",
+      "information_seeking_under_uncertainty",
+      "confidence_calibration",
+      "ambiguity_tolerance",
+      "salience_assignment",
+      "feature_binding",
+      "local_global_weighting",
+      "evidence_weighting",
+      "prior_strength",
+      "uncertainty_estimation",
+      "goal_maintenance",
+      "inhibition"
+    ],
+    "doses_shown": [
+      0.4,
+      0.8
+    ],
+    "note": "the general-cognition control column is not shown in panel A"
+  },
+  "panel_f": {
+    "source": "results/data/result_4_does_response.xlsx",
+    "sheets": [
+      "summary_by_cell",
+      "by_subject"
+    ],
+    "primitives": [
+      "agent_state_updating",
+      "belief_updating",
+      "rule_updating",
+      "self_other_distinction",
+      "social_reward_weighting"
+    ],
+    "doses": [
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      0.9
+    ],
+    "n_replicates_per_cell": 5,
+    "x": "1 − θ (θ = the primitive's integrity), i.e. perturbation strength: the leftmost point is 0 (intact mind) and the ladder's measurements sit at [0.1, 0.2, 0.4, 0.6, 0.8]; ticks are placed at the measured values, NOT re-spaced evenly (0.8/0.9 are close together because the ladder put them there), so the horizontal gaps carry the true distances",
+    "y": "mean phenotype score of the cell (0-1, higher = more typical), i.e. summary_by_cell's {dim}_mean; NOT sign-flipped into Δ — so a curve falling to the right means the profile degrades as the primitive is taken apart",
+    "error_bars": "±1 SEM (ddof=1). Ladder cells: the 5 replicates in by_subject. Intact point: the 5 intact minds of the reference group (the same 5 used by panel E's test)",
+    "intact_point": {
+      "x": 0.0,
+      "meaning": "the intact mind, not a ladder cell: θ = 1 is not in the run grid",
+      "values": {
+        "social_interaction_motivation": {
+          "mean": 0.928,
+          "sem": 0.0128,
+          "n_replicates": 5
+        },
+        "social_cognition": {
+          "mean": 0.914,
+          "sem": 0.0147,
+          "n_replicates": 5
+        },
+        "social_communication_pragmatics": {
+          "mean": 0.916,
+          "sem": 0.0121,
+          "n_replicates": 5
+        },
+        "cognitive_flexibility_adaptation": {
+          "mean": 0.892,
+          "sem": 0.0097,
+          "n_replicates": 5
+        },
+        "repetitive_restricted_behavior": {
+          "mean": 0.854,
+          "sem": 0.0363,
+          "n_replicates": 5
+        },
+        "novelty_uncertainty_sensory_behavior": {
+          "mean": 0.87,
+          "sem": 0.013,
+          "n_replicates": 5
+        },
+        "general_cognition": {
+          "mean": 0.92,
+          "sem": 0.0055,
+          "n_replicates": 5
+        }
+      },
+      "cross_check": "the profile is first re-derived inside result_4 itself as {dim}_mean − {dim}_delta (constant per dimension) and then asserted equal to result_2's baseline constants to 1e-9, so both tables are shown to sit on the same 5 intact minds"
+    },
+    "shared_y_scale": [
+      0.0,
+      1.0
+    ],
+    "channels_per_subplot": [
+      "social_interaction_motivation",
+      "social_cognition",
+      "social_communication_pragmatics",
+      "cognitive_flexibility_adaptation",
+      "repetitive_restricted_behavior",
+      "novelty_uncertainty_sensory_behavior"
+    ],
+    "control_channel": "general_cognition is NOT drawn (removed at the user's request); its per-cell values are still kept in per_primitive.mean_score_by_dose and control_score_by_dose for reference",
+    "line_width_pt": 1.7,
+    "line_width_note": "thicker than anything else in the figure (other panels' lines: panel B's median rule 1.5 pt, panel E's edges 0.22-3.0 pt scaled by Δ)",
+    "legend": "ONE figure-level legend BELOW the five subplots, 6 entries in a single row; identical treats to the panel-B legend (borderless, handlelength 1.2, handletextpad 0.45, columnspacing 0.95, labelspacing 0.4) EXCEPT the font size, which is raised to 8.6 pt (the figure's body size is 7.2 pt) because these six dimension names are panel F's only encoding key; at that size the row measures 11.7 in, still inside the 17 in canvas",
+    "x_title": "ONE shared x title for the five subplots, centred on the row below the tick labels and above the legend: '1 − θ   (0 = intact mind; higher = stronger perturbation)'; the y title is written on the leftmost subplot only, both in the figure's axis-title style (7.2 pt bold, like panel B's and panel E's)",
+    "panel_letters_titles": "none: the subplots carry no title and no panel letter, exactly like the rest of the figure; a primitive is identified by the in-panel annotation (its name, set inside the axes at the top left and coloured with that primitive's panel-A colour)",
+    "mean_cross_check": "175/175 cell × channel means recomputed from by_subject match summary_by_cell within 1e-4",
+    "per_primitive": {
+      "agent_state_updating": {
+        "primitive": "Agent-state updating",
+        "colour_dim_at_primary_dose_result_2": "cognitive_flexibility_adaptation",
+        "dominant_dim_at_primary_dose_result_4": "social_cognition",
+        "mean_score_by_dose": {
+          "0.2": {
+            "social_interaction_motivation": {
+              "mean": 0.778,
+              "sem": 0.0415,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.514,
+              "sem": 0.072,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.622,
+              "sem": 0.0803,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.726,
+              "sem": 0.0691,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.658,
+              "sem": 0.0595,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.804,
+              "sem": 0.0201,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.862,
+              "sem": 0.0233,
+              "n_replicates": 5
+            }
+          },
+          "0.4": {
+            "social_interaction_motivation": {
+              "mean": 0.752,
+              "sem": 0.0413,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.546,
+              "sem": 0.0914,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.688,
+              "sem": 0.0866,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.562,
+              "sem": 0.1127,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.58,
+              "sem": 0.0837,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.672,
+              "sem": 0.0326,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.796,
+              "sem": 0.0653,
+              "n_replicates": 5
+            }
+          },
+          "0.6": {
+            "social_interaction_motivation": {
+              "mean": 0.828,
+              "sem": 0.0332,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.672,
+              "sem": 0.0971,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.744,
+              "sem": 0.0504,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.722,
+              "sem": 0.0651,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.624,
+              "sem": 0.0746,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.782,
+              "sem": 0.0422,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.89,
+              "sem": 0.0195,
+              "n_replicates": 5
+            }
+          },
+          "0.8": {
+            "social_interaction_motivation": {
+              "mean": 0.822,
+              "sem": 0.0393,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.648,
+              "sem": 0.0824,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.728,
+              "sem": 0.0393,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.642,
+              "sem": 0.0405,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.62,
+              "sem": 0.0329,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.792,
+              "sem": 0.0185,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.888,
+              "sem": 0.008,
+              "n_replicates": 5
+            }
+          },
+          "0.9": {
+            "social_interaction_motivation": {
+              "mean": 0.852,
+              "sem": 0.0344,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.696,
+              "sem": 0.0755,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.824,
+              "sem": 0.0331,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.728,
+              "sem": 0.0361,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.74,
+              "sem": 0.0518,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.75,
+              "sem": 0.0537,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.88,
+              "sem": 0.021,
+              "n_replicates": 5
+            }
+          }
+        },
+        "lowest_channel_by_dose": {
+          "0.2": "social_cognition",
+          "0.4": "social_cognition",
+          "0.6": "repetitive_restricted_behavior",
+          "0.8": "repetitive_restricted_behavior",
+          "0.9": "social_cognition"
+        },
+        "mean_rise_over_six_dimensions_0.2_to_0.9": 0.0813,
+        "control_score_by_dose": [
+          0.862,
+          0.796,
+          0.89,
+          0.888,
+          0.88
+        ],
+        "control_min": 0.796,
+        "control_range": 0.094
+      },
+      "belief_updating": {
+        "primitive": "Belief updating",
+        "colour_dim_at_primary_dose_result_2": "cognitive_flexibility_adaptation",
+        "dominant_dim_at_primary_dose_result_4": "cognitive_flexibility_adaptation",
+        "mean_score_by_dose": {
+          "0.2": {
+            "social_interaction_motivation": {
+              "mean": 0.6,
+              "sem": 0.0479,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.526,
+              "sem": 0.0178,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.686,
+              "sem": 0.0502,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.302,
+              "sem": 0.0408,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.324,
+              "sem": 0.0589,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.496,
+              "sem": 0.0728,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.664,
+              "sem": 0.0524,
+              "n_replicates": 5
+            }
+          },
+          "0.4": {
+            "social_interaction_motivation": {
+              "mean": 0.616,
+              "sem": 0.047,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.632,
+              "sem": 0.0492,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.744,
+              "sem": 0.0242,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.316,
+              "sem": 0.0291,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.32,
+              "sem": 0.0329,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.524,
+              "sem": 0.0534,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.846,
+              "sem": 0.0175,
+              "n_replicates": 5
+            }
+          },
+          "0.6": {
+            "social_interaction_motivation": {
+              "mean": 0.652,
+              "sem": 0.0637,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.552,
+              "sem": 0.0814,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.704,
+              "sem": 0.0326,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.282,
+              "sem": 0.0451,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.344,
+              "sem": 0.0446,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.558,
+              "sem": 0.0364,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.85,
+              "sem": 0.0338,
+              "n_replicates": 5
+            }
+          },
+          "0.8": {
+            "social_interaction_motivation": {
+              "mean": 0.778,
+              "sem": 0.0708,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.866,
+              "sem": 0.0264,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.832,
+              "sem": 0.0413,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.534,
+              "sem": 0.1121,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.56,
+              "sem": 0.1212,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.712,
+              "sem": 0.0751,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.884,
+              "sem": 0.0194,
+              "n_replicates": 5
+            }
+          },
+          "0.9": {
+            "social_interaction_motivation": {
+              "mean": 0.802,
+              "sem": 0.0291,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.808,
+              "sem": 0.0224,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.786,
+              "sem": 0.0232,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.462,
+              "sem": 0.0732,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.538,
+              "sem": 0.0714,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.674,
+              "sem": 0.0614,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.866,
+              "sem": 0.0189,
+              "n_replicates": 5
+            }
+          }
+        },
+        "lowest_channel_by_dose": {
+          "0.2": "cognitive_flexibility_adaptation",
+          "0.4": "cognitive_flexibility_adaptation",
+          "0.6": "cognitive_flexibility_adaptation",
+          "0.8": "cognitive_flexibility_adaptation",
+          "0.9": "cognitive_flexibility_adaptation"
+        },
+        "mean_rise_over_six_dimensions_0.2_to_0.9": 0.1893,
+        "control_score_by_dose": [
+          0.664,
+          0.846,
+          0.85,
+          0.884,
+          0.866
+        ],
+        "control_min": 0.664,
+        "control_range": 0.22
+      },
+      "rule_updating": {
+        "primitive": "Rule updating",
+        "colour_dim_at_primary_dose_result_2": "repetitive_restricted_behavior",
+        "dominant_dim_at_primary_dose_result_4": "repetitive_restricted_behavior",
+        "mean_score_by_dose": {
+          "0.2": {
+            "social_interaction_motivation": {
+              "mean": 0.582,
+              "sem": 0.0798,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.588,
+              "sem": 0.0963,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.49,
+              "sem": 0.0814,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.2,
+              "sem": 0.021,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.178,
+              "sem": 0.0338,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.506,
+              "sem": 0.0614,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.704,
+              "sem": 0.0668,
+              "n_replicates": 5
+            }
+          },
+          "0.4": {
+            "social_interaction_motivation": {
+              "mean": 0.62,
+              "sem": 0.0748,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.624,
+              "sem": 0.1176,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.554,
+              "sem": 0.0558,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.206,
+              "sem": 0.0196,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.156,
+              "sem": 0.0169,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.434,
+              "sem": 0.0316,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.694,
+              "sem": 0.0312,
+              "n_replicates": 5
+            }
+          },
+          "0.6": {
+            "social_interaction_motivation": {
+              "mean": 0.766,
+              "sem": 0.0479,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.76,
+              "sem": 0.0779,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.7,
+              "sem": 0.0434,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.334,
+              "sem": 0.0556,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.358,
+              "sem": 0.0618,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.548,
+              "sem": 0.0641,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.796,
+              "sem": 0.0412,
+              "n_replicates": 5
+            }
+          },
+          "0.8": {
+            "social_interaction_motivation": {
+              "mean": 0.73,
+              "sem": 0.0677,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.702,
+              "sem": 0.0708,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.676,
+              "sem": 0.0862,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.316,
+              "sem": 0.0464,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.298,
+              "sem": 0.0496,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.55,
+              "sem": 0.0158,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.75,
+              "sem": 0.046,
+              "n_replicates": 5
+            }
+          },
+          "0.9": {
+            "social_interaction_motivation": {
+              "mean": 0.616,
+              "sem": 0.0906,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.662,
+              "sem": 0.04,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.528,
+              "sem": 0.0528,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.276,
+              "sem": 0.025,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.178,
+              "sem": 0.0299,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.57,
+              "sem": 0.0261,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.79,
+              "sem": 0.0405,
+              "n_replicates": 5
+            }
+          }
+        },
+        "lowest_channel_by_dose": {
+          "0.2": "repetitive_restricted_behavior",
+          "0.4": "repetitive_restricted_behavior",
+          "0.6": "cognitive_flexibility_adaptation",
+          "0.8": "repetitive_restricted_behavior",
+          "0.9": "repetitive_restricted_behavior"
+        },
+        "mean_rise_over_six_dimensions_0.2_to_0.9": 0.0477,
+        "control_score_by_dose": [
+          0.704,
+          0.694,
+          0.796,
+          0.75,
+          0.79
+        ],
+        "control_min": 0.694,
+        "control_range": 0.102
+      },
+      "self_other_distinction": {
+        "primitive": "Self–other distinction",
+        "colour_dim_at_primary_dose_result_2": "social_cognition",
+        "dominant_dim_at_primary_dose_result_4": "social_cognition",
+        "mean_score_by_dose": {
+          "0.2": {
+            "social_interaction_motivation": {
+              "mean": 0.596,
+              "sem": 0.0507,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.22,
+              "sem": 0.0138,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.432,
+              "sem": 0.0325,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.648,
+              "sem": 0.0258,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.47,
+              "sem": 0.0713,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.684,
+              "sem": 0.0293,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.762,
+              "sem": 0.028,
+              "n_replicates": 5
+            }
+          },
+          "0.4": {
+            "social_interaction_motivation": {
+              "mean": 0.604,
+              "sem": 0.0571,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.446,
+              "sem": 0.0785,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.524,
+              "sem": 0.0584,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.688,
+              "sem": 0.0404,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.482,
+              "sem": 0.053,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.63,
+              "sem": 0.0533,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.76,
+              "sem": 0.0358,
+              "n_replicates": 5
+            }
+          },
+          "0.6": {
+            "social_interaction_motivation": {
+              "mean": 0.762,
+              "sem": 0.0317,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.514,
+              "sem": 0.0744,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.63,
+              "sem": 0.011,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.758,
+              "sem": 0.0229,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.568,
+              "sem": 0.0781,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.72,
+              "sem": 0.021,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.814,
+              "sem": 0.0306,
+              "n_replicates": 5
+            }
+          },
+          "0.8": {
+            "social_interaction_motivation": {
+              "mean": 0.784,
+              "sem": 0.0306,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.464,
+              "sem": 0.0478,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.664,
+              "sem": 0.0412,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.77,
+              "sem": 0.0435,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.694,
+              "sem": 0.0776,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.708,
+              "sem": 0.0367,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.768,
+              "sem": 0.0185,
+              "n_replicates": 5
+            }
+          },
+          "0.9": {
+            "social_interaction_motivation": {
+              "mean": 0.836,
+              "sem": 0.0312,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.656,
+              "sem": 0.0423,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.74,
+              "sem": 0.0443,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.83,
+              "sem": 0.0138,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.63,
+              "sem": 0.011,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.756,
+              "sem": 0.0339,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.85,
+              "sem": 0.0316,
+              "n_replicates": 5
+            }
+          }
+        },
+        "lowest_channel_by_dose": {
+          "0.2": "social_cognition",
+          "0.4": "social_cognition",
+          "0.6": "social_cognition",
+          "0.8": "social_cognition",
+          "0.9": "repetitive_restricted_behavior"
+        },
+        "mean_rise_over_six_dimensions_0.2_to_0.9": 0.233,
+        "control_score_by_dose": [
+          0.762,
+          0.76,
+          0.814,
+          0.768,
+          0.85
+        ],
+        "control_min": 0.76,
+        "control_range": 0.09
+      },
+      "social_reward_weighting": {
+        "primitive": "Social reward weighting",
+        "colour_dim_at_primary_dose_result_2": "social_interaction_motivation",
+        "dominant_dim_at_primary_dose_result_4": "social_interaction_motivation",
+        "mean_score_by_dose": {
+          "0.2": {
+            "social_interaction_motivation": {
+              "mean": 0.368,
+              "sem": 0.0289,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.762,
+              "sem": 0.0612,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.662,
+              "sem": 0.0696,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.736,
+              "sem": 0.0827,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.666,
+              "sem": 0.0886,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.734,
+              "sem": 0.0275,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.888,
+              "sem": 0.0102,
+              "n_replicates": 5
+            }
+          },
+          "0.4": {
+            "social_interaction_motivation": {
+              "mean": 0.48,
+              "sem": 0.0639,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.734,
+              "sem": 0.0477,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.732,
+              "sem": 0.0612,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.772,
+              "sem": 0.0608,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.704,
+              "sem": 0.0741,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.73,
+              "sem": 0.0415,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.834,
+              "sem": 0.0266,
+              "n_replicates": 5
+            }
+          },
+          "0.6": {
+            "social_interaction_motivation": {
+              "mean": 0.588,
+              "sem": 0.0485,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.772,
+              "sem": 0.032,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.752,
+              "sem": 0.0394,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.816,
+              "sem": 0.0098,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.766,
+              "sem": 0.0289,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.756,
+              "sem": 0.0256,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.876,
+              "sem": 0.0112,
+              "n_replicates": 5
+            }
+          },
+          "0.8": {
+            "social_interaction_motivation": {
+              "mean": 0.556,
+              "sem": 0.0757,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.758,
+              "sem": 0.0661,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.702,
+              "sem": 0.0702,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.75,
+              "sem": 0.0984,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.682,
+              "sem": 0.1106,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.712,
+              "sem": 0.0913,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.888,
+              "sem": 0.0201,
+              "n_replicates": 5
+            }
+          },
+          "0.9": {
+            "social_interaction_motivation": {
+              "mean": 0.628,
+              "sem": 0.0459,
+              "n_replicates": 5
+            },
+            "social_cognition": {
+              "mean": 0.808,
+              "sem": 0.0196,
+              "n_replicates": 5
+            },
+            "social_communication_pragmatics": {
+              "mean": 0.732,
+              "sem": 0.0372,
+              "n_replicates": 5
+            },
+            "cognitive_flexibility_adaptation": {
+              "mean": 0.754,
+              "sem": 0.0616,
+              "n_replicates": 5
+            },
+            "repetitive_restricted_behavior": {
+              "mean": 0.672,
+              "sem": 0.0732,
+              "n_replicates": 5
+            },
+            "novelty_uncertainty_sensory_behavior": {
+              "mean": 0.706,
+              "sem": 0.0586,
+              "n_replicates": 5
+            },
+            "general_cognition": {
+              "mean": 0.876,
+              "sem": 0.0144,
+              "n_replicates": 5
+            }
+          }
+        },
+        "lowest_channel_by_dose": {
+          "0.2": "social_interaction_motivation",
+          "0.4": "social_interaction_motivation",
+          "0.6": "social_interaction_motivation",
+          "0.8": "social_interaction_motivation",
+          "0.9": "social_interaction_motivation"
+        },
+        "mean_rise_over_six_dimensions_0.2_to_0.9": 0.062,
+        "control_score_by_dose": [
+          0.888,
+          0.834,
+          0.876,
+          0.888,
+          0.876
+        ],
+        "control_min": 0.834,
+        "control_range": 0.054
+      }
+    }
+  },
+  "n_affected_histogram_not_drawn": {
+    "note": "experiment-side classification at Δ ≥ 0.15: how many of the six phenotype dimensions each primitive pushed past the threshold. Not drawn anywhere any more (the panel that histogrammed it was removed), kept here for reference",
+    "counts": {
+      "0": 5,
+      "1": 3,
+      "2": 3,
+      "3": 1,
+      "4": 2,
+      "5": 7,
+      "6": 10
+    }
+  },
+  "dominant_dim_count": {
+    "social_interaction_motivation": 6,
+    "social_cognition": 4,
+    "social_communication_pragmatics": 3,
+    "cognitive_flexibility_adaptation": 8,
+    "repetitive_restricted_behavior": 6,
+    "novelty_uncertainty_sensory_behavior": 4
+  },
+  "verdict_count_dose_0.4": {
+    "fail_control": 8,
+    "fail_diffuse": 13,
+    "pass": 5,
+    "fail_both": 1,
+    "no_effect": 4
+  },
+  "n_primitives_worse_at_0.4_than_0.8": 22,
+  "panel_b": {
+    "chart": "Manhattan-style plot: one column per phenotype dimension, one dot per primitive",
+    "x": "6 phenotype dimensions (one column each); the two dose panels share the same columns",
+    "y": "impairment Δ = baseline − perturbed (positive = more ASD-like)",
+    "shared_y_scale_across_doses": true,
+    "dots_per_column": "31 primitives; horizontal position inside a column carries no value (random jitter), except that the 3 annotated primitives sit at fixed left/centre/right lanes so their rings stay apart and their rank numerals stay unambiguous",
+    "labelled": "the 3 primitives with the largest Δ in each dimension, printed above that column and marked on the plot with a ring + rank numeral",
+    "label_colour": "each printed primitive name is coloured by that primitive's dominant dimension at the PRIMARY dose (0.4), the same colour its row label has in panel A, so a primitive keeps one colour across both dose panels",
+    "per_dose": {
+      "0.4": {
+        "top3_per_dimension": {
+          "social_interaction_motivation": [
+            {
+              "rank": 1,
+              "primitive": "Switching cost",
+              "delta": 0.5047
+            },
+            {
+              "rank": 2,
+              "primitive": "Prediction-error sensitivity",
+              "delta": 0.4513
+            },
+            {
+              "rank": 3,
+              "primitive": "Social reward weighting",
+              "delta": 0.4347
+            }
+          ],
+          "social_cognition": [
+            {
+              "rank": 1,
+              "primitive": "Perspective taking",
+              "delta": 0.4707
+            },
+            {
+              "rank": 2,
+              "primitive": "Representation updating",
+              "delta": 0.4473
+            },
+            {
+              "rank": 3,
+              "primitive": "Agent-state updating",
+              "delta": 0.4107
+            }
+          ],
+          "social_communication_pragmatics": [
+            {
+              "rank": 1,
+              "primitive": "Rule updating",
+              "delta": 0.3993
+            },
+            {
+              "rank": 2,
+              "primitive": "Switching cost",
+              "delta": 0.356
+            },
+            {
+              "rank": 3,
+              "primitive": "Selective attention",
+              "delta": 0.3493
+            }
+          ],
+          "cognitive_flexibility_adaptation": [
+            {
+              "rank": 1,
+              "primitive": "Rule updating",
+              "delta": 0.692
+            },
+            {
+              "rank": 2,
+              "primitive": "Switching cost",
+              "delta": 0.6753
+            },
+            {
+              "rank": 3,
+              "primitive": "Belief updating",
+              "delta": 0.6187
+            }
+          ],
+          "repetitive_restricted_behavior": [
+            {
+              "rank": 1,
+              "primitive": "Rule updating",
+              "delta": 0.704
+            },
+            {
+              "rank": 2,
+              "primitive": "Prediction-error sensitivity",
+              "delta": 0.6373
+            },
+            {
+              "rank": 3,
+              "primitive": "Switching cost",
+              "delta": 0.6273
+            }
+          ],
+          "novelty_uncertainty_sensory_behavior": [
+            {
+              "rank": 1,
+              "primitive": "Prediction-error sensitivity",
+              "delta": 0.6033
+            },
+            {
+              "rank": 2,
+              "primitive": "Signal–noise discrimination",
+              "delta": 0.5533
+            },
+            {
+              "rank": 3,
+              "primitive": "Novelty valuation",
+              "delta": 0.54
+            }
+          ]
+        },
+        "per_dimension": {
+          "social_interaction_motivation": {
+            "n": 31,
+            "mean": 0.2234,
+            "median": 0.2513,
+            "q1": 0.128,
+            "q3": 0.308,
+            "min": 0.008,
+            "max": 0.5047
+          },
+          "social_cognition": {
+            "n": 31,
+            "mean": 0.1967,
+            "median": 0.174,
+            "q1": 0.1074,
+            "q3": 0.2807,
+            "min": 0.0107,
+            "max": 0.4707
+          },
+          "social_communication_pragmatics": {
+            "n": 31,
+            "mean": 0.1981,
+            "median": 0.2193,
+            "q1": 0.1094,
+            "q3": 0.2727,
+            "min": 0.0093,
+            "max": 0.3993
+          },
+          "cognitive_flexibility_adaptation": {
+            "n": 31,
+            "mean": 0.2535,
+            "median": 0.1687,
+            "q1": 0.102,
+            "q3": 0.3987,
+            "min": 0.0053,
+            "max": 0.692
+          },
+          "repetitive_restricted_behavior": {
+            "n": 31,
+            "mean": 0.2669,
+            "median": 0.234,
+            "q1": 0.089,
+            "q3": 0.3657,
+            "min": -0.0393,
+            "max": 0.704
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "n": 31,
+            "mean": 0.2358,
+            "median": 0.2033,
+            "q1": 0.11,
+            "q3": 0.3134,
+            "min": 0.0033,
+            "max": 0.6033
+          }
+        }
+      },
+      "0.8": {
+        "top3_per_dimension": {
+          "social_interaction_motivation": [
+            {
+              "rank": 1,
+              "primitive": "Salience assignment",
+              "delta": 0.4347
+            },
+            {
+              "rank": 2,
+              "primitive": "Social reward weighting",
+              "delta": 0.3447
+            },
+            {
+              "rank": 3,
+              "primitive": "Novelty valuation",
+              "delta": 0.258
+            }
+          ],
+          "social_cognition": [
+            {
+              "rank": 1,
+              "primitive": "Self–other distinction",
+              "delta": 0.5073
+            },
+            {
+              "rank": 2,
+              "primitive": "Perspective taking",
+              "delta": 0.4973
+            },
+            {
+              "rank": 3,
+              "primitive": "Agent-state updating",
+              "delta": 0.2907
+            }
+          ],
+          "social_communication_pragmatics": [
+            {
+              "rank": 1,
+              "primitive": "Agent-state updating",
+              "delta": 0.2427
+            },
+            {
+              "rank": 2,
+              "primitive": "Salience assignment",
+              "delta": 0.236
+            },
+            {
+              "rank": 3,
+              "primitive": "Self–other distinction",
+              "delta": 0.236
+            }
+          ],
+          "cognitive_flexibility_adaptation": [
+            {
+              "rank": 1,
+              "primitive": "Rule updating",
+              "delta": 0.5653
+            },
+            {
+              "rank": 2,
+              "primitive": "Novelty valuation",
+              "delta": 0.4553
+            },
+            {
+              "rank": 3,
+              "primitive": "Representation updating",
+              "delta": 0.442
+            }
+          ],
+          "repetitive_restricted_behavior": [
+            {
+              "rank": 1,
+              "primitive": "Rule updating",
+              "delta": 0.5407
+            },
+            {
+              "rank": 2,
+              "primitive": "Attention shifting",
+              "delta": 0.404
+            },
+            {
+              "rank": 3,
+              "primitive": "Belief updating",
+              "delta": 0.394
+            }
+          ],
+          "novelty_uncertainty_sensory_behavior": [
+            {
+              "rank": 1,
+              "primitive": "Novelty valuation",
+              "delta": 0.4467
+            },
+            {
+              "rank": 2,
+              "primitive": "Selective attention",
+              "delta": 0.44
+            },
+            {
+              "rank": 3,
+              "primitive": "Prediction-error sensitivity",
+              "delta": 0.3967
+            }
+          ]
+        },
+        "per_dimension": {
+          "social_interaction_motivation": {
+            "n": 31,
+            "mean": 0.1462,
+            "median": 0.138,
+            "q1": 0.073,
+            "q3": 0.183,
+            "min": 0.0213,
+            "max": 0.4347
+          },
+          "social_cognition": {
+            "n": 31,
+            "mean": 0.1217,
+            "median": 0.0773,
+            "q1": 0.0423,
+            "q3": 0.159,
+            "min": 0.004,
+            "max": 0.5073
+          },
+          "social_communication_pragmatics": {
+            "n": 31,
+            "mean": 0.1273,
+            "median": 0.116,
+            "q1": 0.076,
+            "q3": 0.156,
+            "min": 0.0227,
+            "max": 0.2427
+          },
+          "cognitive_flexibility_adaptation": {
+            "n": 31,
+            "mean": 0.1923,
+            "median": 0.1353,
+            "q1": 0.1003,
+            "q3": 0.2753,
+            "min": 0.012,
+            "max": 0.5653
+          },
+          "repetitive_restricted_behavior": {
+            "n": 31,
+            "mean": 0.2026,
+            "median": 0.1607,
+            "q1": 0.0873,
+            "q3": 0.304,
+            "min": 0.0073,
+            "max": 0.5407
+          },
+          "novelty_uncertainty_sensory_behavior": {
+            "n": 31,
+            "mean": 0.167,
+            "median": 0.1633,
+            "q1": 0.0817,
+            "q3": 0.2033,
+            "min": 0.0133,
+            "max": 0.4467
+          }
+        }
+      }
+    }
+  },
+  "panel_e": {
+    "chart": "bipartite primitive-phenotype network, one panel per dose; left = 31 primitives grouped by dominant dimension, right = 6 phenotype dimensions; the companion bar chart to the right of each network gives, per dimension, the number of primitives with a significant effect — one solid bar for the criterion the edges are drawn from (pooled test, q < alpha), one faded bar for the SAME test and p-values at the stricter threshold q < alpha_strict (a survival count, always a subset of the solid bar)",
+    "edge_criterion": {
+      "test": "two-sample t-test (scipy.stats.ttest_ind) per primitive x phenotype dimension, 2 groups: that primitive's 3 perturbed repeats vs the reference group's repeats (n = 5); equal_var=True (pooled variance) for the edges and the node numbers, which is exactly the 2-group one-way ANOVA (F = t², df = 6) — asserted cell by cell against scipy.stats.f_oneway in load()",
+      "strict_threshold_variant": "the faded bar uses the same pooled p-values and the same BH-FDR q-values, only the significance level is tightened from alpha = 0.05 to alpha_strict = 0.01, so it reads as 'how much survives a stricter threshold'. It is a NOMINAL level, not a guarantee: this test's realised type-I error rate in this 3-vs-5 design is about 11% at a nominal 5% and about 3.6% at a nominal 1% (null simulations; per-cell variance ratios span 1.2x-17x, so no single level calibrates the whole family)",
+      "welch_variant_not_drawn": "equal_var=False is still computed cell by cell and kept in the metrics below for cross-checking the criterion, but it is no longer drawn",
+      "reference_group": "result_1_robustness.xlsx, rows with row_id starting 'axis1_same_brain' and mind_setting 'intact (no perturbation)'",
+      "reference_self_check": "the reference group's per-dimension means reproduce this figure's baseline constants to 1e-16 (asserted in load()), so the reference is the experiment's own baseline, not a second opinion imported by this figure",
+      "multiple_comparison": "Benjamini-Hochberg FDR within each (dose, phenotype dimension) family of 31 tests — one family per bar; the same q-values are then compared against both thresholds",
+      "alpha": 0.05,
+      "alpha_strict": 0.01,
+      "direction": "an edge also requires Δ = baseline − perturbed > 0; no cell at either dose is significant in the opposite direction",
+      "edge_width": "still Δ (effect size) — width is not a p-value",
+      "n_tests_per_dose": 186
+    },
+    "dose_0.4": {
+      "significant_primitives_per_dimension_pooled": {
+        "social_interaction_motivation": 23,
+        "social_cognition": 22,
+        "social_communication_pragmatics": 28,
+        "cognitive_flexibility_adaptation": 22,
+        "repetitive_restricted_behavior": 19,
+        "novelty_uncertainty_sensory_behavior": 27
+      },
+      "significant_primitives_per_dimension_strict": {
+        "social_interaction_motivation": 20,
+        "social_cognition": 4,
+        "social_communication_pragmatics": 17,
+        "cognitive_flexibility_adaptation": 16,
+        "repetitive_restricted_behavior": 12,
+        "novelty_uncertainty_sensory_behavior": 21
+      },
+      "significant_primitives_per_dimension_welch": {
+        "social_interaction_motivation": 7,
+        "social_cognition": 0,
+        "social_communication_pragmatics": 7,
+        "cognitive_flexibility_adaptation": 11,
+        "repetitive_restricted_behavior": 18,
+        "novelty_uncertainty_sensory_behavior": 18
+      },
+      "primitives_with_no_significant_dimension_pooled": 2,
+      "primitives_with_no_significant_dimension_strict": 6,
+      "primitives_with_no_significant_dimension_welch": 6,
+      "pooled_counts_without_fdr": {
+        "social_interaction_motivation": 24,
+        "social_cognition": 25,
+        "social_communication_pragmatics": 29,
+        "cognitive_flexibility_adaptation": 24,
+        "repetitive_restricted_behavior": 19,
+        "novelty_uncertainty_sensory_behavior": 27
+      },
+      "primitives_per_dominant_dimension": {
+        "social_interaction_motivation": 6,
+        "social_cognition": 4,
+        "social_communication_pragmatics": 3,
+        "cognitive_flexibility_adaptation": 8,
+        "repetitive_restricted_behavior": 6,
+        "novelty_uncertainty_sensory_behavior": 4
+      }
+    },
+    "dose_0.8": {
+      "significant_primitives_per_dimension_pooled": {
+        "social_interaction_motivation": 18,
+        "social_cognition": 4,
+        "social_communication_pragmatics": 21,
+        "cognitive_flexibility_adaptation": 23,
+        "repetitive_restricted_behavior": 12,
+        "novelty_uncertainty_sensory_behavior": 19
+      },
+      "significant_primitives_per_dimension_strict": {
+        "social_interaction_motivation": 1,
+        "social_cognition": 4,
+        "social_communication_pragmatics": 1,
+        "cognitive_flexibility_adaptation": 12,
+        "repetitive_restricted_behavior": 4,
+        "novelty_uncertainty_sensory_behavior": 6
+      },
+      "significant_primitives_per_dimension_welch": {
+        "social_interaction_motivation": 0,
+        "social_cognition": 0,
+        "social_communication_pragmatics": 1,
+        "cognitive_flexibility_adaptation": 2,
+        "repetitive_restricted_behavior": 5,
+        "novelty_uncertainty_sensory_behavior": 2
+      },
+      "primitives_with_no_significant_dimension_pooled": 3,
+      "primitives_with_no_significant_dimension_strict": 15,
+      "primitives_with_no_significant_dimension_welch": 24,
+      "pooled_counts_without_fdr": {
+        "social_interaction_motivation": 23,
+        "social_cognition": 16,
+        "social_communication_pragmatics": 23,
+        "cognitive_flexibility_adaptation": 24,
+        "repetitive_restricted_behavior": 15,
+        "novelty_uncertainty_sensory_behavior": 22
+      },
+      "primitives_per_dominant_dimension": {
+        "social_interaction_motivation": 4,
+        "social_cognition": 5,
+        "social_communication_pragmatics": 0,
+        "cognitive_flexibility_adaptation": 9,
+        "repetitive_restricted_behavior": 6,
+        "novelty_uncertainty_sensory_behavior": 7
+      }
+    },
+    "note": "both networks share ONE row order and one block structure (primitive order and left-hand grouping both taken from the primary dose 0.4, same rule as the panel-B colours), so a primitive sits on the same row in both doses and the right-hand nodes line up; the number printed inside a node and the solid bar are the SIGNIFICANT count (in-degree) under the pooled test, while the block size is the primary-dose dominant count — two different quantities, both stated in the caption; the faded bar is the same in-degree at the stricter threshold"
+  },
+  "continuous_summary_not_drawn": {
+    "note": "the D_eff / concentration figures quoted in the caption text below; panels C and D that used to draw them were removed at the user's request, the numbers remain valid",
+    "median_d_eff_0.4": 5.6849,
+    "range_d_eff_0.4": [
+      3.9096,
+      5.9481
+    ],
+    "median_concentration_C_0.4": 0.2441
+  },
+  "layout_note": {
+    "panel_letters_titles": "NOT drawn in the image: the user asked for all panel titles and panel letters to be removed (this includes panel F: no 'F' and no subplot titles; a primitive is named by the in-panel annotation instead)",
+    "dose_labels": "the dose IS labelled in the figure, as θ = 0.40 / θ = 0.80 (θ = the primitive's integrity): once above each dose's panel in row 1 and once above each dose's network + bar-chart group in row 2; the left/right order is the same everywhere (left = 0.40); panel F labels the x axis as 1 − θ instead (0 = intact mind), with ONE shared title for its five subplots",
+    "legend": "panel E has NO legend (removed at the user's request): the edge criterion, edge width = Δ and the meaning of the solid vs faded bars are now stated in the caption text (caption_text_not_shown) and in the axis titles only; panel F has exactly ONE legend for its five subplots, placed BELOW the row (same style as the panel-B legend and as Figure 1: borderless, 7.2 pt, one row",
+    "rows": "row 1 = heat map (2 doses) + Manhattan (2 doses); row 2 = network + its bar chart, one pair per dose; row 3 = panel F, five dose-response subplots (one per laddered primitive) with a shared x title and a shared legend below them",
+    "canvas": "17.0 x 18.2 in (was 17.0 x 15.5 in before panel F). The canvas was made TALLER rather than the upper panels shorter: every A-E box keeps the exact inch geometry it had on the 15.5 in canvas (see _y()/_h()), so nothing that was already laid out had to be re-tuned. The extra 2.7 in at the bottom hold panel F (2.78 in of axes, bottom edge 0.72 in above the figure bottom), its shared x title and its legend below the row; the space between row 2's lowest ink and the top of panel F's axes is 0.18 in",
+    "footer_text_box": "removed at the user's request; its wording is kept in caption_text_not_shown below",
+    "typography": "all body text (axis titles, tick labels, in-plot annotations, primitive and dimension names) is one size, 7.2 pt; the θ dose labels are 10 pt bold; the 5.5/6.2/6.6 steps of the earlier ladder are gone; the figure title (17 pt) is the only larger text. TWO exceptions, both deliberate: panel F's shared legend is 8.6 pt (FS_F_LEGEND) because those six dimension names are panel F's only encoding key, and every primitive/dimension NAME in the figure is bold — including the 31 left-hand names in panel E's networks, which used to be the only names left on regular weight",
+    "grid_lines": "panel E draws none: no grid in the bar charts and no block separator rules in the networks; panel B no longer draws the Δ = 0.15 threshold line either (it remains a data-layer criterion only)",
+    "panel_e_geometry": "the network and its bar chart have the SAME VISIBLE vertical extent (within 0.03 in): the network's ink fills its axes box, while the bar chart's axes box is raised by the height of its tick labels + x title so that its ink (bars + those two lines of text) ends at the same levels; the right-hand dimension nodes sit on the left-hand row grid (row indices 28/22/19/14/6/2 out of 0-30, each inside its own block)",
+    "primitive_colour": "each primitive's name and node outline use the colour of its dominant dimension at the primary dose - the same colour its row label carries in panel A; the left-hand names are BOLD, like every other primitive/dimension name in the figure (they used to be the only regular-weight names), and the bolded longest name (1.40 in) still fits the 0.62-unit left gutter; the grey 'no significant dimension' outline was dropped for that reason"
+  },
+  "primitives": [
+    {
+      "primitive_id": "rule_updating",
+      "primitive": "Rule updating",
+      "primitive_zh": "规则更新",
+      "reading": {
+        "social_interaction_motivation": 0.59,
+        "social_cognition": 0.5333,
+        "social_communication_pragmatics": 0.5167,
+        "cognitive_flexibility_adaptation": 0.2,
+        "repetitive_restricted_behavior": 0.15,
+        "novelty_uncertainty_sensory_behavior": 0.3967
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.338,
+        "social_cognition": 0.3807,
+        "social_communication_pragmatics": 0.3993,
+        "cognitive_flexibility_adaptation": 0.692,
+        "repetitive_restricted_behavior": 0.704,
+        "novelty_uncertainty_sensory_behavior": 0.4733
+      },
+      "control_emergence": 0.2467,
+      "dominant_dim": "repetitive_restricted_behavior",
+      "dominant_effect": 0.704,
+      "second_dim": "cognitive_flexibility_adaptation",
+      "second_effect": 0.692,
+      "selectivity_gap": 0.012,
+      "concentration_C": 0.2357,
+      "d_eff": 5.7511,
+      "selectivity_margin": 0.0577,
+      "n_affected": 6,
+      "max_effect": 0.704,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.020085,
+        "social_cognition": 0.048181,
+        "social_communication_pragmatics": 0.003447,
+        "cognitive_flexibility_adaptation": 1e-06,
+        "repetitive_restricted_behavior": 0.00024,
+        "novelty_uncertainty_sensory_behavior": 4.9e-05
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.147093,
+        "social_cognition": 0.205736,
+        "social_communication_pragmatics": 0.084071,
+        "cognitive_flexibility_adaptation": 0.003951,
+        "repetitive_restricted_behavior": 0.000133,
+        "novelty_uncertainty_sensory_behavior": 0.009795
+      },
+      "n_significant_dimensions": 6,
+      "n_significant_dimensions_welch": 3,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_control"
+    },
+    {
+      "primitive_id": "switching_cost",
+      "primitive": "Switching cost",
+      "primitive_zh": "切换成本",
+      "reading": {
+        "social_interaction_motivation": 0.4233,
+        "social_cognition": 0.5967,
+        "social_communication_pragmatics": 0.56,
+        "cognitive_flexibility_adaptation": 0.2167,
+        "repetitive_restricted_behavior": 0.2267,
+        "novelty_uncertainty_sensory_behavior": 0.5067
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.5047,
+        "social_cognition": 0.3173,
+        "social_communication_pragmatics": 0.356,
+        "cognitive_flexibility_adaptation": 0.6753,
+        "repetitive_restricted_behavior": 0.6273,
+        "novelty_uncertainty_sensory_behavior": 0.3633
+      },
+      "control_emergence": 0.22,
+      "dominant_dim": "cognitive_flexibility_adaptation",
+      "dominant_effect": 0.6753,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.6273,
+      "selectivity_gap": 0.048,
+      "concentration_C": 0.2375,
+      "d_eff": 5.7507,
+      "selectivity_margin": 0.05,
+      "n_affected": 6,
+      "max_effect": 0.6753,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.000238,
+        "social_cognition": 0.025276,
+        "social_communication_pragmatics": 0.003341,
+        "cognitive_flexibility_adaptation": 1e-06,
+        "repetitive_restricted_behavior": 0.00024,
+        "novelty_uncertainty_sensory_behavior": 0.002333
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.036375,
+        "social_cognition": 0.179329,
+        "social_communication_pragmatics": 0.084071,
+        "cognitive_flexibility_adaptation": 0.00145,
+        "repetitive_restricted_behavior": 0.000133,
+        "novelty_uncertainty_sensory_behavior": 0.070148
+      },
+      "n_significant_dimensions": 6,
+      "n_significant_dimensions_welch": 3,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_control"
+    },
+    {
+      "primitive_id": "prediction_error_sensitivity",
+      "primitive": "Prediction-error sensitivity",
+      "primitive_zh": "预测误差敏感性",
+      "reading": {
+        "social_interaction_motivation": 0.4767,
+        "social_cognition": 0.7533,
+        "social_communication_pragmatics": 0.7,
+        "cognitive_flexibility_adaptation": 0.3167,
+        "repetitive_restricted_behavior": 0.2167,
+        "novelty_uncertainty_sensory_behavior": 0.2667
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.4513,
+        "social_cognition": 0.1607,
+        "social_communication_pragmatics": 0.216,
+        "cognitive_flexibility_adaptation": 0.5753,
+        "repetitive_restricted_behavior": 0.6373,
+        "novelty_uncertainty_sensory_behavior": 0.6033
+      },
+      "control_emergence": 0.08,
+      "dominant_dim": "repetitive_restricted_behavior",
+      "dominant_effect": 0.6373,
+      "second_dim": "novelty_uncertainty_sensory_behavior",
+      "second_effect": 0.6033,
+      "selectivity_gap": 0.034,
+      "concentration_C": 0.241,
+      "d_eff": 5.4119,
+      "selectivity_margin": 0.0751,
+      "n_affected": 6,
+      "max_effect": 0.6373,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.008289,
+        "social_cognition": 0.028146,
+        "social_communication_pragmatics": 0.005002,
+        "cognitive_flexibility_adaptation": 0.00038,
+        "repetitive_restricted_behavior": 0.00024,
+        "novelty_uncertainty_sensory_behavior": 2.5e-05
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.122059,
+        "social_cognition": 0.179329,
+        "social_communication_pragmatics": 0.084071,
+        "cognitive_flexibility_adaptation": 0.055848,
+        "repetitive_restricted_behavior": 0.000387,
+        "novelty_uncertainty_sensory_behavior": 0.009795
+      },
+      "n_significant_dimensions": 6,
+      "n_significant_dimensions_welch": 2,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "belief_updating",
+      "primitive": "Belief updating",
+      "primitive_zh": "信念更新",
+      "reading": {
+        "social_interaction_motivation": 0.6433,
+        "social_cognition": 0.5667,
+        "social_communication_pragmatics": 0.7367,
+        "cognitive_flexibility_adaptation": 0.2733,
+        "repetitive_restricted_behavior": 0.2933,
+        "novelty_uncertainty_sensory_behavior": 0.5267
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.2847,
+        "social_cognition": 0.3473,
+        "social_communication_pragmatics": 0.1793,
+        "cognitive_flexibility_adaptation": 0.6187,
+        "repetitive_restricted_behavior": 0.5607,
+        "novelty_uncertainty_sensory_behavior": 0.3433
+      },
+      "control_emergence": 0.0867,
+      "dominant_dim": "cognitive_flexibility_adaptation",
+      "dominant_effect": 0.6187,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.5607,
+      "selectivity_gap": 0.058,
+      "concentration_C": 0.2651,
+      "d_eff": 5.5497,
+      "selectivity_margin": 0.05,
+      "n_affected": 6,
+      "max_effect": 0.6187,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.000453,
+        "social_cognition": 0.002758,
+        "social_communication_pragmatics": 0.005167,
+        "cognitive_flexibility_adaptation": 1e-06,
+        "repetitive_restricted_behavior": 0.000488,
+        "novelty_uncertainty_sensory_behavior": 0.002388
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.036375,
+        "social_cognition": 0.096103,
+        "social_communication_pragmatics": 0.084071,
+        "cognitive_flexibility_adaptation": 0.003029,
+        "repetitive_restricted_behavior": 0.002348,
+        "novelty_uncertainty_sensory_behavior": 0.070148
+      },
+      "n_significant_dimensions": 6,
+      "n_significant_dimensions_welch": 3,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "pass"
+    },
+    {
+      "primitive_id": "representation_updating",
+      "primitive": "Representation updating",
+      "primitive_zh": "表征更新",
+      "reading": {
+        "social_interaction_motivation": 0.5933,
+        "social_cognition": 0.4667,
+        "social_communication_pragmatics": 0.57,
+        "cognitive_flexibility_adaptation": 0.2833,
+        "repetitive_restricted_behavior": 0.26,
+        "novelty_uncertainty_sensory_behavior": 0.5933
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.3347,
+        "social_cognition": 0.4473,
+        "social_communication_pragmatics": 0.346,
+        "cognitive_flexibility_adaptation": 0.6087,
+        "repetitive_restricted_behavior": 0.594,
+        "novelty_uncertainty_sensory_behavior": 0.2767
+      },
+      "control_emergence": 0.12,
+      "dominant_dim": "cognitive_flexibility_adaptation",
+      "dominant_effect": 0.6087,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.594,
+      "selectivity_gap": 0.0147,
+      "concentration_C": 0.2335,
+      "d_eff": 5.7466,
+      "selectivity_margin": 0.1667,
+      "n_affected": 6,
+      "max_effect": 0.6087,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.002432,
+        "social_cognition": 0.034057,
+        "social_communication_pragmatics": 6.6e-05,
+        "cognitive_flexibility_adaptation": 0.000226,
+        "repetitive_restricted_behavior": 0.00024,
+        "novelty_uncertainty_sensory_behavior": 0.022687
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.072678,
+        "social_cognition": 0.179329,
+        "social_communication_pragmatics": 0.000576,
+        "cognitive_flexibility_adaptation": 0.04838,
+        "repetitive_restricted_behavior": 0.000204,
+        "novelty_uncertainty_sensory_behavior": 0.163919
+      },
+      "n_significant_dimensions": 6,
+      "n_significant_dimensions_welch": 3,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "novelty_valuation",
+      "primitive": "Novelty valuation",
+      "primitive_zh": "新颖性估值",
+      "reading": {
+        "social_interaction_motivation": 0.64,
+        "social_cognition": 0.6967,
+        "social_communication_pragmatics": 0.7733,
+        "cognitive_flexibility_adaptation": 0.3533,
+        "repetitive_restricted_behavior": 0.3,
+        "novelty_uncertainty_sensory_behavior": 0.33
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.288,
+        "social_cognition": 0.2173,
+        "social_communication_pragmatics": 0.1427,
+        "cognitive_flexibility_adaptation": 0.5387,
+        "repetitive_restricted_behavior": 0.554,
+        "novelty_uncertainty_sensory_behavior": 0.54
+      },
+      "control_emergence": 0.0633,
+      "dominant_dim": "repetitive_restricted_behavior",
+      "dominant_effect": 0.554,
+      "second_dim": "novelty_uncertainty_sensory_behavior",
+      "second_effect": 0.54,
+      "selectivity_gap": 0.014,
+      "concentration_C": 0.2429,
+      "d_eff": 5.3892,
+      "selectivity_margin": 0.1058,
+      "n_affected": 5,
+      "max_effect": 0.554,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.002432,
+        "social_cognition": 0.068323,
+        "social_communication_pragmatics": 0.00532,
+        "cognitive_flexibility_adaptation": 4.4e-05,
+        "repetitive_restricted_behavior": 0.000562,
+        "novelty_uncertainty_sensory_behavior": 3e-06
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.072229,
+        "social_cognition": 0.248181,
+        "social_communication_pragmatics": 0.082982,
+        "cognitive_flexibility_adaptation": 0.021589,
+        "repetitive_restricted_behavior": 0.004947,
+        "novelty_uncertainty_sensory_behavior": 4e-06
+      },
+      "n_significant_dimensions": 5,
+      "n_significant_dimensions_welch": 3,
+      "n_significant_dimensions_without_fdr": 5,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "signal_noise_discrimination",
+      "primitive": "Signal–noise discrimination",
+      "primitive_zh": "信噪判别",
+      "reading": {
+        "social_interaction_motivation": 0.66,
+        "social_cognition": 0.7833,
+        "social_communication_pragmatics": 0.6667,
+        "cognitive_flexibility_adaptation": 0.6333,
+        "repetitive_restricted_behavior": 0.5733,
+        "novelty_uncertainty_sensory_behavior": 0.3167
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.268,
+        "social_cognition": 0.1307,
+        "social_communication_pragmatics": 0.2493,
+        "cognitive_flexibility_adaptation": 0.2587,
+        "repetitive_restricted_behavior": 0.2807,
+        "novelty_uncertainty_sensory_behavior": 0.5533
+      },
+      "control_emergence": 0.1333,
+      "dominant_dim": "novelty_uncertainty_sensory_behavior",
+      "dominant_effect": 0.5533,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.2807,
+      "selectivity_gap": 0.2726,
+      "concentration_C": 0.3179,
+      "d_eff": 5.4887,
+      "selectivity_margin": 0.05,
+      "n_affected": 5,
+      "max_effect": 0.5533,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.000238,
+        "social_cognition": 0.02121,
+        "social_communication_pragmatics": 0.002414,
+        "cognitive_flexibility_adaptation": 0.001773,
+        "repetitive_restricted_behavior": 0.011195,
+        "novelty_uncertainty_sensory_behavior": 5e-06
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.021763,
+        "social_cognition": 0.137472,
+        "social_communication_pragmatics": 0.082982,
+        "cognitive_flexibility_adaptation": 0.080338,
+        "repetitive_restricted_behavior": 0.044564,
+        "novelty_uncertainty_sensory_behavior": 0.000321
+      },
+      "n_significant_dimensions": 6,
+      "n_significant_dimensions_welch": 3,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "pass"
+    },
+    {
+      "primitive_id": "attention_persistence",
+      "primitive": "Attention persistence",
+      "primitive_zh": "注意维持",
+      "reading": {
+        "social_interaction_motivation": 0.5567,
+        "social_cognition": 0.7167,
+        "social_communication_pragmatics": 0.6267,
+        "cognitive_flexibility_adaptation": 0.3467,
+        "repetitive_restricted_behavior": 0.3567,
+        "novelty_uncertainty_sensory_behavior": 0.56
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.3713,
+        "social_cognition": 0.1973,
+        "social_communication_pragmatics": 0.2893,
+        "cognitive_flexibility_adaptation": 0.5453,
+        "repetitive_restricted_behavior": 0.4973,
+        "novelty_uncertainty_sensory_behavior": 0.31
+      },
+      "control_emergence": 0.1567,
+      "dominant_dim": "cognitive_flexibility_adaptation",
+      "dominant_effect": 0.5453,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.4973,
+      "selectivity_gap": 0.048,
+      "concentration_C": 0.2467,
+      "d_eff": 5.6849,
+      "selectivity_margin": 0.1139,
+      "n_affected": 6,
+      "max_effect": 0.5453,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.005043,
+        "social_cognition": 0.034451,
+        "social_communication_pragmatics": 0.011314,
+        "cognitive_flexibility_adaptation": 6.4e-05,
+        "repetitive_restricted_behavior": 0.003145,
+        "novelty_uncertainty_sensory_behavior": 0.003187
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.100587,
+        "social_cognition": 0.179329,
+        "social_communication_pragmatics": 0.124545,
+        "cognitive_flexibility_adaptation": 0.028425,
+        "repetitive_restricted_behavior": 0.03599,
+        "novelty_uncertainty_sensory_behavior": 0.071949
+      },
+      "n_significant_dimensions": 6,
+      "n_significant_dimensions_welch": 2,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_control"
+    },
+    {
+      "primitive_id": "perspective_transformation",
+      "primitive": "Perspective taking",
+      "primitive_zh": "视角转换",
+      "reading": {
+        "social_interaction_motivation": 0.8933,
+        "social_cognition": 0.4433,
+        "social_communication_pragmatics": 0.66,
+        "cognitive_flexibility_adaptation": 0.7867,
+        "repetitive_restricted_behavior": 0.68,
+        "novelty_uncertainty_sensory_behavior": 0.8
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.0347,
+        "social_cognition": 0.4707,
+        "social_communication_pragmatics": 0.256,
+        "cognitive_flexibility_adaptation": 0.1053,
+        "repetitive_restricted_behavior": 0.174,
+        "novelty_uncertainty_sensory_behavior": 0.07
+      },
+      "control_emergence": 0.0267,
+      "dominant_dim": "social_cognition",
+      "dominant_effect": 0.4707,
+      "second_dim": "social_communication_pragmatics",
+      "second_effect": 0.256,
+      "selectivity_gap": 0.2147,
+      "concentration_C": 0.4238,
+      "d_eff": 4.4742,
+      "selectivity_margin": 0.2541,
+      "n_affected": 3,
+      "max_effect": 0.4707,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.141988,
+        "social_cognition": 0.011271,
+        "social_communication_pragmatics": 0.021459,
+        "cognitive_flexibility_adaptation": 0.097149,
+        "repetitive_restricted_behavior": 0.182572,
+        "novelty_uncertainty_sensory_behavior": 0.014906
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.147093,
+        "social_cognition": 0.141562,
+        "social_communication_pragmatics": 0.149403,
+        "cognitive_flexibility_adaptation": 0.290938,
+        "repetitive_restricted_behavior": 0.376296,
+        "novelty_uncertainty_sensory_behavior": 0.018396
+      },
+      "n_significant_dimensions": 3,
+      "n_significant_dimensions_welch": 1,
+      "n_significant_dimensions_without_fdr": 3,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "selective_attention",
+      "primitive": "Selective attention",
+      "primitive_zh": "选择性注意",
+      "reading": {
+        "social_interaction_motivation": 0.61,
+        "social_cognition": 0.6533,
+        "social_communication_pragmatics": 0.5667,
+        "cognitive_flexibility_adaptation": 0.7233,
+        "repetitive_restricted_behavior": 0.6667,
+        "novelty_uncertainty_sensory_behavior": 0.4
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.318,
+        "social_cognition": 0.2607,
+        "social_communication_pragmatics": 0.3493,
+        "cognitive_flexibility_adaptation": 0.1687,
+        "repetitive_restricted_behavior": 0.1873,
+        "novelty_uncertainty_sensory_behavior": 0.47
+      },
+      "control_emergence": 0.18,
+      "dominant_dim": "novelty_uncertainty_sensory_behavior",
+      "dominant_effect": 0.47,
+      "second_dim": "social_communication_pragmatics",
+      "second_effect": 0.3493,
+      "selectivity_gap": 0.1207,
+      "concentration_C": 0.268,
+      "d_eff": 5.6477,
+      "selectivity_margin": 0.0577,
+      "n_affected": 6,
+      "max_effect": 0.47,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.005043,
+        "social_cognition": 0.02121,
+        "social_communication_pragmatics": 0.002567,
+        "cognitive_flexibility_adaptation": 0.003259,
+        "repetitive_restricted_behavior": 0.026669,
+        "novelty_uncertainty_sensory_behavior": 2.5e-05
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.098119,
+        "social_cognition": 0.179329,
+        "social_communication_pragmatics": 0.082982,
+        "cognitive_flexibility_adaptation": 0.084868,
+        "repetitive_restricted_behavior": 0.036653,
+        "novelty_uncertainty_sensory_behavior": 0.003441
+      },
+      "n_significant_dimensions": 6,
+      "n_significant_dimensions_welch": 2,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_control"
+    },
+    {
+      "primitive_id": "agent_state_updating",
+      "primitive": "Agent-state updating",
+      "primitive_zh": "主体状态更新",
+      "reading": {
+        "social_interaction_motivation": 0.6867,
+        "social_cognition": 0.5033,
+        "social_communication_pragmatics": 0.6267,
+        "cognitive_flexibility_adaptation": 0.4533,
+        "repetitive_restricted_behavior": 0.48,
+        "novelty_uncertainty_sensory_behavior": 0.6533
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.2413,
+        "social_cognition": 0.4107,
+        "social_communication_pragmatics": 0.2893,
+        "cognitive_flexibility_adaptation": 0.4387,
+        "repetitive_restricted_behavior": 0.374,
+        "novelty_uncertainty_sensory_behavior": 0.2167
+      },
+      "control_emergence": 0.1767,
+      "dominant_dim": "cognitive_flexibility_adaptation",
+      "dominant_effect": 0.4387,
+      "second_dim": "social_cognition",
+      "second_effect": 0.4107,
+      "selectivity_gap": 0.028,
+      "concentration_C": 0.2226,
+      "d_eff": 5.8021,
+      "selectivity_margin": 0.3135,
+      "n_affected": 6,
+      "max_effect": 0.4387,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.000238,
+        "social_cognition": 0.022186,
+        "social_communication_pragmatics": 0.031386,
+        "cognitive_flexibility_adaptation": 0.014901,
+        "repetitive_restricted_behavior": 0.011195,
+        "novelty_uncertainty_sensory_behavior": 0.004068
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.000159,
+        "social_cognition": 0.179329,
+        "social_communication_pragmatics": 0.175312,
+        "cognitive_flexibility_adaptation": 0.174511,
+        "repetitive_restricted_behavior": 0.082594,
+        "novelty_uncertainty_sensory_behavior": 0.071949
+      },
+      "n_significant_dimensions": 6,
+      "n_significant_dimensions_welch": 1,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_control"
+    },
+    {
+      "primitive_id": "social_reward_weighting",
+      "primitive": "Social reward weighting",
+      "primitive_zh": "社会奖励加权",
+      "reading": {
+        "social_interaction_motivation": 0.4933,
+        "social_cognition": 0.7167,
+        "social_communication_pragmatics": 0.6867,
+        "cognitive_flexibility_adaptation": 0.7033,
+        "repetitive_restricted_behavior": 0.5867,
+        "novelty_uncertainty_sensory_behavior": 0.6667
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.4347,
+        "social_cognition": 0.1973,
+        "social_communication_pragmatics": 0.2293,
+        "cognitive_flexibility_adaptation": 0.1887,
+        "repetitive_restricted_behavior": 0.2673,
+        "novelty_uncertainty_sensory_behavior": 0.2033
+      },
+      "control_emergence": 0.12,
+      "dominant_dim": "social_interaction_motivation",
+      "dominant_effect": 0.4347,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.2673,
+      "selectivity_gap": 0.1674,
+      "concentration_C": 0.2859,
+      "d_eff": 5.7076,
+      "selectivity_margin": 0.1392,
+      "n_affected": 6,
+      "max_effect": 0.4347,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.000837,
+        "social_cognition": 0.034451,
+        "social_communication_pragmatics": 0.017517,
+        "cognitive_flexibility_adaptation": 0.028891,
+        "repetitive_restricted_behavior": 0.007361,
+        "novelty_uncertainty_sensory_behavior": 0.00013
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.061144,
+        "social_cognition": 0.179329,
+        "social_communication_pragmatics": 0.147459,
+        "cognitive_flexibility_adaptation": 0.205202,
+        "repetitive_restricted_behavior": 0.006932,
+        "novelty_uncertainty_sensory_behavior": 0.000232
+      },
+      "n_significant_dimensions": 6,
+      "n_significant_dimensions_welch": 2,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "pass"
+    },
+    {
+      "primitive_id": "self_other_distinction",
+      "primitive": "Self–other distinction",
+      "primitive_zh": "自我—他人区分",
+      "reading": {
+        "social_interaction_motivation": 0.6667,
+        "social_cognition": 0.5433,
+        "social_communication_pragmatics": 0.6067,
+        "cognitive_flexibility_adaptation": 0.7467,
+        "repetitive_restricted_behavior": 0.4967,
+        "novelty_uncertainty_sensory_behavior": 0.6933
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.2613,
+        "social_cognition": 0.3707,
+        "social_communication_pragmatics": 0.3093,
+        "cognitive_flexibility_adaptation": 0.1453,
+        "repetitive_restricted_behavior": 0.3573,
+        "novelty_uncertainty_sensory_behavior": 0.1767
+      },
+      "control_emergence": 0.12,
+      "dominant_dim": "social_cognition",
+      "dominant_effect": 0.3707,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.3573,
+      "selectivity_gap": 0.0134,
+      "concentration_C": 0.2287,
+      "d_eff": 5.6916,
+      "selectivity_margin": 0.1618,
+      "n_affected": 5,
+      "max_effect": 0.3707,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.001234,
+        "social_cognition": 0.007776,
+        "social_communication_pragmatics": 0.000144,
+        "cognitive_flexibility_adaptation": 0.000588,
+        "repetitive_restricted_behavior": 0.001923,
+        "novelty_uncertainty_sensory_behavior": 0.00024
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.061144,
+        "social_cognition": 0.137472,
+        "social_communication_pragmatics": 0.014126,
+        "cognitive_flexibility_adaptation": 0.018594,
+        "repetitive_restricted_behavior": 0.00108,
+        "novelty_uncertainty_sensory_behavior": 0.000321
+      },
+      "n_significant_dimensions": 6,
+      "n_significant_dimensions_welch": 4,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "representation_maintenance",
+      "primitive": "Representation maintenance",
+      "primitive_zh": "表征维持",
+      "reading": {
+        "social_interaction_motivation": 0.6767,
+        "social_cognition": 0.7933,
+        "social_communication_pragmatics": 0.6867,
+        "cognitive_flexibility_adaptation": 0.5333,
+        "repetitive_restricted_behavior": 0.5067,
+        "novelty_uncertainty_sensory_behavior": 0.5533
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.2513,
+        "social_cognition": 0.1207,
+        "social_communication_pragmatics": 0.2293,
+        "cognitive_flexibility_adaptation": 0.3587,
+        "repetitive_restricted_behavior": 0.3473,
+        "novelty_uncertainty_sensory_behavior": 0.3167
+      },
+      "control_emergence": 0.31,
+      "dominant_dim": "cognitive_flexibility_adaptation",
+      "dominant_effect": 0.3587,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.3473,
+      "selectivity_gap": 0.0114,
+      "concentration_C": 0.2209,
+      "d_eff": 5.7005,
+      "selectivity_margin": 0.0706,
+      "n_affected": 5,
+      "max_effect": 0.3587,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.002554,
+        "social_cognition": 0.011271,
+        "social_communication_pragmatics": 0.000144,
+        "cognitive_flexibility_adaptation": 6.4e-05,
+        "repetitive_restricted_behavior": 0.00637,
+        "novelty_uncertainty_sensory_behavior": 0.000815
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.072229,
+        "social_cognition": 0.064394,
+        "social_communication_pragmatics": 0.000576,
+        "cognitive_flexibility_adaptation": 0.021589,
+        "repetitive_restricted_behavior": 0.030812,
+        "novelty_uncertainty_sensory_behavior": 0.040375
+      },
+      "n_significant_dimensions": 6,
+      "n_significant_dimensions_welch": 4,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_control"
+    },
+    {
+      "primitive_id": "attention_shifting",
+      "primitive": "Attention shifting",
+      "primitive_zh": "注意转移",
+      "reading": {
+        "social_interaction_motivation": 0.63,
+        "social_cognition": 0.71,
+        "social_communication_pragmatics": 0.6033,
+        "cognitive_flexibility_adaptation": 0.61,
+        "repetitive_restricted_behavior": 0.4967,
+        "novelty_uncertainty_sensory_behavior": 0.56
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.298,
+        "social_cognition": 0.204,
+        "social_communication_pragmatics": 0.3127,
+        "cognitive_flexibility_adaptation": 0.282,
+        "repetitive_restricted_behavior": 0.3573,
+        "novelty_uncertainty_sensory_behavior": 0.31
+      },
+      "control_emergence": 0.13,
+      "dominant_dim": "repetitive_restricted_behavior",
+      "dominant_effect": 0.3573,
+      "second_dim": "social_communication_pragmatics",
+      "second_effect": 0.3127,
+      "selectivity_gap": 0.0446,
+      "concentration_C": 0.2026,
+      "d_eff": 5.9219,
+      "selectivity_margin": 0.1245,
+      "n_affected": 6,
+      "max_effect": 0.3573,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.001147,
+        "social_cognition": 0.031681,
+        "social_communication_pragmatics": 0.001639,
+        "cognitive_flexibility_adaptation": 0.001414,
+        "repetitive_restricted_behavior": 0.005828,
+        "novelty_uncertainty_sensory_behavior": 0.000748
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.061144,
+        "social_cognition": 0.179329,
+        "social_communication_pragmatics": 0.081195,
+        "cognitive_flexibility_adaptation": 0.078112,
+        "repetitive_restricted_behavior": 0.027906,
+        "novelty_uncertainty_sensory_behavior": 0.038372
+      },
+      "n_significant_dimensions": 6,
+      "n_significant_dimensions_welch": 2,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "information_valuation",
+      "primitive": "Information valuation",
+      "primitive_zh": "信息价值",
+      "reading": {
+        "social_interaction_motivation": 0.5967,
+        "social_cognition": 0.87,
+        "social_communication_pragmatics": 0.8333,
+        "cognitive_flexibility_adaptation": 0.8833,
+        "repetitive_restricted_behavior": 0.8,
+        "novelty_uncertainty_sensory_behavior": 0.7333
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.3313,
+        "social_cognition": 0.044,
+        "social_communication_pragmatics": 0.0827,
+        "cognitive_flexibility_adaptation": 0.0087,
+        "repetitive_restricted_behavior": 0.054,
+        "novelty_uncertainty_sensory_behavior": 0.1367
+      },
+      "control_emergence": 0.03,
+      "dominant_dim": "social_interaction_motivation",
+      "dominant_effect": 0.3313,
+      "second_dim": "novelty_uncertainty_sensory_behavior",
+      "second_effect": 0.1367,
+      "selectivity_gap": 0.1946,
+      "concentration_C": 0.504,
+      "d_eff": 3.9599,
+      "selectivity_margin": 0.0657,
+      "n_affected": 1,
+      "max_effect": 0.3313,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.000238,
+        "social_cognition": 0.088609,
+        "social_communication_pragmatics": 0.038323,
+        "cognitive_flexibility_adaptation": 0.687126,
+        "repetitive_restricted_behavior": 0.536527,
+        "novelty_uncertainty_sensory_behavior": 0.003354
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.033397,
+        "social_cognition": 0.137472,
+        "social_communication_pragmatics": 0.149403,
+        "cognitive_flexibility_adaptation": 0.727221,
+        "repetitive_restricted_behavior": 0.567812,
+        "novelty_uncertainty_sensory_behavior": 0.038372
+      },
+      "n_significant_dimensions": 3,
+      "n_significant_dimensions_welch": 2,
+      "n_significant_dimensions_without_fdr": 3,
+      "verdict": "pass"
+    },
+    {
+      "primitive_id": "other_state_representation",
+      "primitive": "Other-state representation",
+      "primitive_zh": "他人状态表征",
+      "reading": {
+        "social_interaction_motivation": 0.8167,
+        "social_cognition": 0.6133,
+        "social_communication_pragmatics": 0.7933,
+        "cognitive_flexibility_adaptation": 0.8867,
+        "repetitive_restricted_behavior": 0.79,
+        "novelty_uncertainty_sensory_behavior": 0.85
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.1113,
+        "social_cognition": 0.3007,
+        "social_communication_pragmatics": 0.1227,
+        "cognitive_flexibility_adaptation": 0.0053,
+        "repetitive_restricted_behavior": 0.064,
+        "novelty_uncertainty_sensory_behavior": 0.02
+      },
+      "control_emergence": 0.0333,
+      "dominant_dim": "social_cognition",
+      "dominant_effect": 0.3007,
+      "second_dim": "social_communication_pragmatics",
+      "second_effect": 0.1227,
+      "selectivity_gap": 0.178,
+      "concentration_C": 0.4819,
+      "d_eff": 3.9096,
+      "selectivity_margin": 0.1041,
+      "n_affected": 1,
+      "max_effect": 0.3007,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.0877,
+        "social_cognition": 0.00428,
+        "social_communication_pragmatics": 0.002414,
+        "cognitive_flexibility_adaptation": 0.805937,
+        "repetitive_restricted_behavior": 0.536527,
+        "novelty_uncertainty_sensory_behavior": 0.508195
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.257772,
+        "social_cognition": 0.135516,
+        "social_communication_pragmatics": 0.008277,
+        "cognitive_flexibility_adaptation": 0.833886,
+        "repetitive_restricted_behavior": 0.627834,
+        "novelty_uncertainty_sensory_behavior": 0.59408
+      },
+      "n_significant_dimensions": 2,
+      "n_significant_dimensions_welch": 1,
+      "n_significant_dimensions_without_fdr": 2,
+      "verdict": "pass"
+    },
+    {
+      "primitive_id": "confidence_calibration",
+      "primitive": "Confidence calibration",
+      "primitive_zh": "置信度校准",
+      "reading": {
+        "social_interaction_motivation": 0.6433,
+        "social_cognition": 0.74,
+        "social_communication_pragmatics": 0.68,
+        "cognitive_flexibility_adaptation": 0.7233,
+        "repetitive_restricted_behavior": 0.82,
+        "novelty_uncertainty_sensory_behavior": 0.6133
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.2847,
+        "social_cognition": 0.174,
+        "social_communication_pragmatics": 0.236,
+        "cognitive_flexibility_adaptation": 0.1687,
+        "repetitive_restricted_behavior": 0.034,
+        "novelty_uncertainty_sensory_behavior": 0.2567
+      },
+      "control_emergence": 0.0767,
+      "dominant_dim": "social_interaction_motivation",
+      "dominant_effect": 0.2847,
+      "second_dim": "novelty_uncertainty_sensory_behavior",
+      "second_effect": 0.2567,
+      "selectivity_gap": 0.028,
+      "concentration_C": 0.2467,
+      "d_eff": 5.3354,
+      "selectivity_margin": 0.0696,
+      "n_affected": 5,
+      "max_effect": 0.2847,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.000453,
+        "social_cognition": 0.00428,
+        "social_communication_pragmatics": 0.000856,
+        "cognitive_flexibility_adaptation": 0.014901,
+        "repetitive_restricted_behavior": 0.584568,
+        "novelty_uncertainty_sensory_behavior": 0.000112
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.036375,
+        "social_cognition": 0.059394,
+        "social_communication_pragmatics": 0.03709,
+        "cognitive_flexibility_adaptation": 0.168922,
+        "repetitive_restricted_behavior": 0.567812,
+        "novelty_uncertainty_sensory_behavior": 0.001259
+      },
+      "n_significant_dimensions": 5,
+      "n_significant_dimensions_welch": 3,
+      "n_significant_dimensions_without_fdr": 5,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "evidence_weighting",
+      "primitive": "Evidence weighting",
+      "primitive_zh": "证据权重",
+      "reading": {
+        "social_interaction_motivation": 0.8967,
+        "social_cognition": 0.8333,
+        "social_communication_pragmatics": 0.8333,
+        "cognitive_flexibility_adaptation": 0.6133,
+        "repetitive_restricted_behavior": 0.62,
+        "novelty_uncertainty_sensory_behavior": 0.7733
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.0313,
+        "social_cognition": 0.0807,
+        "social_communication_pragmatics": 0.0827,
+        "cognitive_flexibility_adaptation": 0.2787,
+        "repetitive_restricted_behavior": 0.234,
+        "novelty_uncertainty_sensory_behavior": 0.0967
+      },
+      "control_emergence": 0.0567,
+      "dominant_dim": "cognitive_flexibility_adaptation",
+      "dominant_effect": 0.2787,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.234,
+      "selectivity_gap": 0.0447,
+      "concentration_C": 0.3466,
+      "d_eff": 4.8173,
+      "selectivity_margin": 0.05,
+      "n_affected": 2,
+      "max_effect": 0.2787,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.198536,
+        "social_cognition": 0.058311,
+        "social_communication_pragmatics": 0.021459,
+        "cognitive_flexibility_adaptation": 3.9e-05,
+        "repetitive_restricted_behavior": 0.009864,
+        "novelty_uncertainty_sensory_behavior": 0.006271
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.235722,
+        "social_cognition": 0.179329,
+        "social_communication_pragmatics": 0.116184,
+        "cognitive_flexibility_adaptation": 0.003951,
+        "repetitive_restricted_behavior": 0.006385,
+        "novelty_uncertainty_sensory_behavior": 0.02355
+      },
+      "n_significant_dimensions": 4,
+      "n_significant_dimensions_welch": 3,
+      "n_significant_dimensions_without_fdr": 5,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "salience_assignment",
+      "primitive": "Salience assignment",
+      "primitive_zh": "显著性分配",
+      "reading": {
+        "social_interaction_motivation": 0.6633,
+        "social_cognition": 0.7533,
+        "social_communication_pragmatics": 0.6867,
+        "cognitive_flexibility_adaptation": 0.7933,
+        "repetitive_restricted_behavior": 0.6067,
+        "novelty_uncertainty_sensory_behavior": 0.6267
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.2647,
+        "social_cognition": 0.1607,
+        "social_communication_pragmatics": 0.2293,
+        "cognitive_flexibility_adaptation": 0.0987,
+        "repetitive_restricted_behavior": 0.2473,
+        "novelty_uncertainty_sensory_behavior": 0.2433
+      },
+      "control_emergence": 0.1133,
+      "dominant_dim": "social_interaction_motivation",
+      "dominant_effect": 0.2647,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.2473,
+      "selectivity_gap": 0.0174,
+      "concentration_C": 0.2128,
+      "d_eff": 5.7356,
+      "selectivity_margin": 0.1224,
+      "n_affected": 5,
+      "max_effect": 0.2647,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.003255,
+        "social_cognition": 0.015495,
+        "social_communication_pragmatics": 0.00524,
+        "cognitive_flexibility_adaptation": 0.001964,
+        "repetitive_restricted_behavior": 0.014806,
+        "novelty_uncertainty_sensory_behavior": 0.006271
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.076338,
+        "social_cognition": 0.137472,
+        "social_communication_pragmatics": 0.090502,
+        "cognitive_flexibility_adaptation": 0.018594,
+        "repetitive_restricted_behavior": 0.044564,
+        "novelty_uncertainty_sensory_behavior": 0.091273
+      },
+      "n_significant_dimensions": 6,
+      "n_significant_dimensions_welch": 2,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "ambiguity_tolerance",
+      "primitive": "Ambiguity tolerance",
+      "primitive_zh": "歧义耐受",
+      "reading": {
+        "social_interaction_motivation": 0.7467,
+        "social_cognition": 0.7767,
+        "social_communication_pragmatics": 0.6733,
+        "cognitive_flexibility_adaptation": 0.76,
+        "repetitive_restricted_behavior": 0.62,
+        "novelty_uncertainty_sensory_behavior": 0.6533
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.1813,
+        "social_cognition": 0.1373,
+        "social_communication_pragmatics": 0.2427,
+        "cognitive_flexibility_adaptation": 0.132,
+        "repetitive_restricted_behavior": 0.234,
+        "novelty_uncertainty_sensory_behavior": 0.2167
+      },
+      "control_emergence": 0.0733,
+      "dominant_dim": "social_communication_pragmatics",
+      "dominant_effect": 0.2427,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.234,
+      "selectivity_gap": 0.0087,
+      "concentration_C": 0.2122,
+      "d_eff": 5.8372,
+      "selectivity_margin": 0.05,
+      "n_affected": 4,
+      "max_effect": 0.2427,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.002432,
+        "social_cognition": 0.02121,
+        "social_communication_pragmatics": 0.000144,
+        "cognitive_flexibility_adaptation": 0.013051,
+        "repetitive_restricted_behavior": 0.010977,
+        "novelty_uncertainty_sensory_behavior": 0.000378
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.061144,
+        "social_cognition": 0.137472,
+        "social_communication_pragmatics": 0.000576,
+        "cognitive_flexibility_adaptation": 0.14523,
+        "repetitive_restricted_behavior": 0.008024,
+        "novelty_uncertainty_sensory_behavior": 0.009795
+      },
+      "n_significant_dimensions": 6,
+      "n_significant_dimensions_welch": 3,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "relational_representation",
+      "primitive": "Relational representation",
+      "primitive_zh": "关系表征",
+      "reading": {
+        "social_interaction_motivation": 0.7267,
+        "social_cognition": 0.6933,
+        "social_communication_pragmatics": 0.81,
+        "cognitive_flexibility_adaptation": 0.7667,
+        "repetitive_restricted_behavior": 0.7467,
+        "novelty_uncertainty_sensory_behavior": 0.7567
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.2013,
+        "social_cognition": 0.2207,
+        "social_communication_pragmatics": 0.106,
+        "cognitive_flexibility_adaptation": 0.1253,
+        "repetitive_restricted_behavior": 0.1073,
+        "novelty_uncertainty_sensory_behavior": 0.1133
+      },
+      "control_emergence": 0.0467,
+      "dominant_dim": "social_cognition",
+      "dominant_effect": 0.2207,
+      "second_dim": "social_interaction_motivation",
+      "second_effect": 0.2013,
+      "selectivity_gap": 0.0194,
+      "concentration_C": 0.2525,
+      "d_eff": 5.7114,
+      "selectivity_margin": 0.1091,
+      "n_affected": 2,
+      "max_effect": 0.2207,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.020478,
+        "social_cognition": 0.011271,
+        "social_communication_pragmatics": 0.005555,
+        "cognitive_flexibility_adaptation": 0.03306,
+        "repetitive_restricted_behavior": 0.286318,
+        "novelty_uncertainty_sensory_behavior": 0.062014
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.147093,
+        "social_cognition": 0.137472,
+        "social_communication_pragmatics": 0.065254,
+        "cognitive_flexibility_adaptation": 0.205202,
+        "repetitive_restricted_behavior": 0.434286,
+        "novelty_uncertainty_sensory_behavior": 0.222588
+      },
+      "n_significant_dimensions": 4,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 4,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "local_global_weighting",
+      "primitive": "Local–global weighting",
+      "primitive_zh": "局部—整体信息权衡",
+      "reading": {
+        "social_interaction_motivation": 0.78,
+        "social_cognition": 0.7167,
+        "social_communication_pragmatics": 0.6967,
+        "cognitive_flexibility_adaptation": 0.7333,
+        "repetitive_restricted_behavior": 0.6667,
+        "novelty_uncertainty_sensory_behavior": 0.6967
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.148,
+        "social_cognition": 0.1973,
+        "social_communication_pragmatics": 0.2193,
+        "cognitive_flexibility_adaptation": 0.1587,
+        "repetitive_restricted_behavior": 0.1873,
+        "novelty_uncertainty_sensory_behavior": 0.1733
+      },
+      "control_emergence": 0.12,
+      "dominant_dim": "social_communication_pragmatics",
+      "dominant_effect": 0.2193,
+      "second_dim": "social_cognition",
+      "second_effect": 0.1973,
+      "selectivity_gap": 0.022,
+      "concentration_C": 0.2023,
+      "d_eff": 5.9481,
+      "selectivity_margin": 0.1675,
+      "n_affected": 5,
+      "max_effect": 0.2193,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.00388,
+        "social_cognition": 0.048181,
+        "social_communication_pragmatics": 0.017517,
+        "cognitive_flexibility_adaptation": 0.009313,
+        "repetitive_restricted_behavior": 0.018645,
+        "novelty_uncertainty_sensory_behavior": 0.00092
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.066057,
+        "social_cognition": 0.204373,
+        "social_communication_pragmatics": 0.147459,
+        "cognitive_flexibility_adaptation": 0.137511,
+        "repetitive_restricted_behavior": 0.013196,
+        "novelty_uncertainty_sensory_behavior": 0.014503
+      },
+      "n_significant_dimensions": 6,
+      "n_significant_dimensions_welch": 2,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "feature_binding",
+      "primitive": "Feature binding",
+      "primitive_zh": "特征绑定",
+      "reading": {
+        "social_interaction_motivation": 0.8233,
+        "social_cognition": 0.81,
+        "social_communication_pragmatics": 0.7533,
+        "cognitive_flexibility_adaptation": 0.7133,
+        "repetitive_restricted_behavior": 0.64,
+        "novelty_uncertainty_sensory_behavior": 0.67
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.1047,
+        "social_cognition": 0.104,
+        "social_communication_pragmatics": 0.1627,
+        "cognitive_flexibility_adaptation": 0.1787,
+        "repetitive_restricted_behavior": 0.214,
+        "novelty_uncertainty_sensory_behavior": 0.2
+      },
+      "control_emergence": 0.1567,
+      "dominant_dim": "repetitive_restricted_behavior",
+      "dominant_effect": 0.214,
+      "second_dim": "novelty_uncertainty_sensory_behavior",
+      "second_effect": 0.2,
+      "selectivity_gap": 0.014,
+      "concentration_C": 0.222,
+      "d_eff": 5.7799,
+      "selectivity_margin": 0.05,
+      "n_affected": 4,
+      "max_effect": 0.214,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.00388,
+        "social_cognition": 0.01973,
+        "social_communication_pragmatics": 0.005002,
+        "cognitive_flexibility_adaptation": 6.4e-05,
+        "repetitive_restricted_behavior": 0.011195,
+        "novelty_uncertainty_sensory_behavior": 0.00024
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.033231,
+        "social_cognition": 0.117212,
+        "social_communication_pragmatics": 0.082982,
+        "cognitive_flexibility_adaptation": 0.00016,
+        "repetitive_restricted_behavior": 0.00737,
+        "novelty_uncertainty_sensory_behavior": 0.001259
+      },
+      "n_significant_dimensions": 6,
+      "n_significant_dimensions_welch": 4,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_control"
+    },
+    {
+      "primitive_id": "information_seeking_under_uncertainty",
+      "primitive": "Info. seeking (uncertainty)",
+      "primitive_zh": "不确定性下的信息寻求",
+      "reading": {
+        "social_interaction_motivation": 0.7767,
+        "social_cognition": 0.8033,
+        "social_communication_pragmatics": 0.85,
+        "cognitive_flexibility_adaptation": 0.7867,
+        "repetitive_restricted_behavior": 0.73,
+        "novelty_uncertainty_sensory_behavior": 0.69
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.1513,
+        "social_cognition": 0.1107,
+        "social_communication_pragmatics": 0.066,
+        "cognitive_flexibility_adaptation": 0.1053,
+        "repetitive_restricted_behavior": 0.124,
+        "novelty_uncertainty_sensory_behavior": 0.18
+      },
+      "control_emergence": 0.04,
+      "dominant_dim": "novelty_uncertainty_sensory_behavior",
+      "dominant_effect": 0.18,
+      "second_dim": "social_interaction_motivation",
+      "second_effect": 0.1513,
+      "selectivity_gap": 0.0287,
+      "concentration_C": 0.2441,
+      "d_eff": 5.7416,
+      "selectivity_margin": 0.1474,
+      "n_affected": 2,
+      "max_effect": 0.18,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.141988,
+        "social_cognition": 0.122139,
+        "social_communication_pragmatics": 0.050588,
+        "cognitive_flexibility_adaptation": 0.068467,
+        "repetitive_restricted_behavior": 0.182572,
+        "novelty_uncertainty_sensory_behavior": 0.022687
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.335074,
+        "social_cognition": 0.307865,
+        "social_communication_pragmatics": 0.149403,
+        "cognitive_flexibility_adaptation": 0.249202,
+        "repetitive_restricted_behavior": 0.286704,
+        "novelty_uncertainty_sensory_behavior": 0.161908
+      },
+      "n_significant_dimensions": 1,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 2,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "familiarity_valuation",
+      "primitive": "Familiarity valuation",
+      "primitive_zh": "熟悉性估值",
+      "reading": {
+        "social_interaction_motivation": 0.75,
+        "social_cognition": 0.8,
+        "social_communication_pragmatics": 0.8033,
+        "cognitive_flexibility_adaptation": 0.7967,
+        "repetitive_restricted_behavior": 0.8533,
+        "novelty_uncertainty_sensory_behavior": 0.7767
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.178,
+        "social_cognition": 0.114,
+        "social_communication_pragmatics": 0.1127,
+        "cognitive_flexibility_adaptation": 0.0953,
+        "repetitive_restricted_behavior": 0.0007,
+        "novelty_uncertainty_sensory_behavior": 0.0933
+      },
+      "control_emergence": 0.17,
+      "dominant_dim": "social_interaction_motivation",
+      "dominant_effect": 0.178,
+      "second_dim": "social_cognition",
+      "second_effect": 0.114,
+      "selectivity_gap": 0.064,
+      "concentration_C": 0.2997,
+      "d_eff": 4.882,
+      "selectivity_margin": 0.1361,
+      "n_affected": 1,
+      "max_effect": 0.178,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.020478,
+        "social_cognition": 0.034057,
+        "social_communication_pragmatics": 0.017189,
+        "cognitive_flexibility_adaptation": 0.06174,
+        "repetitive_restricted_behavior": 0.990688,
+        "novelty_uncertainty_sensory_behavior": 0.047641
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.147093,
+        "social_cognition": 0.179329,
+        "social_communication_pragmatics": 0.123037,
+        "cognitive_flexibility_adaptation": 0.242519,
+        "repetitive_restricted_behavior": 0.989959,
+        "novelty_uncertainty_sensory_behavior": 0.178021
+      },
+      "n_significant_dimensions": 4,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 5,
+      "verdict": "fail_control"
+    },
+    {
+      "primitive_id": "information_relevance_weighting",
+      "primitive": "Info.-relevance weighting",
+      "primitive_zh": "信息相关性加权",
+      "reading": {
+        "social_interaction_motivation": 0.7833,
+        "social_cognition": 0.8533,
+        "social_communication_pragmatics": 0.7733,
+        "cognitive_flexibility_adaptation": 0.7933,
+        "repetitive_restricted_behavior": 0.7667,
+        "novelty_uncertainty_sensory_behavior": 0.74
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.1447,
+        "social_cognition": 0.0607,
+        "social_communication_pragmatics": 0.1427,
+        "cognitive_flexibility_adaptation": 0.0987,
+        "repetitive_restricted_behavior": 0.0873,
+        "novelty_uncertainty_sensory_behavior": 0.13
+      },
+      "control_emergence": 0.1,
+      "dominant_dim": "social_interaction_motivation",
+      "dominant_effect": 0.1447,
+      "second_dim": "social_communication_pragmatics",
+      "second_effect": 0.1427,
+      "selectivity_gap": 0.002,
+      "concentration_C": 0.2179,
+      "d_eff": 5.757,
+      "selectivity_margin": 0.0677,
+      "n_affected": 0,
+      "max_effect": 0.1447,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.005043,
+        "social_cognition": 0.05577,
+        "social_communication_pragmatics": 0.015011,
+        "cognitive_flexibility_adaptation": 0.049671,
+        "repetitive_restricted_behavior": 0.390562,
+        "novelty_uncertainty_sensory_behavior": 0.012283
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.072229,
+        "social_cognition": 0.137472,
+        "social_communication_pragmatics": 0.124545,
+        "cognitive_flexibility_adaptation": 0.22101,
+        "repetitive_restricted_behavior": 0.513095,
+        "novelty_uncertainty_sensory_behavior": 0.091273
+      },
+      "n_significant_dimensions": 4,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 5,
+      "verdict": "no_effect"
+    },
+    {
+      "primitive_id": "inhibition",
+      "primitive": "Inhibition",
+      "primitive_zh": "抑制",
+      "reading": {
+        "social_interaction_motivation": 0.8767,
+        "social_cognition": 0.86,
+        "social_communication_pragmatics": 0.85,
+        "cognitive_flexibility_adaptation": 0.75,
+        "repetitive_restricted_behavior": 0.7633,
+        "novelty_uncertainty_sensory_behavior": 0.7633
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.0513,
+        "social_cognition": 0.054,
+        "social_communication_pragmatics": 0.066,
+        "cognitive_flexibility_adaptation": 0.142,
+        "repetitive_restricted_behavior": 0.0907,
+        "novelty_uncertainty_sensory_behavior": 0.1067
+      },
+      "control_emergence": 0.04,
+      "dominant_dim": "cognitive_flexibility_adaptation",
+      "dominant_effect": 0.142,
+      "second_dim": "novelty_uncertainty_sensory_behavior",
+      "second_effect": 0.1067,
+      "selectivity_gap": 0.0353,
+      "concentration_C": 0.278,
+      "d_eff": 5.6002,
+      "selectivity_margin": 0.1528,
+      "n_affected": 0,
+      "max_effect": 0.142,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.055914,
+        "social_cognition": 0.057614,
+        "social_communication_pragmatics": 0.011508,
+        "cognitive_flexibility_adaptation": 0.06174,
+        "repetitive_restricted_behavior": 0.325536,
+        "novelty_uncertainty_sensory_behavior": 0.002388
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.076354,
+        "social_cognition": 0.137472,
+        "social_communication_pragmatics": 0.017667,
+        "cognitive_flexibility_adaptation": 0.249202,
+        "repetitive_restricted_behavior": 0.442381,
+        "novelty_uncertainty_sensory_behavior": 0.002252
+      },
+      "n_significant_dimensions": 2,
+      "n_significant_dimensions_welch": 2,
+      "n_significant_dimensions_without_fdr": 5,
+      "verdict": "no_effect"
+    },
+    {
+      "primitive_id": "goal_maintenance",
+      "primitive": "Goal maintenance",
+      "primitive_zh": "目标维持",
+      "reading": {
+        "social_interaction_motivation": 0.8867,
+        "social_cognition": 0.8433,
+        "social_communication_pragmatics": 0.8233,
+        "cognitive_flexibility_adaptation": 0.8733,
+        "repetitive_restricted_behavior": 0.7733,
+        "novelty_uncertainty_sensory_behavior": 0.7933
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.0413,
+        "social_cognition": 0.0707,
+        "social_communication_pragmatics": 0.0927,
+        "cognitive_flexibility_adaptation": 0.0187,
+        "repetitive_restricted_behavior": 0.0807,
+        "novelty_uncertainty_sensory_behavior": 0.0767
+      },
+      "control_emergence": 0.18,
+      "dominant_dim": "social_communication_pragmatics",
+      "dominant_effect": 0.0927,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.0807,
+      "selectivity_gap": 0.012,
+      "concentration_C": 0.2434,
+      "d_eff": 5.4578,
+      "selectivity_margin": 0.05,
+      "n_affected": 0,
+      "max_effect": 0.0927,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.072923,
+        "social_cognition": 0.068323,
+        "social_communication_pragmatics": 0.011124,
+        "cognitive_flexibility_adaptation": 0.258695,
+        "repetitive_restricted_behavior": 0.269766,
+        "novelty_uncertainty_sensory_behavior": 0.015719
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.072229,
+        "social_cognition": 0.179329,
+        "social_communication_pragmatics": 0.082982,
+        "cognitive_flexibility_adaptation": 0.22101,
+        "repetitive_restricted_behavior": 0.259088,
+        "novelty_uncertainty_sensory_behavior": 0.040375
+      },
+      "n_significant_dimensions": 2,
+      "n_significant_dimensions_welch": 1,
+      "n_significant_dimensions_without_fdr": 2,
+      "verdict": "fail_both"
+    },
+    {
+      "primitive_id": "prior_strength",
+      "primitive": "Prior strength",
+      "primitive_zh": "先验强度",
+      "reading": {
+        "social_interaction_motivation": 0.9167,
+        "social_cognition": 0.89,
+        "social_communication_pragmatics": 0.9,
+        "cognitive_flexibility_adaptation": 0.8567,
+        "repetitive_restricted_behavior": 0.8933,
+        "novelty_uncertainty_sensory_behavior": 0.8333
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.0113,
+        "social_cognition": 0.024,
+        "social_communication_pragmatics": 0.016,
+        "cognitive_flexibility_adaptation": 0.0353,
+        "repetitive_restricted_behavior": -0.0393,
+        "novelty_uncertainty_sensory_behavior": 0.0367
+      },
+      "control_emergence": 0.05,
+      "dominant_dim": "novelty_uncertainty_sensory_behavior",
+      "dominant_effect": 0.0367,
+      "second_dim": "cognitive_flexibility_adaptation",
+      "second_effect": 0.0353,
+      "selectivity_gap": 0.0014,
+      "concentration_C": 0.4369,
+      "d_eff": 5.3108,
+      "selectivity_margin": 0.05,
+      "n_affected": 0,
+      "max_effect": 0.0367,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.576002,
+        "social_cognition": 0.382925,
+        "social_communication_pragmatics": 0.513851,
+        "cognitive_flexibility_adaptation": 0.354152,
+        "repetitive_restricted_behavior": 0.536527,
+        "novelty_uncertainty_sensory_behavior": 0.20129
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.510006,
+        "social_cognition": 0.412992,
+        "social_communication_pragmatics": 0.567045,
+        "cognitive_flexibility_adaptation": 0.533305,
+        "repetitive_restricted_behavior": 0.513095,
+        "novelty_uncertainty_sensory_behavior": 0.285342
+      },
+      "n_significant_dimensions": 0,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 0,
+      "verdict": "no_effect"
+    },
+    {
+      "primitive_id": "uncertainty_estimation",
+      "primitive": "Uncertainty estimation",
+      "primitive_zh": "不确定性估计",
+      "reading": {
+        "social_interaction_motivation": 0.92,
+        "social_cognition": 0.9033,
+        "social_communication_pragmatics": 0.9067,
+        "cognitive_flexibility_adaptation": 0.8833,
+        "repetitive_restricted_behavior": 0.82,
+        "novelty_uncertainty_sensory_behavior": 0.8667
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.008,
+        "social_cognition": 0.0107,
+        "social_communication_pragmatics": 0.0093,
+        "cognitive_flexibility_adaptation": 0.0087,
+        "repetitive_restricted_behavior": 0.034,
+        "novelty_uncertainty_sensory_behavior": 0.0033
+      },
+      "control_emergence": -0.0067,
+      "dominant_dim": "repetitive_restricted_behavior",
+      "dominant_effect": 0.034,
+      "second_dim": "social_cognition",
+      "second_effect": 0.0107,
+      "selectivity_gap": 0.0233,
+      "concentration_C": 0.4595,
+      "d_eff": 4.6112,
+      "selectivity_margin": 0.1007,
+      "n_affected": 0,
+      "max_effect": 0.034,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.738349,
+        "social_cognition": 0.74224,
+        "social_communication_pragmatics": 0.645668,
+        "cognitive_flexibility_adaptation": 0.811109,
+        "repetitive_restricted_behavior": 0.615834,
+        "novelty_uncertainty_sensory_behavior": 0.929925
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.761815,
+        "social_cognition": 0.787261,
+        "social_communication_pragmatics": 0.643962,
+        "cognitive_flexibility_adaptation": 0.864086,
+        "repetitive_restricted_behavior": 0.63278,
+        "novelty_uncertainty_sensory_behavior": 0.94748
+      },
+      "n_significant_dimensions": 0,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 0,
+      "verdict": "no_effect"
+    }
+  ],
+  "primitives_dose_0.8": [
+    {
+      "primitive_id": "rule_updating",
+      "primitive": "Rule updating",
+      "primitive_zh": "规则更新",
+      "reading": {
+        "social_interaction_motivation": 0.75,
+        "social_cognition": 0.7033,
+        "social_communication_pragmatics": 0.71,
+        "cognitive_flexibility_adaptation": 0.3267,
+        "repetitive_restricted_behavior": 0.3133,
+        "novelty_uncertainty_sensory_behavior": 0.5667
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.178,
+        "social_cognition": 0.2107,
+        "social_communication_pragmatics": 0.206,
+        "cognitive_flexibility_adaptation": 0.5653,
+        "repetitive_restricted_behavior": 0.5407,
+        "novelty_uncertainty_sensory_behavior": 0.3033
+      },
+      "control_emergence": 0.1867,
+      "dominant_dim": "cognitive_flexibility_adaptation",
+      "dominant_effect": 0.5653,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.5407,
+      "selectivity_gap": 0.0246,
+      "concentration_C": 0.2821,
+      "d_eff": 5.3761,
+      "selectivity_margin": 0.1576,
+      "n_affected": 6,
+      "max_effect": 0.5653,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.051667,
+        "social_cognition": 0.071108,
+        "social_communication_pragmatics": 0.032707,
+        "cognitive_flexibility_adaptation": 0.000616,
+        "repetitive_restricted_behavior": 0.002481,
+        "novelty_uncertainty_sensory_behavior": 0.000227
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.239098,
+        "social_cognition": 0.231007,
+        "social_communication_pragmatics": 0.189965,
+        "cognitive_flexibility_adaptation": 0.059286,
+        "repetitive_restricted_behavior": 0.008551,
+        "novelty_uncertainty_sensory_behavior": 0.002359
+      },
+      "n_significant_dimensions": 4,
+      "n_significant_dimensions_welch": 2,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_control"
+    },
+    {
+      "primitive_id": "self_other_distinction",
+      "primitive": "Self–other distinction",
+      "primitive_zh": "自我—他人区分",
+      "reading": {
+        "social_interaction_motivation": 0.7933,
+        "social_cognition": 0.4067,
+        "social_communication_pragmatics": 0.68,
+        "cognitive_flexibility_adaptation": 0.7733,
+        "repetitive_restricted_behavior": 0.6667,
+        "novelty_uncertainty_sensory_behavior": 0.6733
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.1347,
+        "social_cognition": 0.5073,
+        "social_communication_pragmatics": 0.236,
+        "cognitive_flexibility_adaptation": 0.1187,
+        "repetitive_restricted_behavior": 0.1873,
+        "novelty_uncertainty_sensory_behavior": 0.1967
+      },
+      "control_emergence": 0.1533,
+      "dominant_dim": "social_cognition",
+      "dominant_effect": 0.5073,
+      "second_dim": "social_communication_pragmatics",
+      "second_effect": 0.236,
+      "selectivity_gap": 0.2713,
+      "concentration_C": 0.3674,
+      "d_eff": 5.2406,
+      "selectivity_margin": 0.0867,
+      "n_affected": 4,
+      "max_effect": 0.5073,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.033685,
+        "social_cognition": 0.0003,
+        "social_communication_pragmatics": 0.022919,
+        "cognitive_flexibility_adaptation": 0.059296,
+        "repetitive_restricted_behavior": 0.184483,
+        "novelty_uncertainty_sensory_behavior": 0.012573
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.22749,
+        "social_cognition": 0.086957,
+        "social_communication_pragmatics": 0.183256,
+        "cognitive_flexibility_adaptation": 0.251197,
+        "repetitive_restricted_behavior": 0.364673,
+        "novelty_uncertainty_sensory_behavior": 0.171367
+      },
+      "n_significant_dimensions": 4,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 5,
+      "verdict": "fail_control"
+    },
+    {
+      "primitive_id": "perspective_transformation",
+      "primitive": "Perspective taking",
+      "primitive_zh": "视角转换",
+      "reading": {
+        "social_interaction_motivation": 0.8267,
+        "social_cognition": 0.4167,
+        "social_communication_pragmatics": 0.7733,
+        "cognitive_flexibility_adaptation": 0.8433,
+        "repetitive_restricted_behavior": 0.7433,
+        "novelty_uncertainty_sensory_behavior": 0.7833
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.1013,
+        "social_cognition": 0.4973,
+        "social_communication_pragmatics": 0.1427,
+        "cognitive_flexibility_adaptation": 0.0487,
+        "repetitive_restricted_behavior": 0.1107,
+        "novelty_uncertainty_sensory_behavior": 0.0867
+      },
+      "control_emergence": 0.0533,
+      "dominant_dim": "social_cognition",
+      "dominant_effect": 0.4973,
+      "second_dim": "social_communication_pragmatics",
+      "second_effect": 0.1427,
+      "selectivity_gap": 0.3546,
+      "concentration_C": 0.5036,
+      "d_eff": 4.3317,
+      "selectivity_margin": 0.1764,
+      "n_affected": 1,
+      "max_effect": 0.4973,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.111731,
+        "social_cognition": 0.003735,
+        "social_communication_pragmatics": 0.032707,
+        "cognitive_flexibility_adaptation": 0.1536,
+        "repetitive_restricted_behavior": 0.324873,
+        "novelty_uncertainty_sensory_behavior": 0.075016
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.276151,
+        "social_cognition": 0.182972,
+        "social_communication_pragmatics": 0.188263,
+        "cognitive_flexibility_adaptation": 0.3318,
+        "repetitive_restricted_behavior": 0.458527,
+        "novelty_uncertainty_sensory_behavior": 0.243379
+      },
+      "n_significant_dimensions": 2,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 2,
+      "verdict": "pass"
+    },
+    {
+      "primitive_id": "novelty_valuation",
+      "primitive": "Novelty valuation",
+      "primitive_zh": "新颖性估值",
+      "reading": {
+        "social_interaction_motivation": 0.67,
+        "social_cognition": 0.87,
+        "social_communication_pragmatics": 0.8367,
+        "cognitive_flexibility_adaptation": 0.4367,
+        "repetitive_restricted_behavior": 0.4633,
+        "novelty_uncertainty_sensory_behavior": 0.4233
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.258,
+        "social_cognition": 0.044,
+        "social_communication_pragmatics": 0.0793,
+        "cognitive_flexibility_adaptation": 0.4553,
+        "repetitive_restricted_behavior": 0.3907,
+        "novelty_uncertainty_sensory_behavior": 0.4467
+      },
+      "control_emergence": 0.0267,
+      "dominant_dim": "cognitive_flexibility_adaptation",
+      "dominant_effect": 0.4553,
+      "second_dim": "novelty_uncertainty_sensory_behavior",
+      "second_effect": 0.4467,
+      "selectivity_gap": 0.0086,
+      "concentration_C": 0.272,
+      "d_eff": 4.8287,
+      "selectivity_margin": 0.1444,
+      "n_affected": 4,
+      "max_effect": 0.4553,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.010703,
+        "social_cognition": 0.124052,
+        "social_communication_pragmatics": 0.031523,
+        "cognitive_flexibility_adaptation": 0.000692,
+        "repetitive_restricted_behavior": 0.003298,
+        "novelty_uncertainty_sensory_behavior": 0.001527
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.216593,
+        "social_cognition": 0.182972,
+        "social_communication_pragmatics": 0.161866,
+        "cognitive_flexibility_adaptation": 0.063631,
+        "repetitive_restricted_behavior": 0.005549,
+        "novelty_uncertainty_sensory_behavior": 0.114763
+      },
+      "n_significant_dimensions": 5,
+      "n_significant_dimensions_welch": 1,
+      "n_significant_dimensions_without_fdr": 5,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "representation_updating",
+      "primitive": "Representation updating",
+      "primitive_zh": "表征更新",
+      "reading": {
+        "social_interaction_motivation": 0.7733,
+        "social_cognition": 0.6567,
+        "social_communication_pragmatics": 0.73,
+        "cognitive_flexibility_adaptation": 0.45,
+        "repetitive_restricted_behavior": 0.4667,
+        "novelty_uncertainty_sensory_behavior": 0.69
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.1547,
+        "social_cognition": 0.2573,
+        "social_communication_pragmatics": 0.186,
+        "cognitive_flexibility_adaptation": 0.442,
+        "repetitive_restricted_behavior": 0.3873,
+        "novelty_uncertainty_sensory_behavior": 0.18
+      },
+      "control_emergence": 0.0933,
+      "dominant_dim": "cognitive_flexibility_adaptation",
+      "dominant_effect": 0.442,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.3873,
+      "selectivity_gap": 0.0547,
+      "concentration_C": 0.275,
+      "d_eff": 5.536,
+      "selectivity_margin": 0.1963,
+      "n_affected": 6,
+      "max_effect": 0.442,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.056719,
+        "social_cognition": 0.053749,
+        "social_communication_pragmatics": 0.04924,
+        "cognitive_flexibility_adaptation": 0.002817,
+        "repetitive_restricted_behavior": 0.01965,
+        "novelty_uncertainty_sensory_behavior": 0.01698
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.239098,
+        "social_cognition": 0.201879,
+        "social_communication_pragmatics": 0.214043,
+        "cognitive_flexibility_adaptation": 0.099029,
+        "repetitive_restricted_behavior": 0.140873,
+        "novelty_uncertainty_sensory_behavior": 0.171367
+      },
+      "n_significant_dimensions": 4,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "selective_attention",
+      "primitive": "Selective attention",
+      "primitive_zh": "选择性注意",
+      "reading": {
+        "social_interaction_motivation": 0.7033,
+        "social_cognition": 0.84,
+        "social_communication_pragmatics": 0.76,
+        "cognitive_flexibility_adaptation": 0.7633,
+        "repetitive_restricted_behavior": 0.7133,
+        "novelty_uncertainty_sensory_behavior": 0.43
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.2247,
+        "social_cognition": 0.074,
+        "social_communication_pragmatics": 0.156,
+        "cognitive_flexibility_adaptation": 0.1287,
+        "repetitive_restricted_behavior": 0.1407,
+        "novelty_uncertainty_sensory_behavior": 0.44
+      },
+      "control_emergence": 0.09,
+      "dominant_dim": "novelty_uncertainty_sensory_behavior",
+      "dominant_effect": 0.44,
+      "second_dim": "social_interaction_motivation",
+      "second_effect": 0.2247,
+      "selectivity_gap": 0.2153,
+      "concentration_C": 0.378,
+      "d_eff": 5.0969,
+      "selectivity_margin": 0.1361,
+      "n_affected": 3,
+      "max_effect": 0.44,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.004321,
+        "social_cognition": 0.054207,
+        "social_communication_pragmatics": 0.015553,
+        "cognitive_flexibility_adaptation": 0.004229,
+        "repetitive_restricted_behavior": 0.218486,
+        "novelty_uncertainty_sensory_behavior": 0.001527
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.086182,
+        "social_cognition": 0.086957,
+        "social_communication_pragmatics": 0.161866,
+        "cognitive_flexibility_adaptation": 0.073379,
+        "repetitive_restricted_behavior": 0.385172,
+        "novelty_uncertainty_sensory_behavior": 0.114763
+      },
+      "n_significant_dimensions": 4,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 5,
+      "verdict": "pass"
+    },
+    {
+      "primitive_id": "salience_assignment",
+      "primitive": "Salience assignment",
+      "primitive_zh": "显著性分配",
+      "reading": {
+        "social_interaction_motivation": 0.4933,
+        "social_cognition": 0.7,
+        "social_communication_pragmatics": 0.68,
+        "cognitive_flexibility_adaptation": 0.7167,
+        "repetitive_restricted_behavior": 0.5367,
+        "novelty_uncertainty_sensory_behavior": 0.65
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.4347,
+        "social_cognition": 0.214,
+        "social_communication_pragmatics": 0.236,
+        "cognitive_flexibility_adaptation": 0.1753,
+        "repetitive_restricted_behavior": 0.3173,
+        "novelty_uncertainty_sensory_behavior": 0.22
+      },
+      "control_emergence": 0.0367,
+      "dominant_dim": "social_interaction_motivation",
+      "dominant_effect": 0.4347,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.3173,
+      "selectivity_gap": 0.1174,
+      "concentration_C": 0.2721,
+      "d_eff": 5.7122,
+      "selectivity_margin": 0.309,
+      "n_affected": 6,
+      "max_effect": 0.4347,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.03229,
+        "social_cognition": 0.003735,
+        "social_communication_pragmatics": 0.022919,
+        "cognitive_flexibility_adaptation": 0.035297,
+        "repetitive_restricted_behavior": 0.050102,
+        "novelty_uncertainty_sensory_behavior": 0.045238
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.231256,
+        "social_cognition": 0.086957,
+        "social_communication_pragmatics": 0.183256,
+        "cognitive_flexibility_adaptation": 0.204164,
+        "repetitive_restricted_behavior": 0.191323,
+        "novelty_uncertainty_sensory_behavior": 0.233465
+      },
+      "n_significant_dimensions": 5,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "belief_updating",
+      "primitive": "Belief updating",
+      "primitive_zh": "信念更新",
+      "reading": {
+        "social_interaction_motivation": 0.7033,
+        "social_cognition": 0.8333,
+        "social_communication_pragmatics": 0.8067,
+        "cognitive_flexibility_adaptation": 0.4667,
+        "repetitive_restricted_behavior": 0.46,
+        "novelty_uncertainty_sensory_behavior": 0.6967
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.2247,
+        "social_cognition": 0.0807,
+        "social_communication_pragmatics": 0.1093,
+        "cognitive_flexibility_adaptation": 0.4253,
+        "repetitive_restricted_behavior": 0.394,
+        "novelty_uncertainty_sensory_behavior": 0.1733
+      },
+      "control_emergence": 0.0533,
+      "dominant_dim": "cognitive_flexibility_adaptation",
+      "dominant_effect": 0.4253,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.394,
+      "selectivity_gap": 0.0313,
+      "concentration_C": 0.3022,
+      "d_eff": 5.1105,
+      "selectivity_margin": 0.3152,
+      "n_affected": 4,
+      "max_effect": 0.4253,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.039038,
+        "social_cognition": 0.065646,
+        "social_communication_pragmatics": 0.082245,
+        "cognitive_flexibility_adaptation": 0.01902,
+        "repetitive_restricted_behavior": 0.044096,
+        "novelty_uncertainty_sensory_behavior": 0.051506
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.231256,
+        "social_cognition": 0.182972,
+        "social_communication_pragmatics": 0.240277,
+        "cognitive_flexibility_adaptation": 0.171332,
+        "repetitive_restricted_behavior": 0.191323,
+        "novelty_uncertainty_sensory_behavior": 0.243379
+      },
+      "n_significant_dimensions": 3,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 5,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "attention_shifting",
+      "primitive": "Attention shifting",
+      "primitive_zh": "注意转移",
+      "reading": {
+        "social_interaction_motivation": 0.71,
+        "social_cognition": 0.78,
+        "social_communication_pragmatics": 0.7667,
+        "cognitive_flexibility_adaptation": 0.6167,
+        "repetitive_restricted_behavior": 0.45,
+        "novelty_uncertainty_sensory_behavior": 0.7067
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.218,
+        "social_cognition": 0.134,
+        "social_communication_pragmatics": 0.1493,
+        "cognitive_flexibility_adaptation": 0.2753,
+        "repetitive_restricted_behavior": 0.404,
+        "novelty_uncertainty_sensory_behavior": 0.1633
+      },
+      "control_emergence": 0.0467,
+      "dominant_dim": "repetitive_restricted_behavior",
+      "dominant_effect": 0.404,
+      "second_dim": "cognitive_flexibility_adaptation",
+      "second_effect": 0.2753,
+      "selectivity_gap": 0.1287,
+      "concentration_C": 0.3006,
+      "d_eff": 5.5359,
+      "selectivity_margin": 0.05,
+      "n_affected": 4,
+      "max_effect": 0.404,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.010703,
+        "social_cognition": 0.065646,
+        "social_communication_pragmatics": 0.034525,
+        "cognitive_flexibility_adaptation": 0.001682,
+        "repetitive_restricted_behavior": 0.002481,
+        "novelty_uncertainty_sensory_behavior": 0.034181
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.207302,
+        "social_cognition": 0.21475,
+        "social_communication_pragmatics": 0.189965,
+        "cognitive_flexibility_adaptation": 0.073379,
+        "repetitive_restricted_behavior": 0.005734,
+        "novelty_uncertainty_sensory_behavior": 0.204182
+      },
+      "n_significant_dimensions": 5,
+      "n_significant_dimensions_welch": 1,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "pass"
+    },
+    {
+      "primitive_id": "prediction_error_sensitivity",
+      "primitive": "Prediction-error sensitivity",
+      "primitive_zh": "预测误差敏感性",
+      "reading": {
+        "social_interaction_motivation": 0.7833,
+        "social_cognition": 0.8467,
+        "social_communication_pragmatics": 0.8133,
+        "cognitive_flexibility_adaptation": 0.53,
+        "repetitive_restricted_behavior": 0.5367,
+        "novelty_uncertainty_sensory_behavior": 0.4733
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.1447,
+        "social_cognition": 0.0673,
+        "social_communication_pragmatics": 0.1027,
+        "cognitive_flexibility_adaptation": 0.362,
+        "repetitive_restricted_behavior": 0.3173,
+        "novelty_uncertainty_sensory_behavior": 0.3967
+      },
+      "control_emergence": 0.0433,
+      "dominant_dim": "novelty_uncertainty_sensory_behavior",
+      "dominant_effect": 0.3967,
+      "second_dim": "cognitive_flexibility_adaptation",
+      "second_effect": 0.362,
+      "selectivity_gap": 0.0347,
+      "concentration_C": 0.2853,
+      "d_eff": 5.0518,
+      "selectivity_margin": 0.0786,
+      "n_affected": 3,
+      "max_effect": 0.3967,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.03229,
+        "social_cognition": 0.088755,
+        "social_communication_pragmatics": 0.015553,
+        "cognitive_flexibility_adaptation": 0.000616,
+        "repetitive_restricted_behavior": 0.01965,
+        "novelty_uncertainty_sensory_behavior": 0.000343
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.221329,
+        "social_cognition": 0.199852,
+        "social_communication_pragmatics": 0.143515,
+        "cognitive_flexibility_adaptation": 0.059286,
+        "repetitive_restricted_behavior": 0.140873,
+        "novelty_uncertainty_sensory_behavior": 0.054961
+      },
+      "n_significant_dimensions": 5,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "attention_persistence",
+      "primitive": "Attention persistence",
+      "primitive_zh": "注意维持",
+      "reading": {
+        "social_interaction_motivation": 0.74,
+        "social_cognition": 0.87,
+        "social_communication_pragmatics": 0.8033,
+        "cognitive_flexibility_adaptation": 0.57,
+        "repetitive_restricted_behavior": 0.4733,
+        "novelty_uncertainty_sensory_behavior": 0.6667
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.188,
+        "social_cognition": 0.044,
+        "social_communication_pragmatics": 0.1127,
+        "cognitive_flexibility_adaptation": 0.322,
+        "repetitive_restricted_behavior": 0.3807,
+        "novelty_uncertainty_sensory_behavior": 0.2033
+      },
+      "control_emergence": 0.06,
+      "dominant_dim": "repetitive_restricted_behavior",
+      "dominant_effect": 0.3807,
+      "second_dim": "cognitive_flexibility_adaptation",
+      "second_effect": 0.322,
+      "selectivity_gap": 0.0587,
+      "concentration_C": 0.3044,
+      "d_eff": 5.0845,
+      "selectivity_margin": 0.1964,
+      "n_affected": 4,
+      "max_effect": 0.3807,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.010703,
+        "social_cognition": 0.124052,
+        "social_communication_pragmatics": 0.030921,
+        "cognitive_flexibility_adaptation": 0.017999,
+        "repetitive_restricted_behavior": 0.01965,
+        "novelty_uncertainty_sensory_behavior": 0.007178
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.165139,
+        "social_cognition": 0.182972,
+        "social_communication_pragmatics": 0.183256,
+        "cognitive_flexibility_adaptation": 0.171332,
+        "repetitive_restricted_behavior": 0.140873,
+        "novelty_uncertainty_sensory_behavior": 0.151297
+      },
+      "n_significant_dimensions": 5,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 5,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "social_reward_weighting",
+      "primitive": "Social reward weighting",
+      "primitive_zh": "社会奖励加权",
+      "reading": {
+        "social_interaction_motivation": 0.5833,
+        "social_cognition": 0.73,
+        "social_communication_pragmatics": 0.6833,
+        "cognitive_flexibility_adaptation": 0.65,
+        "repetitive_restricted_behavior": 0.5833,
+        "novelty_uncertainty_sensory_behavior": 0.6333
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.3447,
+        "social_cognition": 0.184,
+        "social_communication_pragmatics": 0.2327,
+        "cognitive_flexibility_adaptation": 0.242,
+        "repetitive_restricted_behavior": 0.2707,
+        "novelty_uncertainty_sensory_behavior": 0.2367
+      },
+      "control_emergence": 0.0367,
+      "dominant_dim": "social_interaction_motivation",
+      "dominant_effect": 0.3447,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.2707,
+      "selectivity_gap": 0.074,
+      "concentration_C": 0.2282,
+      "d_eff": 5.8917,
+      "selectivity_margin": 0.2667,
+      "n_affected": 6,
+      "max_effect": 0.3447,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.033685,
+        "social_cognition": 0.113665,
+        "social_communication_pragmatics": 0.047149,
+        "cognitive_flexibility_adaptation": 0.071113,
+        "repetitive_restricted_behavior": 0.146796,
+        "novelty_uncertainty_sensory_behavior": 0.076675
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.231256,
+        "social_cognition": 0.275948,
+        "social_communication_pragmatics": 0.213821,
+        "cognitive_flexibility_adaptation": 0.28005,
+        "repetitive_restricted_behavior": 0.350637,
+        "novelty_uncertainty_sensory_behavior": 0.273439
+      },
+      "n_significant_dimensions": 2,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 2,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "ambiguity_tolerance",
+      "primitive": "Ambiguity tolerance",
+      "primitive_zh": "歧义耐受",
+      "reading": {
+        "social_interaction_motivation": 0.7667,
+        "social_cognition": 0.8367,
+        "social_communication_pragmatics": 0.6867,
+        "cognitive_flexibility_adaptation": 0.5833,
+        "repetitive_restricted_behavior": 0.5667,
+        "novelty_uncertainty_sensory_behavior": 0.6667
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.1613,
+        "social_cognition": 0.0773,
+        "social_communication_pragmatics": 0.2293,
+        "cognitive_flexibility_adaptation": 0.3087,
+        "repetitive_restricted_behavior": 0.2873,
+        "novelty_uncertainty_sensory_behavior": 0.2033
+      },
+      "control_emergence": 0.0467,
+      "dominant_dim": "cognitive_flexibility_adaptation",
+      "dominant_effect": 0.3087,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.2873,
+      "selectivity_gap": 0.0214,
+      "concentration_C": 0.2436,
+      "d_eff": 5.5644,
+      "selectivity_margin": 0.05,
+      "n_affected": 5,
+      "max_effect": 0.3087,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.051667,
+        "social_cognition": 0.0843,
+        "social_communication_pragmatics": 0.015553,
+        "cognitive_flexibility_adaptation": 0.000131,
+        "repetitive_restricted_behavior": 0.009243,
+        "novelty_uncertainty_sensory_behavior": 0.02605
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.239098,
+        "social_cognition": 0.201879,
+        "social_communication_pragmatics": 0.183256,
+        "cognitive_flexibility_adaptation": 0.014308,
+        "repetitive_restricted_behavior": 0.006062,
+        "novelty_uncertainty_sensory_behavior": 0.195564
+      },
+      "n_significant_dimensions": 4,
+      "n_significant_dimensions_welch": 2,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "agent_state_updating",
+      "primitive": "Agent-state updating",
+      "primitive_zh": "主体状态更新",
+      "reading": {
+        "social_interaction_motivation": 0.7867,
+        "social_cognition": 0.6233,
+        "social_communication_pragmatics": 0.6733,
+        "cognitive_flexibility_adaptation": 0.6633,
+        "repetitive_restricted_behavior": 0.6267,
+        "novelty_uncertainty_sensory_behavior": 0.7667
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.1413,
+        "social_cognition": 0.2907,
+        "social_communication_pragmatics": 0.2427,
+        "cognitive_flexibility_adaptation": 0.2287,
+        "repetitive_restricted_behavior": 0.2273,
+        "novelty_uncertainty_sensory_behavior": 0.1033
+      },
+      "control_emergence": 0.04,
+      "dominant_dim": "social_cognition",
+      "dominant_effect": 0.2907,
+      "second_dim": "social_communication_pragmatics",
+      "second_effect": 0.2427,
+      "selectivity_gap": 0.048,
+      "concentration_C": 0.2356,
+      "d_eff": 5.6985,
+      "selectivity_margin": 0.1179,
+      "n_affected": 4,
+      "max_effect": 0.2907,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.039038,
+        "social_cognition": 0.006603,
+        "social_communication_pragmatics": 0.007818,
+        "cognitive_flexibility_adaptation": 0.000624,
+        "repetitive_restricted_behavior": 0.01965,
+        "novelty_uncertainty_sensory_behavior": 0.007178
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.231256,
+        "social_cognition": 0.182972,
+        "social_communication_pragmatics": 0.156214,
+        "cognitive_flexibility_adaptation": 0.059286,
+        "repetitive_restricted_behavior": 0.017675,
+        "novelty_uncertainty_sensory_behavior": 0.008496
+      },
+      "n_significant_dimensions": 6,
+      "n_significant_dimensions_welch": 2,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "representation_maintenance",
+      "primitive": "Representation maintenance",
+      "primitive_zh": "表征维持",
+      "reading": {
+        "social_interaction_motivation": 0.7967,
+        "social_cognition": 0.8467,
+        "social_communication_pragmatics": 0.7667,
+        "cognitive_flexibility_adaptation": 0.6533,
+        "repetitive_restricted_behavior": 0.5633,
+        "novelty_uncertainty_sensory_behavior": 0.7133
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.1313,
+        "social_cognition": 0.0673,
+        "social_communication_pragmatics": 0.1493,
+        "cognitive_flexibility_adaptation": 0.2387,
+        "repetitive_restricted_behavior": 0.2907,
+        "novelty_uncertainty_sensory_behavior": 0.1567
+      },
+      "control_emergence": 0.14,
+      "dominant_dim": "repetitive_restricted_behavior",
+      "dominant_effect": 0.2907,
+      "second_dim": "cognitive_flexibility_adaptation",
+      "second_effect": 0.2387,
+      "selectivity_gap": 0.052,
+      "concentration_C": 0.2811,
+      "d_eff": 5.4762,
+      "selectivity_margin": 0.1507,
+      "n_affected": 3,
+      "max_effect": 0.2907,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.065109,
+        "social_cognition": 0.124052,
+        "social_communication_pragmatics": 0.041701,
+        "cognitive_flexibility_adaptation": 0.000676,
+        "repetitive_restricted_behavior": 0.025452,
+        "novelty_uncertainty_sensory_behavior": 0.016996
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.23977,
+        "social_cognition": 0.237037,
+        "social_communication_pragmatics": 0.204952,
+        "cognitive_flexibility_adaptation": 0.059286,
+        "repetitive_restricted_behavior": 0.140873,
+        "novelty_uncertainty_sensory_behavior": 0.171367
+      },
+      "n_significant_dimensions": 4,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 5,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "switching_cost",
+      "primitive": "Switching cost",
+      "primitive_zh": "切换成本",
+      "reading": {
+        "social_interaction_motivation": 0.76,
+        "social_cognition": 0.8233,
+        "social_communication_pragmatics": 0.76,
+        "cognitive_flexibility_adaptation": 0.6167,
+        "repetitive_restricted_behavior": 0.5967,
+        "novelty_uncertainty_sensory_behavior": 0.6933
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.168,
+        "social_cognition": 0.0907,
+        "social_communication_pragmatics": 0.156,
+        "cognitive_flexibility_adaptation": 0.2753,
+        "repetitive_restricted_behavior": 0.2573,
+        "novelty_uncertainty_sensory_behavior": 0.1767
+      },
+      "control_emergence": 0.0267,
+      "dominant_dim": "cognitive_flexibility_adaptation",
+      "dominant_effect": 0.2753,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.2573,
+      "selectivity_gap": 0.018,
+      "concentration_C": 0.2449,
+      "d_eff": 5.6645,
+      "selectivity_margin": 0.2073,
+      "n_affected": 5,
+      "max_effect": 0.2753,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.039038,
+        "social_cognition": 0.09418,
+        "social_communication_pragmatics": 0.090754,
+        "cognitive_flexibility_adaptation": 0.019925,
+        "repetitive_restricted_behavior": 0.036442,
+        "novelty_uncertainty_sensory_behavior": 0.064551
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.231256,
+        "social_cognition": 0.231007,
+        "social_communication_pragmatics": 0.261992,
+        "cognitive_flexibility_adaptation": 0.171332,
+        "repetitive_restricted_behavior": 0.140873,
+        "novelty_uncertainty_sensory_behavior": 0.254298
+      },
+      "n_significant_dimensions": 3,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 5,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "signal_noise_discrimination",
+      "primitive": "Signal–noise discrimination",
+      "primitive_zh": "信噪判别",
+      "reading": {
+        "social_interaction_motivation": 0.79,
+        "social_cognition": 0.82,
+        "social_communication_pragmatics": 0.7733,
+        "cognitive_flexibility_adaptation": 0.7533,
+        "repetitive_restricted_behavior": 0.6933,
+        "novelty_uncertainty_sensory_behavior": 0.61
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.138,
+        "social_cognition": 0.094,
+        "social_communication_pragmatics": 0.1427,
+        "cognitive_flexibility_adaptation": 0.1387,
+        "repetitive_restricted_behavior": 0.1607,
+        "novelty_uncertainty_sensory_behavior": 0.26
+      },
+      "control_emergence": 0.07,
+      "dominant_dim": "novelty_uncertainty_sensory_behavior",
+      "dominant_effect": 0.26,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.1607,
+      "selectivity_gap": 0.0993,
+      "concentration_C": 0.2783,
+      "d_eff": 5.7121,
+      "selectivity_margin": 0.1637,
+      "n_affected": 2,
+      "max_effect": 0.26,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.03229,
+        "social_cognition": 0.065646,
+        "social_communication_pragmatics": 0.031523,
+        "cognitive_flexibility_adaptation": 0.001048,
+        "repetitive_restricted_behavior": 0.066085,
+        "novelty_uncertainty_sensory_behavior": 0.016448
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.22749,
+        "social_cognition": 0.199852,
+        "social_communication_pragmatics": 0.183256,
+        "cognitive_flexibility_adaptation": 0.050141,
+        "repetitive_restricted_behavior": 0.140873,
+        "novelty_uncertainty_sensory_behavior": 0.171367
+      },
+      "n_significant_dimensions": 4,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "information_valuation",
+      "primitive": "Information valuation",
+      "primitive_zh": "信息价值",
+      "reading": {
+        "social_interaction_motivation": 0.6833,
+        "social_cognition": 0.8767,
+        "social_communication_pragmatics": 0.8467,
+        "cognitive_flexibility_adaptation": 0.88,
+        "repetitive_restricted_behavior": 0.7567,
+        "novelty_uncertainty_sensory_behavior": 0.7067
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.2447,
+        "social_cognition": 0.0373,
+        "social_communication_pragmatics": 0.0693,
+        "cognitive_flexibility_adaptation": 0.012,
+        "repetitive_restricted_behavior": 0.0973,
+        "novelty_uncertainty_sensory_behavior": 0.1633
+      },
+      "control_emergence": -0.0033,
+      "dominant_dim": "social_interaction_motivation",
+      "dominant_effect": 0.2447,
+      "second_dim": "novelty_uncertainty_sensory_behavior",
+      "second_effect": 0.1633,
+      "selectivity_gap": 0.0814,
+      "concentration_C": 0.3922,
+      "d_eff": 4.4648,
+      "selectivity_margin": 0.1378,
+      "n_affected": 2,
+      "max_effect": 0.2447,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.019727,
+        "social_cognition": 0.191403,
+        "social_communication_pragmatics": 0.046471,
+        "cognitive_flexibility_adaptation": 0.481962,
+        "repetitive_restricted_behavior": 0.227666,
+        "novelty_uncertainty_sensory_behavior": 0.048377
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.221329,
+        "social_cognition": 0.218021,
+        "social_communication_pragmatics": 0.183256,
+        "cognitive_flexibility_adaptation": 0.480205,
+        "repetitive_restricted_behavior": 0.325579,
+        "novelty_uncertainty_sensory_behavior": 0.233465
+      },
+      "n_significant_dimensions": 3,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 3,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "information_relevance_weighting",
+      "primitive": "Info.-relevance weighting",
+      "primitive_zh": "信息相关性加权",
+      "reading": {
+        "social_interaction_motivation": 0.8,
+        "social_cognition": 0.8267,
+        "social_communication_pragmatics": 0.7633,
+        "cognitive_flexibility_adaptation": 0.76,
+        "repetitive_restricted_behavior": 0.61,
+        "novelty_uncertainty_sensory_behavior": 0.6867
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.128,
+        "social_cognition": 0.0873,
+        "social_communication_pragmatics": 0.1527,
+        "cognitive_flexibility_adaptation": 0.132,
+        "repetitive_restricted_behavior": 0.244,
+        "novelty_uncertainty_sensory_behavior": 0.1833
+      },
+      "control_emergence": 0.0667,
+      "dominant_dim": "repetitive_restricted_behavior",
+      "dominant_effect": 0.244,
+      "second_dim": "novelty_uncertainty_sensory_behavior",
+      "second_effect": 0.1833,
+      "selectivity_gap": 0.0607,
+      "concentration_C": 0.2631,
+      "d_eff": 5.7093,
+      "selectivity_margin": 0.1562,
+      "n_affected": 3,
+      "max_effect": 0.244,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.039793,
+        "social_cognition": 0.065646,
+        "social_communication_pragmatics": 0.031878,
+        "cognitive_flexibility_adaptation": 0.013578,
+        "repetitive_restricted_behavior": 0.044411,
+        "novelty_uncertainty_sensory_behavior": 0.012573
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.231256,
+        "social_cognition": 0.199852,
+        "social_communication_pragmatics": 0.183256,
+        "cognitive_flexibility_adaptation": 0.141984,
+        "repetitive_restricted_behavior": 0.161613,
+        "novelty_uncertainty_sensory_behavior": 0.171367
+      },
+      "n_significant_dimensions": 5,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 6,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "other_state_representation",
+      "primitive": "Other-state representation",
+      "primitive_zh": "他人状态表征",
+      "reading": {
+        "social_interaction_motivation": 0.8267,
+        "social_cognition": 0.6933,
+        "social_communication_pragmatics": 0.82,
+        "cognitive_flexibility_adaptation": 0.8533,
+        "repetitive_restricted_behavior": 0.8267,
+        "novelty_uncertainty_sensory_behavior": 0.84
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.1013,
+        "social_cognition": 0.2207,
+        "social_communication_pragmatics": 0.096,
+        "cognitive_flexibility_adaptation": 0.0387,
+        "repetitive_restricted_behavior": 0.0273,
+        "novelty_uncertainty_sensory_behavior": 0.03
+      },
+      "control_emergence": 0.0467,
+      "dominant_dim": "social_cognition",
+      "dominant_effect": 0.2207,
+      "second_dim": "social_interaction_motivation",
+      "second_effect": 0.1013,
+      "selectivity_gap": 0.1194,
+      "concentration_C": 0.4294,
+      "d_eff": 4.54,
+      "selectivity_margin": 0.1538,
+      "n_affected": 1,
+      "max_effect": 0.2207,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.03229,
+        "social_cognition": 0.053749,
+        "social_communication_pragmatics": 0.079688,
+        "cognitive_flexibility_adaptation": 0.04396,
+        "repetitive_restricted_behavior": 0.705938,
+        "novelty_uncertainty_sensory_behavior": 0.340651
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.216593,
+        "social_cognition": 0.201879,
+        "social_communication_pragmatics": 0.228983,
+        "cognitive_flexibility_adaptation": 0.059286,
+        "repetitive_restricted_behavior": 0.711882,
+        "novelty_uncertainty_sensory_behavior": 0.453089
+      },
+      "n_significant_dimensions": 2,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 3,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "local_global_weighting",
+      "primitive": "Local–global weighting",
+      "primitive_zh": "局部—整体信息权衡",
+      "reading": {
+        "social_interaction_motivation": 0.7733,
+        "social_cognition": 0.8,
+        "social_communication_pragmatics": 0.7767,
+        "cognitive_flexibility_adaptation": 0.72,
+        "repetitive_restricted_behavior": 0.6933,
+        "novelty_uncertainty_sensory_behavior": 0.76
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.1547,
+        "social_cognition": 0.114,
+        "social_communication_pragmatics": 0.1393,
+        "cognitive_flexibility_adaptation": 0.172,
+        "repetitive_restricted_behavior": 0.1607,
+        "novelty_uncertainty_sensory_behavior": 0.11
+      },
+      "control_emergence": 0.11,
+      "dominant_dim": "cognitive_flexibility_adaptation",
+      "dominant_effect": 0.172,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.1607,
+      "selectivity_gap": 0.0113,
+      "concentration_C": 0.2022,
+      "d_eff": 5.9188,
+      "selectivity_margin": 0.05,
+      "n_affected": 3,
+      "max_effect": 0.172,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.058646,
+        "social_cognition": 0.191403,
+        "social_communication_pragmatics": 0.064055,
+        "cognitive_flexibility_adaptation": 0.000483,
+        "repetitive_restricted_behavior": 0.096585,
+        "novelty_uncertainty_sensory_behavior": 0.038846
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.239098,
+        "social_cognition": 0.355923,
+        "social_communication_pragmatics": 0.225005,
+        "cognitive_flexibility_adaptation": 0.004348,
+        "repetitive_restricted_behavior": 0.177714,
+        "novelty_uncertainty_sensory_behavior": 0.195564
+      },
+      "n_significant_dimensions": 2,
+      "n_significant_dimensions_welch": 1,
+      "n_significant_dimensions_without_fdr": 5,
+      "verdict": "fail_diffuse"
+    },
+    {
+      "primitive_id": "goal_maintenance",
+      "primitive": "Goal maintenance",
+      "primitive_zh": "目标维持",
+      "reading": {
+        "social_interaction_motivation": 0.87,
+        "social_cognition": 0.8867,
+        "social_communication_pragmatics": 0.8267,
+        "cognitive_flexibility_adaptation": 0.7567,
+        "repetitive_restricted_behavior": 0.7133,
+        "novelty_uncertainty_sensory_behavior": 0.8067
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.058,
+        "social_cognition": 0.0273,
+        "social_communication_pragmatics": 0.0893,
+        "cognitive_flexibility_adaptation": 0.1353,
+        "repetitive_restricted_behavior": 0.1407,
+        "novelty_uncertainty_sensory_behavior": 0.0633
+      },
+      "control_emergence": 0.17,
+      "dominant_dim": "repetitive_restricted_behavior",
+      "dominant_effect": 0.1407,
+      "second_dim": "cognitive_flexibility_adaptation",
+      "second_effect": 0.1353,
+      "selectivity_gap": 0.0054,
+      "concentration_C": 0.2738,
+      "d_eff": 5.3133,
+      "selectivity_margin": 0.1162,
+      "n_affected": 0,
+      "max_effect": 0.1407,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.039038,
+        "social_cognition": 0.2662,
+        "social_communication_pragmatics": 0.015553,
+        "cognitive_flexibility_adaptation": 0.029817,
+        "repetitive_restricted_behavior": 0.138482,
+        "novelty_uncertainty_sensory_behavior": 0.112645
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.123739,
+        "social_cognition": 0.231007,
+        "social_communication_pragmatics": 0.023829,
+        "cognitive_flexibility_adaptation": 0.180952,
+        "repetitive_restricted_behavior": 0.191323,
+        "novelty_uncertainty_sensory_behavior": 0.273439
+      },
+      "n_significant_dimensions": 3,
+      "n_significant_dimensions_welch": 1,
+      "n_significant_dimensions_without_fdr": 3,
+      "verdict": "fail_both"
+    },
+    {
+      "primitive_id": "familiarity_valuation",
+      "primitive": "Familiarity valuation",
+      "primitive_zh": "熟悉性估值",
+      "reading": {
+        "social_interaction_motivation": 0.8033,
+        "social_cognition": 0.85,
+        "social_communication_pragmatics": 0.8,
+        "cognitive_flexibility_adaptation": 0.7733,
+        "repetitive_restricted_behavior": 0.8033,
+        "novelty_uncertainty_sensory_behavior": 0.7333
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.1247,
+        "social_cognition": 0.064,
+        "social_communication_pragmatics": 0.116,
+        "cognitive_flexibility_adaptation": 0.1187,
+        "repetitive_restricted_behavior": 0.0507,
+        "novelty_uncertainty_sensory_behavior": 0.1367
+      },
+      "control_emergence": 0.1333,
+      "dominant_dim": "novelty_uncertainty_sensory_behavior",
+      "dominant_effect": 0.1367,
+      "second_dim": "social_interaction_motivation",
+      "second_effect": 0.1247,
+      "selectivity_gap": 0.012,
+      "concentration_C": 0.2238,
+      "d_eff": 5.6758,
+      "selectivity_margin": 0.0706,
+      "n_affected": 0,
+      "max_effect": 0.1367,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.033718,
+        "social_cognition": 0.139718,
+        "social_communication_pragmatics": 0.04924,
+        "cognitive_flexibility_adaptation": 0.017999,
+        "repetitive_restricted_behavior": 0.487625,
+        "novelty_uncertainty_sensory_behavior": 0.014203
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.22749,
+        "social_cognition": 0.270394,
+        "social_communication_pragmatics": 0.207316,
+        "cognitive_flexibility_adaptation": 0.15782,
+        "repetitive_restricted_behavior": 0.500572,
+        "novelty_uncertainty_sensory_behavior": 0.171367
+      },
+      "n_significant_dimensions": 4,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 4,
+      "verdict": "no_effect"
+    },
+    {
+      "primitive_id": "prior_strength",
+      "primitive": "Prior strength",
+      "primitive_zh": "先验强度",
+      "reading": {
+        "social_interaction_motivation": 0.8867,
+        "social_cognition": 0.8933,
+        "social_communication_pragmatics": 0.8567,
+        "cognitive_flexibility_adaptation": 0.7667,
+        "repetitive_restricted_behavior": 0.7667,
+        "novelty_uncertainty_sensory_behavior": 0.8
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.0413,
+        "social_cognition": 0.0207,
+        "social_communication_pragmatics": 0.0593,
+        "cognitive_flexibility_adaptation": 0.1253,
+        "repetitive_restricted_behavior": 0.0873,
+        "novelty_uncertainty_sensory_behavior": 0.07
+      },
+      "control_emergence": 0.0333,
+      "dominant_dim": "cognitive_flexibility_adaptation",
+      "dominant_effect": 0.1253,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.0873,
+      "selectivity_gap": 0.038,
+      "concentration_C": 0.3102,
+      "d_eff": 5.286,
+      "selectivity_margin": 0.1671,
+      "n_affected": 0,
+      "max_effect": 0.1253,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.156323,
+        "social_cognition": 0.35706,
+        "social_communication_pragmatics": 0.12987,
+        "cognitive_flexibility_adaptation": 0.108702,
+        "repetitive_restricted_behavior": 0.207512,
+        "novelty_uncertainty_sensory_behavior": 0.150499
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.252315,
+        "social_cognition": 0.280037,
+        "social_communication_pragmatics": 0.266415,
+        "cognitive_flexibility_adaptation": 0.323666,
+        "repetitive_restricted_behavior": 0.177714,
+        "novelty_uncertainty_sensory_behavior": 0.317211
+      },
+      "n_significant_dimensions": 0,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 0,
+      "verdict": "no_effect"
+    },
+    {
+      "primitive_id": "feature_binding",
+      "primitive": "Feature binding",
+      "primitive_zh": "特征绑定",
+      "reading": {
+        "social_interaction_motivation": 0.86,
+        "social_cognition": 0.8733,
+        "social_communication_pragmatics": 0.85,
+        "cognitive_flexibility_adaptation": 0.7967,
+        "repetitive_restricted_behavior": 0.7733,
+        "novelty_uncertainty_sensory_behavior": 0.7467
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.068,
+        "social_cognition": 0.0407,
+        "social_communication_pragmatics": 0.066,
+        "cognitive_flexibility_adaptation": 0.0953,
+        "repetitive_restricted_behavior": 0.0807,
+        "novelty_uncertainty_sensory_behavior": 0.1233
+      },
+      "control_emergence": 0.1,
+      "dominant_dim": "novelty_uncertainty_sensory_behavior",
+      "dominant_effect": 0.1233,
+      "second_dim": "cognitive_flexibility_adaptation",
+      "second_effect": 0.0953,
+      "selectivity_gap": 0.028,
+      "concentration_C": 0.2601,
+      "d_eff": 5.6866,
+      "selectivity_margin": 0.1041,
+      "n_affected": 0,
+      "max_effect": 0.1233,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.113081,
+        "social_cognition": 0.214671,
+        "social_communication_pragmatics": 0.0501,
+        "cognitive_flexibility_adaptation": 0.133291,
+        "repetitive_restricted_behavior": 0.364609,
+        "novelty_uncertainty_sensory_behavior": 0.045238
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.258439,
+        "social_cognition": 0.275948,
+        "social_communication_pragmatics": 0.183256,
+        "cognitive_flexibility_adaptation": 0.3318,
+        "repetitive_restricted_behavior": 0.458527,
+        "novelty_uncertainty_sensory_behavior": 0.21863
+      },
+      "n_significant_dimensions": 1,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 2,
+      "verdict": "no_effect"
+    },
+    {
+      "primitive_id": "confidence_calibration",
+      "primitive": "Confidence calibration",
+      "primitive_zh": "置信度校准",
+      "reading": {
+        "social_interaction_motivation": 0.85,
+        "social_cognition": 0.85,
+        "social_communication_pragmatics": 0.84,
+        "cognitive_flexibility_adaptation": 0.8133,
+        "repetitive_restricted_behavior": 0.7967,
+        "novelty_uncertainty_sensory_behavior": 0.7567
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.078,
+        "social_cognition": 0.064,
+        "social_communication_pragmatics": 0.076,
+        "cognitive_flexibility_adaptation": 0.0787,
+        "repetitive_restricted_behavior": 0.0573,
+        "novelty_uncertainty_sensory_behavior": 0.1133
+      },
+      "control_emergence": 0.12,
+      "dominant_dim": "novelty_uncertainty_sensory_behavior",
+      "dominant_effect": 0.1133,
+      "second_dim": "cognitive_flexibility_adaptation",
+      "second_effect": 0.0787,
+      "selectivity_gap": 0.0346,
+      "concentration_C": 0.2425,
+      "d_eff": 5.8555,
+      "selectivity_margin": 0.05,
+      "n_affected": 0,
+      "max_effect": 0.1133,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.019727,
+        "social_cognition": 0.080024,
+        "social_communication_pragmatics": 0.032707,
+        "cognitive_flexibility_adaptation": 0.030105,
+        "repetitive_restricted_behavior": 0.414146,
+        "novelty_uncertainty_sensory_behavior": 0.012573
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.086182,
+        "social_cognition": 0.182972,
+        "social_communication_pragmatics": 0.183256,
+        "cognitive_flexibility_adaptation": 0.171332,
+        "repetitive_restricted_behavior": 0.429365,
+        "novelty_uncertainty_sensory_behavior": 0.114763
+      },
+      "n_significant_dimensions": 4,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 5,
+      "verdict": "no_effect"
+    },
+    {
+      "primitive_id": "inhibition",
+      "primitive": "Inhibition",
+      "primitive_zh": "抑制",
+      "reading": {
+        "social_interaction_motivation": 0.9,
+        "social_cognition": 0.88,
+        "social_communication_pragmatics": 0.84,
+        "cognitive_flexibility_adaptation": 0.78,
+        "repetitive_restricted_behavior": 0.7667,
+        "novelty_uncertainty_sensory_behavior": 0.7933
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.028,
+        "social_cognition": 0.034,
+        "social_communication_pragmatics": 0.076,
+        "cognitive_flexibility_adaptation": 0.112,
+        "repetitive_restricted_behavior": 0.0873,
+        "novelty_uncertainty_sensory_behavior": 0.0767
+      },
+      "control_emergence": 0.0133,
+      "dominant_dim": "cognitive_flexibility_adaptation",
+      "dominant_effect": 0.112,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.0873,
+      "selectivity_gap": 0.0247,
+      "concentration_C": 0.2705,
+      "d_eff": 5.4352,
+      "selectivity_margin": 0.0611,
+      "n_affected": 0,
+      "max_effect": 0.112,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.205116,
+        "social_cognition": 0.188,
+        "social_communication_pragmatics": 0.034525,
+        "cognitive_flexibility_adaptation": 0.011581,
+        "repetitive_restricted_behavior": 0.189948,
+        "novelty_uncertainty_sensory_behavior": 0.112645
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.239098,
+        "social_cognition": 0.199852,
+        "social_communication_pragmatics": 0.183256,
+        "cognitive_flexibility_adaptation": 0.114677,
+        "repetitive_restricted_behavior": 0.161613,
+        "novelty_uncertainty_sensory_behavior": 0.27422
+      },
+      "n_significant_dimensions": 2,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 2,
+      "verdict": "no_effect"
+    },
+    {
+      "primitive_id": "evidence_weighting",
+      "primitive": "Evidence weighting",
+      "primitive_zh": "证据权重",
+      "reading": {
+        "social_interaction_motivation": 0.8933,
+        "social_cognition": 0.89,
+        "social_communication_pragmatics": 0.8767,
+        "cognitive_flexibility_adaptation": 0.7867,
+        "repetitive_restricted_behavior": 0.7467,
+        "novelty_uncertainty_sensory_behavior": 0.8233
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.0347,
+        "social_cognition": 0.024,
+        "social_communication_pragmatics": 0.0393,
+        "cognitive_flexibility_adaptation": 0.1053,
+        "repetitive_restricted_behavior": 0.1073,
+        "novelty_uncertainty_sensory_behavior": 0.0467
+      },
+      "control_emergence": 0.04,
+      "dominant_dim": "repetitive_restricted_behavior",
+      "dominant_effect": 0.1073,
+      "second_dim": "cognitive_flexibility_adaptation",
+      "second_effect": 0.1053,
+      "selectivity_gap": 0.002,
+      "concentration_C": 0.3003,
+      "d_eff": 5.1445,
+      "selectivity_margin": 0.0533,
+      "n_affected": 0,
+      "max_effect": 0.1073,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.11771,
+        "social_cognition": 0.326396,
+        "social_communication_pragmatics": 0.096957,
+        "cognitive_flexibility_adaptation": 0.003328,
+        "repetitive_restricted_behavior": 0.146796,
+        "novelty_uncertainty_sensory_behavior": 0.076675
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.216593,
+        "social_cognition": 0.275948,
+        "social_communication_pragmatics": 0.183256,
+        "cognitive_flexibility_adaptation": 0.059286,
+        "repetitive_restricted_behavior": 0.140873,
+        "novelty_uncertainty_sensory_behavior": 0.171367
+      },
+      "n_significant_dimensions": 1,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 1,
+      "verdict": "no_effect"
+    },
+    {
+      "primitive_id": "relational_representation",
+      "primitive": "Relational representation",
+      "primitive_zh": "关系表征",
+      "reading": {
+        "social_interaction_motivation": 0.9067,
+        "social_cognition": 0.8333,
+        "social_communication_pragmatics": 0.8733,
+        "cognitive_flexibility_adaptation": 0.8567,
+        "repetitive_restricted_behavior": 0.8333,
+        "novelty_uncertainty_sensory_behavior": 0.8567
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.0213,
+        "social_cognition": 0.0807,
+        "social_communication_pragmatics": 0.0427,
+        "cognitive_flexibility_adaptation": 0.0353,
+        "repetitive_restricted_behavior": 0.0207,
+        "novelty_uncertainty_sensory_behavior": 0.0133
+      },
+      "control_emergence": 0.0367,
+      "dominant_dim": "social_cognition",
+      "dominant_effect": 0.0807,
+      "second_dim": "social_communication_pragmatics",
+      "second_effect": 0.0427,
+      "selectivity_gap": 0.038,
+      "concentration_C": 0.3771,
+      "d_eff": 5.0273,
+      "selectivity_margin": 0.1572,
+      "n_affected": 0,
+      "max_effect": 0.0807,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.468326,
+        "social_cognition": 0.2662,
+        "social_communication_pragmatics": 0.082245,
+        "cognitive_flexibility_adaptation": 0.519013,
+        "repetitive_restricted_behavior": 0.782203,
+        "novelty_uncertainty_sensory_behavior": 0.713251
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.559464,
+        "social_cognition": 0.427004,
+        "social_communication_pragmatics": 0.183256,
+        "cognitive_flexibility_adaptation": 0.658133,
+        "repetitive_restricted_behavior": 0.802099,
+        "novelty_uncertainty_sensory_behavior": 0.781214
+      },
+      "n_significant_dimensions": 0,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 0,
+      "verdict": "no_effect"
+    },
+    {
+      "primitive_id": "uncertainty_estimation",
+      "primitive": "Uncertainty estimation",
+      "primitive_zh": "不确定性估计",
+      "reading": {
+        "social_interaction_motivation": 0.8867,
+        "social_cognition": 0.8933,
+        "social_communication_pragmatics": 0.8833,
+        "cognitive_flexibility_adaptation": 0.8567,
+        "repetitive_restricted_behavior": 0.8467,
+        "novelty_uncertainty_sensory_behavior": 0.8033
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.0413,
+        "social_cognition": 0.0207,
+        "social_communication_pragmatics": 0.0327,
+        "cognitive_flexibility_adaptation": 0.0353,
+        "repetitive_restricted_behavior": 0.0073,
+        "novelty_uncertainty_sensory_behavior": 0.0667
+      },
+      "control_emergence": 0.0267,
+      "dominant_dim": "novelty_uncertainty_sensory_behavior",
+      "dominant_effect": 0.0667,
+      "second_dim": "social_interaction_motivation",
+      "second_effect": 0.0413,
+      "selectivity_gap": 0.0254,
+      "concentration_C": 0.327,
+      "d_eff": 5.1409,
+      "selectivity_margin": 0.05,
+      "n_affected": 0,
+      "max_effect": 0.0667,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.221013,
+        "social_cognition": 0.35706,
+        "social_communication_pragmatics": 0.162054,
+        "cognitive_flexibility_adaptation": 0.048849,
+        "repetitive_restricted_behavior": 0.894122,
+        "novelty_uncertainty_sensory_behavior": 0.051506
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.353494,
+        "social_cognition": 0.280037,
+        "social_communication_pragmatics": 0.221982,
+        "cognitive_flexibility_adaptation": 0.059286,
+        "repetitive_restricted_behavior": 0.879887,
+        "novelty_uncertainty_sensory_behavior": 0.171367
+      },
+      "n_significant_dimensions": 1,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 2,
+      "verdict": "no_effect"
+    },
+    {
+      "primitive_id": "information_seeking_under_uncertainty",
+      "primitive": "Info. seeking (uncertainty)",
+      "primitive_zh": "不确定性下的信息寻求",
+      "reading": {
+        "social_interaction_motivation": 0.8667,
+        "social_cognition": 0.91,
+        "social_communication_pragmatics": 0.8933,
+        "cognitive_flexibility_adaptation": 0.8767,
+        "repetitive_restricted_behavior": 0.8067,
+        "novelty_uncertainty_sensory_behavior": 0.8367
+      },
+      "emergence": {
+        "social_interaction_motivation": 0.0613,
+        "social_cognition": 0.004,
+        "social_communication_pragmatics": 0.0227,
+        "cognitive_flexibility_adaptation": 0.0153,
+        "repetitive_restricted_behavior": 0.0473,
+        "novelty_uncertainty_sensory_behavior": 0.0333
+      },
+      "control_emergence": 0.0533,
+      "dominant_dim": "social_interaction_motivation",
+      "dominant_effect": 0.0613,
+      "second_dim": "repetitive_restricted_behavior",
+      "second_effect": 0.0473,
+      "selectivity_gap": 0.014,
+      "concentration_C": 0.3333,
+      "d_eff": 4.8223,
+      "selectivity_margin": 0.0874,
+      "n_affected": 0,
+      "max_effect": 0.0613,
+      "t_q_by_dimension": {
+        "social_interaction_motivation": 0.156323,
+        "social_cognition": 0.865036,
+        "social_communication_pragmatics": 0.226694,
+        "cognitive_flexibility_adaptation": 0.421804,
+        "repetitive_restricted_behavior": 0.502899,
+        "novelty_uncertainty_sensory_behavior": 0.208093
+      },
+      "welch_q_by_dimension": {
+        "social_interaction_motivation": 0.313561,
+        "social_cognition": 0.857482,
+        "social_communication_pragmatics": 0.207316,
+        "cognitive_flexibility_adaptation": 0.461815,
+        "repetitive_restricted_behavior": 0.514481,
+        "novelty_uncertainty_sensory_behavior": 0.27422
+      },
+      "n_significant_dimensions": 0,
+      "n_significant_dimensions_welch": 0,
+      "n_significant_dimensions_without_fdr": 0,
+      "verdict": "no_effect"
+    }
+  ],
+  "caption_text_not_shown": "A single cognitive-primitive perturbation does not buy a selective phenotype.  Throughout, θ is the primitive's integrity (the share of its components left intact) and Δ = baseline − perturbed measures how far the phenotype profile\nmoved towards the ASD-like end; panel E's networks draw an edge where the two-sample t-test is significant and give its width to Δ, while the paired bar chart reports, per phenotype dimension, how many primitives are significant\nunder the pooled-variance test (solid bar, q < 0.05) and how many of those survive a stricter threshold on the same test (faded bar, q < 0.01).  Across the six phenotype dimensions the median primitive has an effective\ndimensionality D_eff = 5.68 of 6 (1 = only one dimension is hit, 6 = all six equally) and a phenotypic concentration C = 0.24 — its worst dimension carries only about 24% of the total impairment, where a fully selective perturbation\nwould carry 100%.  Under the experiment's own criteria only 5 keep the general-cognition control inside ±0.15 while passing the concentration test (13 fail as diffuse, 4 show no effect, 9 break the control channel).  A per-dimension\nt-test against the intact reference (each primitive's 3 perturbed repeats vs 5 intact repeats, BH-FDR q < 0.05) calls 141 of 186 primitive × dimension cells significant at integrity 0.4 and 97 at 0.8, and at 0.4 only 2 of 31\nprimitives escape without a single significant dimension; tightening the same test to q < 0.01 leaves 90 and 28 of those cells (faded bar), so roughly two thirds of the counts survive the stricter threshold.  These counts are the\nleast assumption-free part of the figure: the perturbed repeats are the noisier ones (median variance ratio perturbed/reference ≈ 5) and the equal-variance test is anti-conservative in this 3-repeats-vs-5 design (realised type-I\nerror ≈ 11% at a nominal 5%), so the reading above rests on the effect sizes (Δ, D_eff, C) rather than on the significance counts alone.  Effects are dose-dependent for 22 of 31 primitives, which worsen as integrity falls from 0.8\nto 0.4, and at the stronger dose the control channel is itself depressed for 9 of 31 primitives — so the map reads as a distributed, partly non-specific shift of the whole phenotype profile rather than as a set of clean one-\nprimitive → one-dimension links.  Panel F follows five of those primitives down the whole dose ladder (θ = 0.2, 0.4, 0.6, 0.8, 0.9; 5 repeats per cell, a separate run from panels A–E).  Each subplot plots the MEAN phenotype score of\nthe six phenotype dimensions against 1 − θ (0 = the intact mind, 0.8 = θ 0.2, the weakest cell; 0–1, higher = more typical; error bars = ±1 SEM), all five subplots on one shared 0–1 scale, with one shared x title and one shared\nlegend below the row.  The leftmost point of every curve is the intact profile itself, taken from the same five intact minds the rest of the figure uses, so the curves start from one common baseline.  Taking a primitive apart costs\nthe profile 0.21–0.47 on average over the six dimensions by the weakest dose, and at that dose the lowest curve is that primitive's own dimension in 5 of 5 subplots — the damage is aimed at the right dimension.  It is still not\nselective: the other five dimensions fall with it, by different amounts in every subplot, and the six curves cross rather than separating, which is the same distributed profile the heat map and the networks show, read along the dose\naxis instead of across primitives."
+}

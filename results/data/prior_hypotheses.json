@@ -1,0 +1,26 @@
+{
+  "layer": "analysis_input",
+  "note": "Mechanism–phenotype pairs reflecting the study's prior theoretical expectations. They are used only to order illustrative cases in the dialogue-evidence analysis; they do not enter any measurement, statistic, or conclusion.",
+  "pairs": [
+    {
+      "primitive_id": "belief_updating",
+      "dimension": "cognitive_flexibility_adaptation"
+    },
+    {
+      "primitive_id": "rule_updating",
+      "dimension": "repetitive_restricted_behavior"
+    },
+    {
+      "primitive_id": "self_other_distinction",
+      "dimension": "social_cognition"
+    },
+    {
+      "primitive_id": "agent_state_updating",
+      "dimension": "social_cognition"
+    },
+    {
+      "primitive_id": "social_reward_weighting",
+      "dimension": "social_interaction_motivation"
+    }
+  ]
+}

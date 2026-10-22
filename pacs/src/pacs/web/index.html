@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PACS · 可扰动人工认知系统</title>
+<!-- 样式分层：令牌 → 基础 → 布局 → 组件（顺序即优先级） -->
+<link rel="stylesheet" href="/static/css/tokens.css">
+<link rel="stylesheet" href="/static/css/base.css">
+<link rel="stylesheet" href="/static/css/layout.css">
+<link rel="stylesheet" href="/static/css/components.css">
+</head>
+<body>
+
+<!-- 全局上下文：产品标识、当前屏幕、当前大脑、免责声明 -->
+<header class="topbar">
+  <button class="btn ghost sm topbar-toggle" id="btn-sidebar" aria-label="展开导航" aria-expanded="false" aria-controls="sidebar">☰</button>
+  <h1>PACS · 可扰动人工认知系统</h1>
+  <span class="sub" id="topbar-screen">模型设置</span>
+  <span class="context-chip">当前大脑：<b id="topbar-brain">…</b></span>
+  <span class="disclaimer">方法学研究工具，不用于医学诊断</span>
+</header>
+
+<!-- 常驻提示（离线模式等）由 app.js 注入 -->
+<div id="banner-host"></div>
+
+<div class="shell">
+  <!-- 侧栏：主导航 + 当前大脑 + 大脑库（切换/重命名/删除/保存） -->
+  <aside class="sidebar" id="sidebar" aria-label="导航与大脑库">
+    <div class="blk">
+      <h3>界面</h3>
+      <nav class="nav" id="nav"></nav>
+    </div>
+    <div class="blk">
+      <h3>当前大脑</h3>
+      <div id="side-current"></div>
+    </div>
+    <div class="blk">
+      <h3>大脑库</h3>
+      <div class="row tight">
+        <input id="brain-name" placeholder="命名当前 θ" aria-label="大脑名称">
+        <button class="btn ghost sm" id="btn-sidebar-save">保存</button>
+      </div>
+      <div id="brain-list" style="margin-top:9px"></div>
+    </div>
+  </aside>
+
+  <!-- 视图容器：各界面在首次进入时挂载到此处 -->
+  <div class="content" id="view"></div>
+</div>
+
+<!-- 配置门禁（规则 1：打开界面时要求配置 LLM API） -->
+<div class="modal" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+  <div class="box">
+    <div class="row">
+      <h2 id="gate-title">先配置 LLM API</h2>
+      <div class="spacer"></div>
+      <button class="tiny" id="gate-close" aria-label="关闭">✕</button>
+    </div>
+    <p class="hint">
+      本系统需要两套 LLM：<b>模拟大脑</b>（被扰动的人工心智）与<b>提问者 / 分析者</b>
+      （表型观察里提问、并对反应结果做分析与表型打分的「另外一个 LLM」）。两套可以填同一个端点，
+      也可以不同厂商。Key 只保存在本机内存 / 本地配置，<b>不会</b>被任何接口返回，也不上报。
+    </p>
+    <div id="gate-reasons"></div>
+    <div class="grid g2" style="margin-top:var(--sp-3)">
+      <div class="col">
+        <h3 style="margin-top:0">模拟大脑</h3>
+        <label for="gate-b-provider">提供方</label>
+        <select id="gate-b-provider">
+          <option value="mock">mock —— 离线规则式心智（无需 Key）</option>
+          <option value="openai">openai —— 任意 OpenAI 兼容端点</option>
+        </select>
+        <label style="margin-top:var(--sp-2)" for="gate-b-model">模型名</label><input id="gate-b-model" placeholder="gpt-4o-mini">
+        <label style="margin-top:var(--sp-2)" for="gate-b-base">API Base URL</label><input id="gate-b-base" placeholder="https://api.openai.com/v1">
+        <label style="margin-top:var(--sp-2)" for="gate-b-key">API Key</label><input id="gate-b-key" type="password" placeholder="your API key" autocomplete="off">
+      </div>
+      <div class="col">
+        <h3 style="margin-top:0">提问者 / 分析者（另外的 LLM）</h3>
+        <label for="gate-e-provider">提供方</label>
+        <select id="gate-e-provider">
+          <option value="mock">mock —— 离线规则式</option>
+          <option value="openai">openai —— 任意 OpenAI 兼容端点</option>
+        </select>
+        <label style="margin-top:var(--sp-2)" for="gate-e-model">模型名</label><input id="gate-e-model" placeholder="gpt-4o-mini">
+        <label style="margin-top:var(--sp-2)" for="gate-e-base">API Base URL</label><input id="gate-e-base" placeholder="https://api.openai.com/v1">
+        <label style="margin-top:var(--sp-2)" for="gate-e-key">API Key</label><input id="gate-e-key" type="password" placeholder="your API key" autocomplete="off">
+      </div>
+    </div>
+    <div class="row" style="margin-top:var(--sp-4)">
+      <button class="btn" id="gate-save">保存并进入</button>
+      <button class="btn ghost" id="gate-offline">离线 mock 模式进入（非 LLM 涌现）</button>
+      <label class="inline"><input type="checkbox" id="gate-persist"> 同时写入 config.json（含 Key，谨慎）</label>
+      <span class="status" id="gate-status"></span>
+    </div>
+    <div class="warnbox" style="margin-top:var(--sp-3)">
+      <b>离线 mock 模式</b>用规则式前向模型代替 LLM：它能验证整条管线与统计逻辑，
+      但表型结构是<b>构造出来的</b>，不是 LLM 涌现的。<b>真实结论必须用真实 provider 跑。</b>
+    </div>
+  </div>
+</div>
+
+<!-- 应用入口：原生 ES 模块，无需构建 -->
+<script type="module" src="/static/js/app.js"></script>
+</body>
+</html>

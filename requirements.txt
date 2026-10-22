@@ -1,0 +1,14 @@
+# 结果表与 Fig.1–4 的依赖（智能体本体只用标准库，不需要这一份）。
+# conda 用户请用 environment.yml。
+#
+#   python -m pip install -r requirements.txt
+#
+# 实测通过的版本：numpy 1.26.4 / pandas 2.3.3 / scipy 1.16.3
+#                 matplotlib 3.11.0 / openpyxl 3.1.2 / pytest 7.4.4
+
+openpyxl>=3.1
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+matplotlib>=3.8
+pytest>=7.0
