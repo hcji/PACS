@@ -222,6 +222,7 @@ python -m pacs.cli serve --port 8080
 | 路径 | 内容 |
 |---|---|
 | `data/pacs.db` | SQLite：运行、剖面、大脑库、对话、条目集、冻结快照 |
+| `data.7z` | 五个批次的逐被试对话数据压缩包（解压后为 `data/runs/`） |
 | `data/runs/` | 批量实验的逐被试文件（解压 `data.7z` 后生成，不纳入版本库） |
 | `data/exports/atlas.{md,json}` | `pacs report` 的九章 Atlas |
 | `data/exports/freeze_<id>/` | `pacs freeze` 的冻结快照 |
